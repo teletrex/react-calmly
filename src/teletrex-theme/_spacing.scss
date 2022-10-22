@@ -1,0 +1,31 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+$spacing-baseline: 1rem !default;
+
+// Spacing scale
+$spacing-4xs: $spacing-baseline * 0.0625 !default;
+$spacing-3xs: $spacing-baseline * 0.125 !default;
+$spacing-2xs: $spacing-baseline * 0.25 !default;
+$spacing-xs: $spacing-baseline * 0.5 !default;
+$spacing-sm: $spacing-baseline * 0.75 !default;
+$spacing-md: $spacing-baseline !default;
+$spacing-lg: $spacing-baseline * 1.5 !default;
+$spacing-xl: $spacing-baseline * 2 !default;
+$spacing-2xl: $spacing-baseline * 2.5 !default;
+$spacing-3xl: $spacing-baseline * 3 !default;
+
+// Layout scale
+$layout-2xs: $spacing-baseline !default;
+$layout-xs: $spacing-baseline * 1.5 !default;
+$layout-sm: $spacing-baseline * 2 !default;
+$layout-md: $spacing-baseline * 3 !default;
+$layout-lg: $spacing-baseline * 4 !default;
+$layout-xl: $spacing-baseline * 6 !default;
+$layout-2xl: $spacing-baseline * 10 !default;

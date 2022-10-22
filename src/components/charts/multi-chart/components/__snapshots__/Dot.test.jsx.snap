@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiChart Dot renders ActiveDashedDotWithAlert 1`] = `
+<span
+  class="bx--multi-chart__chart-dashed__dot"
+  cx="17"
+  cy="23"
+  index="0"
+  r="6"
+/>
+`;
+
+exports[`MultiChart Dot renders ActiveDashedDotWithAlert with alert 1`] = `
+<span
+  class="bx--multi-chart__chart-dashed__dot bx--multi-chart__chart-dashed__dot--alert"
+  cx="17"
+  cy="23"
+  index="0"
+  r="6"
+/>
+`;
+
+exports[`MultiChart Dot renders ActiveLineDotWithAlert 1`] = `
+<span
+  class="bx--multi-chart__chart-line__dot"
+  cx="17"
+  cy="23"
+  index="0"
+  r="6"
+/>
+`;
+
+exports[`MultiChart Dot renders ActiveLineDotWithAlert with alert 1`] = `
+<span
+  class="bx--multi-chart__chart-line__dot bx--multi-chart__chart-line__dot--alert"
+  cx="17"
+  cy="23"
+  index="0"
+  r="6"
+/>
+`;
+
+exports[`MultiChart Dot renders InactiveDot 1`] = `
+<span
+  class="bx--multi-chart__chart-line__inactive-dot bx--multi-chart__chart-line__inactive-dot--alert"
+  cx="17"
+  cy="23"
+  r="4"
+/>
+`;
+
+exports[`MultiChart Dot renders selected InactiveDot 1`] = `
+<span
+  class="bx--multi-chart__chart-line__inactive-dot bx--multi-chart__chart-line__inactive-dot--alert bx--multi-chart__chart-line__inactive-dot--selected"
+  cx="17"
+  cy="23"
+  r="5"
+/>
+`;

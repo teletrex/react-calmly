@@ -1,0 +1,13 @@
+node_modules/
+coverage/
+config/
+lib/
+storybook-static/
+build
+dist/
+
+.snapshots/
+*.min.js
+
+*
+*.*

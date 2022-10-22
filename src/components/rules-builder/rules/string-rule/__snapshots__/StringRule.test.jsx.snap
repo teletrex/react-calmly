@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StringRule should render correctly 1`] = `
+<div>
+  <div
+    class="bx--form-item bx--text-input-wrapper"
+  >
+    <span
+      class="bx--text-input__label-wrapper bx--visually-hidden"
+    >
+      <label
+        class="bx--label"
+        for="TestStringRuleElement"
+      >
+        String rule
+      </label>
+      
+    </span>
+    <div
+      class="bx--text-input__field-wrapper"
+    >
+      <input
+        class="bx--text-input"
+        id="TestStringRuleElement"
+        name="TestStringRuleElement"
+        placeholder="Enter value"
+        type="text"
+        value="abc"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StringRule should render correctly for read-only 1`] = `
+<div>
+  <span
+    class="bx--rule-value-readonly bx--text-space-left"
+  >
+    abc
+  </span>
+</div>
+`;
+
+exports[`StringRule should render correctly for read-only and oneOfValues operator 1`] = `
+<div>
+  <span
+    class="bx--rule-value-readonly bx--text-space-left"
+  >
+    Foo, Bar
+  </span>
+</div>
+`;

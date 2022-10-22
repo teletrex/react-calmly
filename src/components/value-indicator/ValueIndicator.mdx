@@ -1,0 +1,27 @@
+import { Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# ValueIndicator
+
+
+## Default
+
+Tag component is styled accordingly to the `tagValue`:
+
+- For positive numbers will be styled as `green`.
+- For negative numbers will be styled as `red`.
+- For `0` it will appear as `gray`.
+
+<Canvas>
+  <Story id="atoms-valueindicator--default" />
+</Canvas>
+
+## Component API
+
+| Parameter name |   Type   | Default value | Required | Description                                                           |
+| -------------- | :------: | :-----------: | :------: | --------------------------------------------------------------------- |
+| className      | _string_ |     `''`      |    No    | Provide a custom className that is applied to the containing `<span>` |
+| mainPostfix    | _string_ |      `%`      |    No    | Postfix presented on main element                                     |
+| mainValue      | _number_ |    `null`     |    No    | The main number displayed in a percentage                             |
+| tagPostfix     | _string_ |      `%`      |   Yes    | Postfix presented on tag element                                      |
+| tagValue       | _number_ |      `0`      |   Yes    | Tag value displayed in tag in percentage                              |
+| title          | _string_ |     `''`      |   Yes    | Text description for label for tag                                    |

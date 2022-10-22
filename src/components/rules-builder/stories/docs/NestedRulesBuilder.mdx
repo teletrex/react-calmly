@@ -1,0 +1,38 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - Nested rules builder
+
+## Overview
+
+A rules builder instance can be injected into another rules builder instance as a body of a `CustomRule`. Such nesting may come in useful with rules that require complex internal logic e.g. based on the selected operator.
+
+
+<Preview>
+  <Story id="experimental-rulesbuilder-nestedrulesbuilder--usage" />
+</Preview>
+
+
+## Nesting the rules builder
+
+In order to inject a rules builder instance to a rule, you need to do this within a `CustomRule` (see the [CustomRule docs](?path=/docs/experimental-rulesbuilder-customrule--usage) for details on how to create such a rule). However, there are a couple of things worth mentioning when doing so.
+
+
+### Memoization
+
+The current architecture of the rules builder requires memoizing the injected instance. You can use `React.memo` for that, as presented in the code example above.
+
+Note that you will most likely need to provide a custom comparison function. This is due to the fact that the passed `onChange` function is always recognized as differing, and you might also want to trigger updates based on some custom data.
+
+
+### Visuals
+
+Using the `isLight` flag should handle the visual when nesting rules builders. If you nest rules builders in such a manner that rule builders on every other level have this flag turned on, you should get a good visual result in terms of colors. Any sizing issues related to the container responsiveness etc. should most likely be handled within the `inputComponent` prepared for the `CustomRule`.
+
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on
+

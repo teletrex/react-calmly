@@ -1,0 +1,101 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+@import 'src/teletrex-theme/teletrex-theme';
+@import 'src/teletrex-theme/typography/productive';
+
+/// Column chart styles
+/// @access private
+/// @group column-chart›
+
+  .#{$prefix}--column-chart {
+    position: relative;
+    background: $ui-02;
+    border: $ui-03 solid 1px;
+    padding: rem(19px) rem(20px);
+    overflow: hidden;
+
+    .--minimized {
+      height: rem(580px);
+    }
+
+    .--maximized {
+      height: rem(580px);
+    }
+
+    &__legend {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .#{$prefix}--chart-wrapper {
+      position: relative;
+      height: 100%;
+    }
+
+    .#{$prefix}--no-data {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        height: 50%;
+      }
+    }
+
+    .recharts-wrapper {
+      user-select: none;
+    }
+
+    .#{$prefix}--column-chart__tooltip {
+      background: $tag-01-background-color;
+      border-radius: rem(2px);
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+      color: $text-01;
+      font-size: rem(13px);
+      min-width: rem(68px);
+      padding: rem(10px) rem(8px);
+      white-space: nowrap;
+
+      &-name {
+        font-weight: bold;
+        margin-bottom: rem(4px);
+      }
+    }
+
+    .recharts-bar-rectangle:hover path {
+      fill: $chart-hover;
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__title {
+      flex: 1;
+      margin-bottom: rem(30px);
+    }
+
+    &__color-legend {
+      float: left;
+      margin-top: rem(8px);
+      margin-right: rem(6px);
+      width: rem(8px);
+      height: rem(8px);
+    }
+  }
+
+
+.#{$prefix}--recharts-default-tooltip {
+  transform: translate(-50%, rem(8px));
+}

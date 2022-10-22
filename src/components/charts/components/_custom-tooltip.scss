@@ -1,0 +1,48 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+
+@import 'src/teletrex-theme/typography/productive';
+@import 'src/teletrex-theme/typography/tokens';
+@import 'src/teletrex-theme/teletrex-theme';
+
+@include theme();
+
+
+  .#{$prefix}--recharts {
+    &-tooltip-label,
+    &-tooltip-item {
+//TODO:      @include type-style('productive-heading-01');
+
+      font-weight: 500;
+    }
+
+    &-tooltip-wrapper {
+      background-color: $ui-background;
+    }
+
+    &-default-tooltip {
+      max-width: rem(305px);
+      min-width: rem(60px);
+
+      @include rechats-default-tooltip;
+
+      &::before {
+        @include rechats-default-tooltip__caret;
+      }
+    }
+
+    &-tooltip-item-value {
+      color: $text-01;
+      font-weight: 400;
+    }
+  }
+

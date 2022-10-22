@@ -1,0 +1,87 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+
+.percentile-indicator {
+  height: 18px;
+}
+
+.progress-background {
+  background-color: $rc-brand-background;
+}
+
+.progress {
+  background-color: rgb(84,168,137);
+}
+
+.pi100 {
+  background-color: rgb(84,168,137);
+}
+.pi95 {
+  background-color: rgb(96,176,149);
+}
+.pi90 {
+  background-color: rgb(112,186,161);
+}
+.pi85 {
+  background-color: rgb(128,194,172);
+}
+.pi80 {
+  background-color: rgb(145,203,184);
+}
+.pi75 {
+  background-color: rgb(163,211,197);
+}
+.pi70 {
+  background-color: rgb(179,219,208);
+}
+.pi65 {
+  background-color: rgb(197,228,220);
+}
+.pi60 {
+  background-color: rgb(217,236,231);
+}
+.pi55 {
+  background-color: rgb(236,246,244);
+}
+.pi50 {
+  background-color: rgb(240,207,209);
+}
+.pi45 {
+  background-color: rgb(235,194,198);
+}
+.pi40 {
+  background-color: rgb(232,182,186);
+}
+.pi35{
+  background-color: rgb(229,171,175);
+}
+.pi30 {
+  background-color: rgb(224,159,163);
+}
+.pi25 {
+  background-color: rgb(221,148,152);
+}
+.pi20 {
+  background-color: rgb(217,135,140);
+}
+.pi15 {
+  background-color: rgb(214,124,129);
+}
+.pi10 {
+  background-color: rgb(211,113,117);
+}
+.pi5 {
+  background-color: rgb(208,102,105);
+}
+.pi0 {
+  background-color: rgb(205,91,93);
+  min-width:1px
+}

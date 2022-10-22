@@ -1,0 +1,95 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+.#{$prefix}--modal-checkbox-tree.#{$prefix}--modal{
+  .#{$prefix}--modal-header{
+    padding: 0;
+    margin: 0 !important;
+    .#{$prefix}--modal-close{
+      display: none;
+    }
+  }
+  .#{$prefix}--modal-content{
+    padding: 0;
+    border:0;
+  }
+  .cds--modal-footer{
+    display: none;
+  }
+}
+
+.#{$prefix}--checkbox-tree-container {
+  overflow: hidden;
+  .#{$prefix}--checkbox-tree{
+    max-height: calc(80vh - 100px);
+    display: flex;
+    flex-flow: column;
+    min-height: 22rem;
+    .#{$prefix}--checkbox-tree-section{
+      margin: 24px 0 0 24px;
+    }
+
+    .#{$prefix}--checkbox-tree-title{
+      font-weight: bold;
+      font-size: 1.2em;
+      flex : 0;
+    }
+    .#{$prefix}--checkbox-tree-main {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      max-height: calc(80vh - 140px);
+    }
+    .#{$prefix}--checkbox-tree-search{
+      flex : 0;
+      width: 90%;
+      .#{$prefix}--advanced-search-dropdown{
+        &--list{
+          max-height: 400px;
+          overflow-y: auto;
+        }
+      }
+    }
+
+    .#{$prefix}--checkbox-tree-tags{
+      flex : 0;
+    }
+
+    .#{$prefix}--checkbox-tree-content{
+      flex: 1;
+      overflow: auto;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      max-height: calc(80vh - 100px);
+      .hidden-item{
+        display: none;
+      }
+    }
+  }
+  .#{$prefix}--checkbox-tree-actions{
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    button {
+      width:100%;
+    }
+  }
+  .#{$prefix}--tree-item {
+    &__heading {
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: transparent;
+      border:none;
+    }
+    &__spacer {
+      min-width: 6px;
+    }
+  }
+}

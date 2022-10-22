@@ -1,0 +1,93 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.review-content-summary-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 750px;
+  outline: solid 1px #ddd;
+  overflow-x:scroll;
+
+  .#{$prefix}--value-indicator-vis,
+  .#{$prefix}--value-indicator-vis-1,
+  .#{$prefix}--value-indicator-vis-2
+  {
+    padding: 5px;
+    flex-grow: 1;
+
+    .#{$prefix}--hover-popup-target {
+      overflow: unset !important;
+    }
+    .#{$prefix}--value-indicator{
+      .#{$prefix}--value-indicator--header {
+        display: flex;
+        align-items: baseline;
+
+        .#{$prefix}--value-indicator--title {
+          min-height: 1.5rem;
+        }
+        .#{$prefix}--tag {
+          white-space:nowrap;
+          margin-top:0px;
+        }
+      }
+      .#{$prefix}--value-indicator--body{
+        font-size: 3rem ;
+        text-align: center;
+        padding-top: 0.7rem;
+      }
+      .#{$prefix}--bar-value-indicator--extra{
+        width: 67%;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        align-items: baseline;
+        grid-gap:4px;
+      }
+    }
+
+    .label {
+      display:inline-block;
+      font-size: 0.80rem;
+      white-space: nowrap;
+      text-align: start;
+    }
+
+    .value-bar {
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 3.5px;
+      min-width: min-content;
+      height: 24px;
+      color: white
+    }
+
+  }
+
+}
+.#{$prefix}--value-indicator--tooltip {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 6px;
+  grid-auto-flow: row;
+  align-items: baseline;
+
+  .label {
+    display:inline-block;
+    font-size: 0.90rem;
+    white-space: nowrap;
+    text-align: start;
+  }
+  .tooltip-data {
+    display: grid;
+    font-size: 1.00rem;
+    justify-content: end;
+  }
+
+}

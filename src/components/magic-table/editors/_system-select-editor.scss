@@ -1,0 +1,38 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.#{$prefix}--system-select-editor {
+  position:relative;
+  align-items: center;
+  display: flex;
+
+  .onclick-overlay {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color:transparent;
+  }
+
+
+  .system-select {
+    width:100%;
+    height:1.5rem;
+    border: none;
+    background-color: $rc-brand-background;
+    -webkit-appearance: none;
+//    font-family: 'National 2';
+    font-size: 13px;
+    padding-left:10px;
+    background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg focusable="false"    preserveAspectRatio="xMidYMid meet"    aria-label="Open menu"    name="chevron--down"    xmlns="http://www.w3.org/2000/svg"    width="16"    height="16"    viewBox="0 0 16 16"    role="img"    style="will-change: transform;">  <path d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"></path>    <title>Open menu</title>    </svg>');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    padding-right: 2rem;
+  }
+}

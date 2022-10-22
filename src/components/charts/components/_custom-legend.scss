@@ -1,0 +1,105 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+  .#{$prefix}--recharts {
+    &__legend {
+      position: relative;
+      font-size: rem(12px);
+      padding-left: rem(40px);
+      width: rem(200px);
+
+      ul {
+        max-height: rem(317px);
+        padding-top: rem(17px);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      li {
+        line-height: rem(24px);
+
+        &:first-of-type {
+          margin-top: rem(-15px);
+        }
+
+        span {
+          width: rem(103px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .#{$prefix}--checkbox:focus + .#{$prefix}--checkbox-label::before {
+          border-width: rem(2px);
+          border-color: $focus;
+          left: rem(-1px);
+        }
+      }
+
+      &-with-metrics {
+        ul {
+          max-height: rem(215px);
+        }
+      }
+    }
+  }
+
+  .#{$prefix}--recharts__legend_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: rem(12px);
+    margin-bottom: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    pointer-events: none;
+
+    &-collapsable {
+      cursor: pointer;
+      pointer-events: initial;
+      font-size: rem(13px);
+      margin-bottom: rem(10px);
+      padding-top: rem(10px);
+      border-top: 1px solid $ui-03;
+    }
+  }
+
+  .#{$prefix}--column-chart-portrait,
+  .#{$prefix}--pie-chart-portrait,
+  .#{$prefix}--multiple-line-chart-portrait,
+  .#{$prefix}--donut-chart-portrait,
+  .#{$prefix}--combo-chart-portrait {
+    .recharts-wrapper {
+      margin-top: rem(30px);
+    }
+
+    .#{$prefix}--chart-metrics {
+      position: relative;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .#{$prefix}--recharts__legend,
+    .#{$prefix}--recharts__legend-with-metrics {
+      position: relative;
+      bottom: auto;
+      top: auto;
+      width: 100%;
+      padding-left: 0;
+
+      ul {
+        max-height: rem(215px);
+      }
+    }
+  }
+
+

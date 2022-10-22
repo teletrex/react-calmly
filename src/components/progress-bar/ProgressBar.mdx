@@ -1,0 +1,26 @@
+import ProgressBar from "./ProgressBar";
+
+
+# Progress Bar #
+
+Displays a progress bar based on a value given from 0 to 1.
+To use this in the MagicGrid, specify format:'progress'.
+This component will automatically size in width to it's container.
+
+Default (0%)
+<ProgressBar />
+
+65%
+<ProgressBar value={0.65}/>
+
+100%
+<ProgressBar value={1.00}/>
+
+The value is a floating point number between 0 and 1 to indicate a completion from 0% to 100%.
+
+| Property | Description | Type | Default |
+|-|-|-|-|
+| value| A number from 0 to 1.| number| 0.0|
+
+
+

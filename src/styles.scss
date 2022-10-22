@@ -1,0 +1,97 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+$prefix: 'cds';
+
+$teletrex-font-path: './';
+
+
+@use 'sass:math';
+@use '~@carbon/styles';
+
+:root {
+  --short: 1.65rem;
+}
+
+$base-font-size: 16px !default;
+
+/// Convert a given px unit to a rem unit
+/// @param {Number} $px - Number with px unit
+/// @return {Number} Number with rem unit
+/// @access public
+/// @group utilities
+@function rem($px) {
+  @if unit($px) != 'px' {
+    @error "Expected argument $px to be of type `px`, instead received: `#{unit($px)}`";
+  }
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+@import './teletrex-theme/typography/productive';
+@import './teletrex-theme/typography/tokens';
+@import './teletrex-theme/teletrex-theme';
+
+
+// general //
+
+@import './teletrex-theme/teletrex';
+@import './teletrex-theme/eleven';
+@import './teletrex-theme/common';
+@import './teletrex-theme/component';
+
+// components //
+
+@import './components/checkbox/_checkbox.scss';   // empty
+//@import './components/Dropdown/dropdown.scss';  Do not need. Empty.
+//@import './components/configurable-action/configurable-action.scss';
+//@import './components/ExtendedPagination/extended-pagination.scss';
+//@import './components/FullPageTemplate/full-page-template.scss';
+
+@import './components/add-tags/add-tags';
+@import './components/checkbox-tree/_checkbox-tree.scss';
+@import './components/search-drop-down/search-drop-down';
+@import './components/heading/heading';
+@import './components/magic-table/magic-table';
+@import './components/bi-level-percentile-indicator/bi-level-percentile-indicator';
+@import './components/labeled-data/labeled-data';
+//@import './components/eleven/LabeledDataSet/labeled-data-set.scss';
+@import './components/percentile-indicator/percentile-indicator';
+@import './components/eleven-tooltip/eleven-tooltip';
+
+@import './components/column-filter/_column-filter';
+@import './components/magic-table/flexible-column-header/flexible-column-header';
+
+@import './components/multi-select-combo-box/multi-select-combo-box';
+
+@import './components/hover-better-dropdown/hover-better-dropdown';
+@import './components/combo-button/combo-button';
+@import './components/magic-table/editors/system-select-editor';
+@import './components/magic-table/editors/text-input-editor';
+@import './components/magic-table/editors/select-editor';
+@import './components/magic-table/table-text-input/text-input';
+
+@import './components/charts/components/chart';
+@import './components/analytical-card/analytical-card.scss';
+
+@import './components/checkbox-indicator/checkbox-indicator.scss';
+@import './components/pager-control/pager-control.scss';
+/*
+@import './components/validation-messages/validation-messages.scss';
+@import './components/progress-indicator/_progress-indicator.scss';
+@import './components/value-indicator-with-bar-charts/value-indicator-with-bar-charts.scss';
+@import './components/widget/widget.scss';
+*/
+
+@import './components/charts/gauge-chart/_gauge-chart.scss';
+@import './components/hr/horizontal-line.scss';
+
+
+/*@import './components/rules-builder/_rules-builder.scss';
+
+
+*/
+

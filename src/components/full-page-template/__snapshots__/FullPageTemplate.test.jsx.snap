@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullPageTemplate with scrollable table 1`] = `
+<main
+  class="bx--full-page-template"
+>
+  <div
+    class="bx--full-page-template__heading"
+  >
+    <div
+      class="bx--full-page-template__header-left"
+    />
+  </div>
+  <div
+    class="bx--full-page-template__content"
+  >
+    Content
+    <div
+      class="bx--full-page-template__scrollable-table"
+    >
+      <div>
+        scrollable table
+      </div>
+    </div>
+  </div>
+</main>
+`;

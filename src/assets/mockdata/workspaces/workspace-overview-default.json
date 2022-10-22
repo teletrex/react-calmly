@@ -1,0 +1,141 @@
+{
+  status: "ok",
+  result: [{
+    workspace: "Overview",
+    template: "overview",
+    widgets: [
+      {
+        id: "a",
+        definitionId: "weekly-activity-tracker"
+      },
+      {
+        id: "b",
+        definitionId: "executive-summary",
+      },
+      {
+        id: "c",
+        definitionId: "deals-by-week"
+      },
+      {
+        id: "d",
+        definitionId: "sales-by-week"
+      },
+      {
+        id: "e",
+        definitionId: "promo-effectivity"
+      },
+      {
+        id: "f",
+        definitionId: "campaign-success"
+      },
+      {
+        id: "g",
+        definitionId: "journey-map-path-to-purchase"
+      }
+    ],
+    layouts: {
+      lg: [
+        {
+          i: 'b',
+          x: 0,
+          y: 0,
+          w: 2,
+          h: 10
+        },
+        {
+          i: 'b',
+          x: 2,
+          y: 0,
+          h: 2,
+          w: 6
+        },
+        {
+          i: 'c',
+          x: 2,
+          y: 0,
+          w: 2,
+          h: 1
+        },
+        {
+          i: 'd',
+          x: 4,
+          y: 0,
+          w: 2,
+          h: 1
+        },
+        {
+          i: 'e',
+          x: 6,
+          y: 0,
+          w: 2,
+          h: 1
+        },
+        {
+          i: 'f',
+          x: 8,
+          y: 0,
+          w: 2,
+          h: 1
+        },
+        {
+          i: 'g',
+          x: 0,
+          y: 4,
+          w: 8,
+          h: 2
+        },
+      ],
+      md: [
+        {
+          i: 'a',
+          x: 0,
+          y: 0,
+          w: 2,
+          h: 8
+        },
+        {
+          i: 'b',
+          x: 0,
+          y: 0,
+          h: 4,
+          w: 4
+        },
+        {
+          i: 'c',
+          x: 0,
+          y: 0,
+          w: 1,
+          h: 1
+        },
+        {
+          i: 'd',
+          x: 2,
+          y: 0,
+          w: 1,
+          h: 1
+        },
+        {
+          i: 'e',
+          x: 0,
+          y: 1,
+          w: 1,
+          h: 1
+        },
+        {
+          i: 'f',
+          x: 2,
+          y: 1,
+          w: 1,
+          h: 1
+        },
+        {
+          i: 'g',
+          x: 4,
+          y: 4,
+          w: 4,
+          h: 2
+        },
+      ]
+    }
+  }]
+}

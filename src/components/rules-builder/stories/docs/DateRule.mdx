@@ -1,0 +1,73 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - DateRule
+
+## Overview
+
+`DateRule` is a predefined rule type that allows to create date queries.
+
+<Preview>
+  <Story id="experimental-rulesbuilder-daterule--usage" />
+</Preview>
+
+## Operators
+
+The `DateRule` supports the following operators by default:
+
+| Operator                          |    inputType     |
+| --------------------------------- | :--------------: |
+| `IS`                              |  `singleValue`   |
+| `IS_NOT`                          |  `singleValue`   |
+| `IS_AFTER`                        |  `singleValue`   |
+| `IS_BEFORE`                       |  `singleValue`   |
+| `IS_ONE_OF_THE_FOLLOWING`         | `multipleValues` |
+| `IS_NOT_ONE_OF_THE_FOLLOWING`     | `multipleValues` |
+| `YEAR_IS`                         |  `periodNumber`  |
+| `MONTH_IS`                        |  `periodNumber`  |
+| `DAY_IS`                          |  `periodNumber`  |
+| `IS_EXACTLY`                      |  `whenRelation`  |
+| `IS_NOT_EXACTLY`                  |  `whenRelation`  |
+| `ANNIVERSARY_IS`                  |  `whenRelation`  |
+| `IS_WITHIN_THE_LAST`              |  `withinPeriod`  |
+| `IS_NOT_WITHIN_THE_LAST`          |  `withinPeriod`  |
+| `IS_WITHIN_THE_NEXT`              |  `withinPeriod`  |
+| `IS_NOT_WITHIN_THE_NEXT`          |  `withinPeriod`  |
+| `IS_BETWEEN`                      |     `range`      |
+| `IS_WITHIN_THE_RANGE_OF_THE_LAST` |  `periodRange`   |
+| `IS_BLANK`                        |      `none`      |
+| `IS_NOT_BLANK`                    |      `none`      |
+| `IS_TODAY`                        |      `none`      |
+| `IS_AFTER_TODAY`                  |      `none`      |
+| `IS_NOT_AFTER_TODAY`              |      `none`      |
+| `IS_BEFORE_TODAY`                 |      `none`      |
+| `IS_NOT_BEFORE_TODAY`             |      `none`      |
+| `ANNIVERSARY_IS_TODAY`            |      `none`      |
+
+You can also create a custom operator using the following format
+
+| Field       |   Type   |                          Description |
+| ----------- | :------: | -----------------------------------: |
+| `label`     | `string` | Value displayed in operator dropdown |
+| `value`     | `string` |                   Unique operator id |
+| `inputType` | `string` |    One of supported rule input types |
+
+## Supported `inputTypes`
+
+| inputType        |                 Description                  |                          Value                           |
+| ---------------- | :------------------------------------------: | :------------------------------------------------------: |
+| `none`           |          Value defined by operator           |                          `null`                          |
+| `singleValue`    |            Sets the single value             |                       `timestamp`                        |
+| `multipleValues` |           Sets the multiple values           |              `[timestamp, ..., timestamp]`               |
+| `periodNumber`   |     Sets the amount of days/weeks/months     |                         `number`                         |
+| `whenRelation`   | Sets the amount of period in the past/future | `{ period: string, value: number, whenRelation: string}` |
+| `withinPeriod`   |       Sets the amount of given period        |            `{ period: string, value: number}`            |
+| `range`          |              Sets time interval              |                 `[timestamp, timestamp]`                 |
+| `periodRange`    |       Sets the range for given period        |      `{ period: string, value: [number, number] }`       |
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on
+

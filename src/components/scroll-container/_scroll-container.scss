@@ -1,0 +1,84 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+@import 'src/teletrex-theme/typography/productive';
+@import 'src/teletrex-theme/typography/tokens';
+@import 'src/teletrex-theme/teletrex-theme';
+
+@include theme();
+
+.#{$prefix}--scroll-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  &:focus {
+    outline: rem(2px) solid $focus;
+  }
+
+  &--sensor {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__horizontal {
+    &-auto {
+      overflow-x: auto;
+    }
+
+    &-scroll {
+      overflow-x: scroll;
+    }
+
+    &-visible {
+      overflow-x: visible;
+    }
+
+    &-hidden {
+      overflow-x: hidden;
+    }
+
+    &-clip {
+      overflow-x: clip;
+    }
+
+    &-inherit {
+      overflow-x: inherit;
+    }
+  }
+
+  &__vertical {
+    &-auto {
+      overflow-y: auto;
+    }
+
+    &-scroll {
+      overflow-y: scroll;
+    }
+
+    &-visible {
+      overflow-y: visible;
+    }
+
+    &-hidden {
+      overflow-y: hidden;
+    }
+
+    &-clip {
+      overflow-y: clip;
+    }
+
+    &-inherit {
+      overflow-y: inherit;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+.#{$prefix}--heading_default_color {
+  color: $text-01;
+}
+
+.#{$prefix}--heading_1 {
+//  @include type-style('productive-heading-06');
+
+  &__extra {
+//    @include type-style('productive-heading-07');
+  }
+}
+
+.#{$prefix}--heading_2 {
+//  @include type-style('productive-heading-05');
+}
+
+.#{$prefix}--heading_3 {
+//  @include type-style('productive-heading-04');
+}
+
+.#{$prefix}--heading_4 {
+//  @include type-style('productive-heading-03');
+
+  &__bold {
+//    @include type-style('panel-heading-03');
+  }
+}
+
+.#{$prefix}--heading_5 {
+//  @include type-style('productive-heading-02');
+}
+
+.#{$prefix}--heading_6 {
+//  @include type-style('productive-heading-01');
+}

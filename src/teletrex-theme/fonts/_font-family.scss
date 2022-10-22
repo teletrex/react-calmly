@@ -1,0 +1,44 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+@import '~@carbon/styles';
+@import './national2';
+@import './tiempos-fine';
+
+@include national2();
+@include tiempos-fine();
+
+$font-families: (
+  'mono':
+    unquote(
+      "'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+    ),
+  'sans': unquote("'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif"),
+  'sans-condensed': unquote("'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif"),
+  'sans-hebrew': unquote("'IBM Plex Sans Hebrew', 'Helvetica Hebrew', 'Arial Hebrew', sans-serif"),
+  'serif': unquote("'IBM Plex Serif', 'Georgia', Times, serif"),
+  'tiempos-fine': unquote("'Tiempos Fine', sans-serif"),
+  'national-2': unquote("'National 2', sans-serif"),
+);
+
+@function font-family($name) {
+  @return map-get($font-families, $name);
+}
+
+$font-weights: (
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+);
+
+@function font-weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+

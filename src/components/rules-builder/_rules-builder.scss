@@ -1,0 +1,135 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+@import './rule-element/rule-element';
+@import './rules/rules';
+
+.#{$prefix}--rules-builder {
+  &--add-btn.#{$prefix}--btn.#{$prefix}--btn--icon-only.#{$prefix}--tooltip__trigger {
+    justify-content: center;
+    width: rem(32px);
+    height: rem(32px);
+    min-height: auto;
+    padding: 0;
+    margin: 0 0 rem(8px);
+    font-size: rem(20px);
+  }
+
+  // Dropdown button
+  .#{$prefix}--conjunction {
+    .#{$prefix}-proposal-dropdown-wrapper {
+      .#{$prefix}-proposal-dropdown__field {
+        background: $interactive-01;
+        min-width: rem(70px);
+
+        &__label {
+          color: $ui-02;
+        }
+
+        &__menu-icon {
+          svg {
+            fill: $ui-02;
+          }
+        }
+
+        &:active {
+          background: $active-primary;
+        }
+      }
+    }
+  }
+
+  // Read-only
+  .#{$prefix}--rule-element--item--readonly {
+// TODO:    @include type-style('body-short-01');
+
+    color: $text-01;
+
+    &.#{$prefix}--rule-element--item {
+      padding: 0;
+      margin: 0 0 rem(3px) 0;
+      background: none;
+    }
+
+    .#{$prefix}--rule-element--item--content {
+      padding: 0;
+    }
+
+    &.#{$prefix}--rule-element--item,
+    &.#{$prefix}--rule-element--item .#{$prefix}--rule-element--item--readonly {
+      min-height: auto;
+    }
+
+    .#{$prefix}--rule-element--item--draggable-btn,
+    .#{$prefix}--rule-element--item--controls {
+      display: none;
+    }
+  }
+
+  .#{$prefix}--input-field-container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .#{$prefix}-proposal-dropdown-wrapper {
+    align-self: end;
+  }
+
+  .#{$prefix}--timeframe {
+    display: flex;
+  }
+
+  .#{$prefix}--rule-text {
+// TODO:    @include type-style('body-short-01');
+  }
+
+  .#{$prefix}--rule-element--group.#{$prefix}--rule-element--group--readonly {
+    padding: 0 0 0 rem(9px);
+    margin: 0;
+    border-left: rem(2px) solid $interactive-04;
+  }
+
+  .#{$prefix}--rule-criteria--readonly,
+  .#{$prefix}--rule-value-readonly {
+    font-weight: 500;
+  }
+
+  .#{$prefix}--conjunction--readonly {
+// TODO:    @include type-style('label-01');
+
+    color: $text-01;
+    display: block;
+    margin: rem(4px) 0;
+  }
+
+  &--light {
+    .#{$prefix}--rule-element {
+      &--container,
+      &--item {
+        background-color: $ui-02;
+      }
+    }
+  }
+}
+
+.#{$prefix}--rules-builder-skeleton {
+  .#{$prefix}--rule-element--item {
+    padding-left: rem(44px);
+    margin-bottom: rem(16px);
+
+    .#{$prefix}--skeleton {
+      height: rem(8px);
+      width: rem(112px);
+      margin-right: rem(40px);
+      margin-bottom: 0;
+    }
+  }
+}

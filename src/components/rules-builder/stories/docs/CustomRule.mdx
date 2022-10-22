@@ -1,0 +1,171 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - CustomRule
+
+## Overview
+
+`CustomRule` is a generic pattern for rule creation. Using this rule type, you can create solutions for non-generic or unusual cases.```
+
+<Preview>
+  <Story id="experimental-rulesbuilder-customrule--usage" />
+</Preview>
+
+## Custom `InputComponent`
+
+By default `CustomRule` does not support any input controls, and can be perceived as a simple wrapper for your unique rule behaviors.
+
+In order to extend `CustomRule` with new functionalities, you need to provide a React component in the RulesBuilder `criteriaConfig`.
+
+```js
+const CRITERIA_CONFIG = {
+  SEGMENT: {
+    type: 'custom',
+    inputComponent: InputComponent,
+  },
+};
+```
+
+`InputComponent` must be the React component that will handle data selection and proper presentation in UI. The general requirements are:
+
+- It should be a responsive component that returns a single node, preferably styled with `display: flex` for positioning inside the container, and should avoid hiding or scrolling overflowed UI.
+- It should expose the `values` prop that is used to populate Rule with initial values.
+- It should expose the `onChange` handler that returns changed `values`.
+- It should handle the `isReadOnly` prop for read-only mode.
+- It can handle the `isLight` prop for light theme.
+- It can handle the `setTimeframeVisibility` prop, which is a function that allow to control the timeframe visibility.
+
+### Example
+
+```jsx
+const InputComponent = ({ isReadOnly, onChange, operator, value }) => {
+  const [ref, setRef] = useNodeRef();
+  const [isModalOpened, triggerModal] = useState(false);
+  const [selectedItems, setSelection] = useState(value);
+
+  const handleSelection = (isChecked, id) => {
+    let newItems;
+    if (isChecked) {
+      newItems = [...selectedItems, id];
+    } else {
+      newItems = without(selectedItems, id);
+    }
+
+    setSelection(newItems);
+    onChange(newItems);
+  };
+
+  if (isReadOnly) {
+    return <div>{value}</div>;
+  }
+
+  if (!operator) {
+    return null;
+  }
+
+  return (
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      {map(selectedItems, item => (
+        <Tag key={item} filter onClick={() => handleSelection(false, item)}>
+          {item}
+        </Tag>
+      ))}
+      <Button
+        ref={setRef}
+        kind={selectedItems.length ? 'ghost' : 'primary'}
+        onClick={() => triggerModal(true)}
+        size="field"
+      >
+        Select directory
+      </Button>
+      <Modal
+        onRequestClose={() => triggerModal(false)}
+        onRequestSubmit={() => triggerModal(false)}
+        open={isModalOpened}
+        primaryButtonText="Confirm"
+        triggerRef={ref}
+      >
+        {LIST_DATA.map(label => (
+          <Checkbox
+            key={label}
+            checked={includes(selectedItems, label)}
+            id={label}
+            labelText={label}
+            onChange={handleSelection}
+          />
+        ))}
+      </Modal>
+    </div>
+  );
+};
+```
+
+## Operators
+
+The `CustomRule` supports all available operators:
+
+| Operator                                   |    inputType     |
+| ------------------------------------------ | :--------------: |
+| `IS`                                       |  `singleValue`   |
+| `IS_NOT`                                   |  `singleValue`   |
+| `HAS`                                      |  `singleValue`   |
+| `HAS_NOT`                                  |  `singleValue`   |
+| `CONTAINS`                                 |  `singleValue`   |
+| `DOES_NOT_CONTAIN`                         |  `singleValue`   |
+| `STARTS_WITH`                              |  `singleValue`   |
+| `DOES_NOT_START_WITH`                      |  `singleValue`   |
+| `ENDS_WITH`                                |  `singleValue`   |
+| `DOES_NOT_END_WITH`                        |  `singleValue`   |
+| `IS_LESS`                                  |  `singleValue`   |
+| `IS_LESS_OR_EQUAL`                         |  `singleValue`   |
+| `IS_GREATER`                               |  `singleValue`   |
+| `IS_GREATER_OR_EQUAL`                      |  `singleValue`   |
+| `IS_AFTER`                                 |  `singleValue`   |
+| `IS_BEFORE`                                |  `singleValue`   |
+| `IS_ONE_OF_THE_FOLLOWING`                  | `multipleValues` |
+| `IS_NOT_ONE_OF_THE_FOLLOWING`              | `multipleValues` |
+| `CONTAINS_ONE_OF_THE_FOLLOWING`            | `multipleValues` |
+| `DOES_NOT_CONTAIN_ONE_OF_THE_FOLLOWING`    | `multipleValues` |
+| `STARTS_WITH_ONE_OF_THE_FOLLOWING`         | `multipleValues` |
+| `DOES_NOT_START_WITH_ONE_OF_THE_FOLLOWING` | `multipleValues` |
+| `ENDS_WITH_ONE_OF_THE_FOLLOWING`           | `multipleValues` |
+| `DOES_NOT_END_WITH_ONE_OF_THE_FOLLOWING`   | `multipleValues` |
+| `IS_BETWEEN`                               |     `range`      |
+| `IS_EXACTLY`                               |  `whenRelation`  |
+| `IS_NOT_EXACTLY`                           |  `whenRelation`  |
+| `ANNIVERSARY_IS`                           |  `whenRelation`  |
+| `IS_WITHIN_THE_LAST`                       |  `withinPeriod`  |
+| `IS_NOT_WITHIN_THE_LAST`                   |  `withinPeriod`  |
+| `IS_WITHIN_THE_NEXT`                       |  `withinPeriod`  |
+| `IS_NOT_WITHIN_THE_NEXT`                   |  `withinPeriod`  |
+| `IS_WITHIN_THE_RANGE_OF_THE_LAST`          |  `periodRange`   |
+| `YEAR_IS`                                  |  `periodNumber`  |
+| `MONTH_IS`                                 |  `periodNumber`  |
+| `DAY_IS`                                   |  `periodNumber`  |
+| `IS_BLANK`                                 |      `none`      |
+| `IS_NOT_BLANK`                             |      `none`      |
+| `IS_TODAY`                                 |      `none`      |
+| `IS_AFTER_TODAY`                           |      `none`      |
+| `IS_NOT_AFTER_TODAY`                       |      `none`      |
+| `IS_BEFORE_TODAY`                          |      `none`      |
+| `IS_NOT_BEFORE_TODAY`                      |      `none`      |
+| `ANNIVERSARY_IS_TODAY`                     |      `none`      |
+
+You can also create a custom operator using the following format
+
+| Field       |   Type   |                          Description |
+| ----------- | :------: | -----------------------------------: |
+| `label`     | `string` | Value displayed in operator dropdown |
+| `value`     | `string` |                   Unique operator id |
+| `inputType` | `string` |    One of supported rule input types |
+
+## Supported `inputTypes`
+
+Since the `CustomRule` inputs are almost entirely custom, the supported `inputTypes` depends on the `InputComponent` implementation.
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on
+

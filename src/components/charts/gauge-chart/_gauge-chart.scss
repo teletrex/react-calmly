@@ -1,0 +1,41 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+/// Gauge chart styles
+/// @access private
+/// @group gauge-chart
+
+
+.#{$prefix}--gauge-chart-dt {
+  border: none;
+  width: fit-content;
+  //padding: carbon--rem(20px) carbon--rem(6px) carbon--rem(20px) 0;
+   .recharts-sector {
+    stroke: $skeleton-01;
+    stroke-linejoin: round;
+    stroke-width: rem(24px);
+  }
+  .recharts-pie-sector:nth-of-type(2) {
+    .recharts-sector {
+    stroke: url(#gradient);
+    }
+  }
+
+  svg text {
+//    @include type-style('label-long-02');
+  }
+
+  &__title {
+//     @include type-style('productive-heading-04');
+
+    margin-bottom: rem(-4px);
+    margin-left: rem(24px);
+  }
+}
+

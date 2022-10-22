@@ -1,0 +1,14 @@
+# CodeOwners have last decisive vote on any Pull Request.
+# Their acceptance is required to merge anything to protected branches.
+# In terms of permission, they stand above Repository Administrators.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @global-owner1 and @global-owner2 will be requested for
+# review when someone opens a pull request.
+*       @louisroehrs
+
+
+
+
+

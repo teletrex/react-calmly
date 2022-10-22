@@ -1,0 +1,48 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '../mixins';
+
+@mixin tiempos-fine {
+  $teletrex-font-path: '' !default;
+
+  @include font-face(
+    'Tiempos Fine',
+    '#{$teletrex-font-path}teletrex-theme/fonts/Tiempos_Fine/TiemposFineWeb-Light',
+    300
+  );
+  @include font-face(
+    'Tiempos Fine',
+    '#{$teletrex-font-path}teletrex-theme/fonts/Tiempos_Fine/TiemposFineWeb-LightItalic',
+    300,
+    italic
+  );
+  @include font-face(
+    'Tiempos Fine',
+    '#{$teletrex-font-path}teletrex-theme/fonts/Tiempos_Fine/TiemposFineWeb-Regular',
+    400
+  );
+  @include font-face(
+    'Tiempos Fine',
+    '#{$teletrex-font-path}teletrex-theme/fonts/Tiempos_Fine/TiemposFineWeb-RegularItalic',
+    400,
+    italic
+  );
+  @include font-face(
+    'Tiempos Fine',
+    '#{$teletrex-font-path}teletrex-theme/fonts/Tiempos_Fine/TiemposFineWeb-Medium',
+    500
+  );
+  @include font-face(
+    'Tiempos Fine',
+    '#{$teletrex-font-path}teletrex-theme/fonts/Tiempos_Fine/TiemposFineWeb-MediumItalic',
+    500,
+    italic
+  );
+}

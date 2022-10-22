@@ -1,0 +1,22 @@
+{
+  "branches": [
+    '^(\d+.){1,2}x$',
+    'master',
+    {name: 'next', channel: 'next', prerelease: 'next'},
+    {name: 'beta', channel: 'beta', prerelease: 'beta'},
+    {name: 'alpha', channel: 'alpha', prerelease: 'alpha'},
+  ],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    ["@semantic-release/git", {
+      "message": "chore(release): ${nextRelease.version} [skip ci]"
+    }],
+    ["@semantic-release/exec", {
+      "generateNotesCmd": 'echo env.projectVersion=\"${nextRelease.version}\" > .env.semantic.release'
+    }]
+  ]
+}
+

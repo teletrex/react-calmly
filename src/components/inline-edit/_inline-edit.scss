@@ -1,0 +1,155 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+@import 'src/teletrex-theme/fonts/font-family';
+
+@mixin inline-edit-typography {
+  font-family: font-family('national-2');
+  font-size: type-scale(5);
+  font-weight: font-weight('regular');
+  line-height: rem(26px);
+  letter-spacing: 0;
+}
+
+@mixin inheritInlineEditTypography {
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+/// Inline edit styles
+/// @access private
+/// @group inline-edit
+
+  .#{$prefix}--inline-edit {
+    margin-bottom: rem(8px);
+    height: rem(32px);
+    display: flex;
+    align-items: center;
+
+    @include inline-edit-typography;
+
+    &__label--edit,
+    .#{$prefix}--text-input__field-wrapper,
+    .#{$prefix}--text-input {
+      height: 100%;
+    }
+
+    &__label--edit {
+      width: 100%;
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      .#{$prefix}--text-input-wrapper,
+      .#{$prefix}--text-input__field-wrapper,
+      .#{$prefix}--text-input {
+        width: 100%;
+      }
+    }
+
+    .#{$prefix}--tooltip__trigger.#{$prefix}--tooltip--top.#{$prefix}--tooltip--align-center
+      .#{$prefix}--assistive-text {
+      max-width: fit-content;
+      top: rem(-5px);
+    }
+
+    .#{$prefix}--btn {
+      border: none;
+      padding: 0;
+      background: transparent;
+      min-height: rem(16px);
+      color: $icon-02;
+      width: rem(32px);
+
+      &.#{$prefix}--tooltip__trigger {
+        &.#{$prefix}--tooltip--top.#{$prefix}--tooltip--align-center::before {
+          top: 0;
+        }
+
+        &:focus,
+        :active {
+          outline: rem(2px) solid $focus;
+          box-shadow: none;
+        }
+
+        path:active,
+        svg:active {
+          outline: none;
+        }
+      }
+
+      &--icon-only {
+        justify-content: center;
+      }
+    }
+
+    .#{$prefix}--row-buttons {
+      display: flex;
+      flex-wrap: nowrap;
+      position: absolute;
+      right: 0;
+      z-index: 1;
+    }
+
+    .#{$prefix}--text-input__field-wrapper {
+      .#{$prefix}--text-input {
+        outline: transparent;
+        padding-right: rem(64px);
+        border-bottom: rem(1px) solid transparent;
+        border-top: rem(1px) solid transparent;
+
+        @include inheritInlineEditTypography;
+
+        &:hover {
+          border-bottom: rem(1px) dashed $ui-04;
+        }
+
+        &:focus {
+          border-top: rem(2px) solid transparent;
+          border-bottom: rem(2px) solid $focus;
+        }
+
+        &[type='number']::-webkit-outer-spin-button,
+        &[type='number']::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      &[data-invalid] {
+        outline: transparent;
+
+        .#{$prefix}--text-input {
+          outline: transparent;
+          border-top: rem(2px) solid transparent;
+          border-bottom: rem(2px) solid $danger;
+        }
+      }
+    }
+
+    .#{$prefix}--text-input {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .#{$prefix}--form-item {
+      flex: none;
+
+      @include inheritInlineEditTypography;
+    }
+  }
+
+  .#{$prefix}--inline-edit-skeleton {
+    @include skeleton;
+
+    height: 100%;
+    width: 100%;
+  }
+

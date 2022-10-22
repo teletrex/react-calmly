@@ -1,0 +1,145 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+// global
+$input-border: 1px solid transparent !default !global;
+$input-label-weight: 400 !default !global;
+$disabled: $text-disabled !default !global;
+$disabled-background-color: $disabled-01 !default !global;
+//$focus: $ibm-color__blue-60 !default !global;
+
+// Link
+// $link-visited: $ibm-color__purple-60 !default !global;
+$link-inverse-color: #6ea6ff !default !global;
+
+// Tooltip
+$tooltip-background-color: $inverse-02 !default !global;
+
+// Button Theme Variables
+//$button-font-weight: 400 !default !global;
+//$button-font-size: 0.875rem !default !global;
+//$button-border-radius: 0 !default !global;
+//$button-height: 48px !default !global;
+//$button-padding: 0.875rem 15px !default !global;
+//$button-padding-sm: 0.375rem 15px !default !global;
+// $button-padding-lg: $carbon--spacing-04 !default !global;
+//$button-border-width: 1px !default !global;
+//$button-outline-width: 3px !default !global;
+//$button-outline-offset: -5px !default !global;
+// $button-outline: 1px solid $ibm-color__white-0 !default !global;
+
+// Accordion (Reverse)
+$accordion-flex-direction: row-reverse !default !global;
+$accordion-justify-content: flex-start !default !global;
+// $accordion-arrow-margin: 0 $carbon--spacing-05 0 0 !default !global;
+// $accordion-title-margin: 0 0 0 $carbon--spacing-05 !default !global;
+// $accordion-content-padding: 0 0 0 $carbon--spacing-05 !default !global;
+
+// Card
+$card-text-align: center !default !global;
+$card-flex-align: center !default !global;
+
+// Checkbox
+$checkbox-border-width: 2px !default !global;
+
+// Code Snippet
+$snippet-background-color: $ui-01 !default !global;
+$snippet-border-color: $ui-03 !default !global;
+
+// Content Switcher
+$content-switcher-border-radius: 0px !default !global;
+$content-switcher-option-border: 1px solid $brand-01 !default !global;
+$content-switcher-divider: $ui-03 !default !global;
+
+// Data Table
+$data-table-heading-transform: uppercase !default !global;
+$data-table-heading-border-bottom: 1px solid $brand-01 !default !global;
+$data-table-row-height: 2rem !default !global;
+$data-table-zebra-color: #fcfcfc !default !global;
+$data-table-column-hover: $hover-selected-ui !default !global;
+
+// Date Picker
+// $date-picker-in-range-background-color: $ibm-color__blue-20 !default !global;
+
+// Modal
+$modal-border-top: $brand-01 4px solid !default !global;
+$modal-footer-background-color: $ui-03 !default !global;
+
+// Notification
+$notification-info-background-color: #e5f4fa !global;
+$notification-success-background-color: #e9f6f3 !global;
+$notification-warning-background-color: #fff3e9 !global;
+$notification-error-background-color: #fae5e7 !global;
+
+$notification-info-background-color-hover: #eafaff !global;
+$notification-success-background-color-hover: #e8fef6 !global;
+$notification-warning-background-color-hover: #fff8ec !global;
+$notification-error-background-color-hover: #ffedef !global;
+$notification-error-background-color-dark-hover: #121a3f !global;
+
+$notification-info-background-color-active: #d4f5ff !global;
+$notification-success-background-color-active: #d1fdee !global;
+$notification-warning-background-color-active: #ffeac7 !global;
+$notification-error-background-color-active: #ffc9ce !global;
+$notification-error-background-color-dark-active: #293352 !global;
+
+$notification-info-font-color-light: #005db7 !global;
+$notification-success-font-color-light: #047d71 !global;
+$notification-warning-font-color-light: #c43600 !global;
+$notification-error-font-color-light: #cd0004 !global;
+$notification-error-font-color-dark: #ff818a !global;
+
+// Progress Indicator
+$progress-indicator-bar-width: 1px inset transparent !default !global;
+$progress-indicator-stroke-width: 5 !default !global;
+$progress-indicator-line-offset: 0.625rem !default !global;
+
+//Code Snippet
+$copy-active: $active-ui !default !global;
+// $copy-btn-feedback: $ibm-color__gray-80 !default !global;
+
+// Radio Button
+$radio-border-width: 1px !default !global;
+
+// Structured Theme Variables
+$structured-list-padding: 2rem !default !global;
+$structured-list-text-transform: none !default !global;
+
+// Header Feed
+$header-feed-box-shadow-color: #00000033 !default !global;
+
+// Slider
+
+// Tab
+// $tab-underline-color: 3px solid $ibm-color__gray-30 !default !global;
+// $tab-underline-color-hover: 3px solid $ibm-color__gray-60 !default !global;
+// $tab-text-disabled: $ibm-color__gray-30 !default !global;
+// $tab-underline-disabled: 3px solid $ibm-color__gray-10 !default !global;
+
+// Skeleton Loading
+// $skeleton: rgba($color__blue-51, 0.1) !default !global;
+
+//Gallery Tyle
+$g-tiles-small: (
+  width: 192px,
+  height: rem(136px),
+  gap: rem(16px),
+);
+$g-tiles-medium: (
+  width: 237px,
+  height: rem(200px),
+  gap: rem(16px),
+);
+$g-tiles-default: (
+  width: 288px,
+  height: rem(232px),
+  gap: rem(32px),
+);

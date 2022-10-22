@@ -1,0 +1,6 @@
+{
+  "search": "Search...",
+  "toolbar.{{totalSelected}}.item.selected": "{{ totalSelected }} item selected",
+  "toolbar.{{totalSelected}}.items.selected": "{{ totalSelected }} items selected",
+  "column.range.filter.equals": "Equals"
+}

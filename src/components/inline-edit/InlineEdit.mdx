@@ -1,0 +1,120 @@
+import { Props, Story, Canvas, Source, Preview } from '@storybook/addon-docs/blocks';
+
+# InlineEdit
+
+
+## Overview
+
+The InlineEdit component allows a user to edit without leaving the current view. It is most often used in a page or panel to edit the title of an object or a table to edit one or more cells.
+
+### Default
+<Canvas>
+    <Story id="atoms-inlineedit--default" />
+</Canvas>
+
+## Configureable Sizes
+Use the `domProps` prop object to add custom styles to InlineEdit.
+
+Example: `domProps={{ style: { height: '40px', width: '400px', fontSize: '22px' }}}`
+<Canvas>
+    <Story id="atoms-inlineedit--with-configurable-size" />
+</Canvas>
+
+## Controlled Value and Validation
+
+<Canvas>
+    <Story id="atoms-inlineedit--controlled-value-and-validation" />
+</Canvas>
+
+### Skeleton
+To display a loading state, use the InlineEdit skeleton.
+<Canvas>
+    <Story id="atoms-inlineedit--skeleton" />
+</Canvas>
+
+## Component API
+
+The `InlineEdit` component accepts the following parameters:
+
+| Parameter name             |    Type                                         | Default value           | Required | Description                                                |
+|---------------------------:|-------------------------------------------------|-------------------------|----------|------------------------------------------------------------|
+| domProps                   | *Object*                                        | `{}`                    | No       | Optional props to pass to input DOM element                |
+| defaultValue               | *string* or *number*                            |                         | No       | Default initial value of input                             |
+| fieldName                  | *string*                                        | `'Value'`               | No       | Name of field to be used in min/max length error messages  |
+| forwardedRef               | *Object({current: Element})*                    | `'null'`                | No       | Ref to the input DOM element                               |
+| id                         | *string*                                        |                         | Yes      | id for input DOM element                                   |
+| inputType                  | *string*                                        | `'text'`                | No       | Type of input element                                      |
+| invalid                    | *boolean*                                       | `false`                 | No       | Specify whether the control is currently invalid           |
+| invalidText                | *string*                                        |                         | No       | Specify error text to display when `invalid` is true       |
+| isLoading                  | *boolean*                                       | `false`                 | No       | Show component skeleton if `isLoading` is true             |
+| ~~mandatory~~              | *boolean*                                       | `false`                 | No       | (Deprecated) You should use `required` instead             |
+| ~~mandatoryErrorMessage~~  | *string*                                        | `false`                 | No       | (Deprecated) You should use `requiredErrorMessage` instead |
+| minLengthErrorMessage      | *string*                                        |                         | No       | Custom error message for minimum length validation         |
+| minLength                  | *number*                                        |                         | No       | Specifies minimum character length for input               |
+| maxLengthErrorMessage      | *string*                                        |                         | No       | Custom error message for maximum length validation         |
+| maxLength                  | *number*                                        |                         | No       | Specifies maximum character length for input               |
+| onBlur                     | *function*                                      |                         | No       | Callback called when input loses focus                     |
+| onCancel                   | *function*                                      |                         | No       | Callback called when input is cancelled (value not saved)  |
+| onChange                   | *function*                                      |                         | No       | Callback called when input value is saved                  |
+| onInputChange              | *function*                                      |                         | No       | Callback called when input value is changed                |
+| onValidationChange         | *function*                                      |                         | No       | Callback called when input's error state is changed        |
+| pattern                    | *string*                                        |                         | No       | RegEx to enables validation on allowed characters          |
+| patternErrorMessage        | *string*                                        |                         | No       | Error message for validation on allowed characters         |
+| placeholder                | *string*                                        |                         | No       | Placeholder text                                           |
+| range                      | *Object({maxNumber: number, minNumber: number})*|                         | No       | Enables validation on value range for number input         |
+| rangeErrorMessage          | *string*                                        |                         | No       | Error message validation if value is outside of range      |
+| required                   | *boolean*                                       | `false`                 | No       | Specify whether the field is required                      |
+| requiredErrorMessage       | *string*                                        |                         | No       | Error message validation if field is required but empty    |
+| t                          | *function*                                      |                         | Yes      | Translation function for strings within component          |
+| value                      | *string* or *number*                            |                         | No       | Current input value                                        |
+
+### Validation
+The InlineEdit component contains props to specify validation behavior for minimum and maximum character length, required status, RegEx pattern matching, and numeric range for number-type inputs.
+If there are multiple error messages to be displayed, the messages will be concatenated with a period and a space in between. The order of error messages will be: `invalidText`, `rangeErrorMessage`, `requiredErrorMessage`, `patternErrorMessage`, `minLengthErrorMessage`, `maxLengthErrorMessage`.
+
+#### Minimum and Maximum length
+
+##### maxLength
+If `maxLength` is supplied, the input value will be restricted and will not be able to surpass this number of characters.
+If a user attempts to type more characters and the input has reached maximum length, no additional characters will be added and an error will be displayed.
+If a user attempts to paste a value in the input that will cause it to surpass its maximum length, the pasted value will be truncated and an error will be displayed.
+Any error displayed because of `maxLength` will be removed on save (because input does not allow length to actually exceed maximum length) or when backspacing.
+If `defaultValue` has a greater length than `maxLength`, the value will be truncated but no error will be shown.
+
+##### minLength
+If `minLength` is supplied, an error will be displayed when the input's value is less than the minimum length.
+If the `defaultValue` is set to an empty string (which is the default for that prop), no error will be shown on initial render.
+If the `defaultValue` is set to a non-empty string that doesn't meet the minimum length requirement, an error *will* be shown on initial render.
+When a `minLength` error is displayed and the user types more characters to meet the length requirement, the error will be automatically removed.
+
+##### maxLengthErrorMessage and minLengthErrorMessage
+If desired, you may set custom error messages to be displayed for minimum and maximum character length validation.
+The default error messages are:
+- `'{{fieldName}} must be at least {{minLength}} characters'` (for minimum)
+- `'{{fieldName}} cannot exceed {{maxLength}} characters'` (for maximum)
+Including `{{fieldName}}`, `{{minLength}}`, and `{{maxLength}}` in your custom error message will replaced those tokens with the `fieldName`, `maxLength`, and `maxLength` supplied,
+
+##### fieldName
+You can use `fieldName` to specify how the field should be referred to in minimum and maximum error messages, e.g. `Folder must be at least 7 characters`.
+
+#### Numeric range
+If `range` is supplied and `inputType` is `'number'`, the value will be validated to make sure it fits into this range. If not, `rangeErrorMessage` (or default, 'Value is out of range'), will be displayed.
+
+#### Pattern
+If `pattern` is supplied, the value will be validated to make sure it follows the given RegEx pattern. If not, `patternErrorMessage` (or default, 'Field contains not allowed characters'), will be displayed.
+Note: You may either pass a [Javascript RegExp object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) or a string to be supplied to `new RegExp()`.
+
+#### Required
+If `required` is supplied, the field will be validated on each save to ensure that a value is present. If not, `requiredErrorMessage` (or default, 'Field is required'), will be displayed.
+
+#### invalidText
+If an error message is supplied to `invalidText` and `invalid` is true, this error message will be displayed.
+
+### Saving and Cancelling
+The InlineEdit does not save values that are typed in by default. To save the value, the user must either click the Save (✓) button or type the Enter key. Conversely, the user can cancel their change by clicking away from the input, pressing the Cancel (x) button or typing the Esc key.
+
+### Controlled vs. Uncontrolled `value`
+If you want to control the value of the InlineEdit externally, you should do so by passing the `value` prop. The internal component validation will work the same even if you are passing the value in this way.
+Note: You should never supply `defaultValue` and `value` at the same time. `defaultValue` is only for setting the initial state of an uncontrolled input and doing so will cause an error.
+
+

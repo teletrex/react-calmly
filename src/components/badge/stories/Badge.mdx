@@ -1,0 +1,52 @@
+import { Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# Badge
+
+
+
+Badges are generally used to visually identify status of a process or object, for example, a report readiness status, data job status, an email status or a webpage status.
+Status icons can be paired with the text or stand alone.
+
+## Default
+
+By default `Badge` renders as `published` with `label` visible.
+
+<Canvas>
+  <Story id="atoms-badge--default" />
+</Canvas>
+
+
+## Component API
+
+| Parameter name     |             Type             |  Default value  | Required  |                                  Description                                      |
+| -------------------| :--------------------------: | :-------------: | :-------: | --------------------------------------------------------------------------------- |
+| label              | *OneOf(string, node)*        | `''`            | No        | Badge label                                                                       |
+| showLabel          | *boolean*                    | `true`          | No        | Show label flag                                                                   |
+| size               | *OneOf('xs', 's', 'm', 'l')* | `s`             | No        | Size of Badge                                                                     |
+| status             | *OneOf(STATUS_TYPE)*         | `'published'`   | No        | Status of the Badge (list of predefined labels). Available statuses listed below. |
+| statusIconPosition | *OneOfType('left', 'right')* | `left`          | No        | Position of the status icon (on the left or right side of the label)              |
+| textOnly           | *boolean*                    | `false`         | No        | Show status icon flag                                                             |
+
+### `status` (STATUS_TYPE)
+
+List of available statuses:
+- `disabled`
+- `published`
+- `approved`
+- `draft , in Review`
+- `draft`
+- `pending`
+- `success`
+- `cancelled`
+- `scheduled`
+- `draft / Open`
+- `inprogress / Sending`
+- `failed`
+- `complete`
+- `enabled`
+- `routine`
+- `event`
+- `retired`
+- `paused`
+
+

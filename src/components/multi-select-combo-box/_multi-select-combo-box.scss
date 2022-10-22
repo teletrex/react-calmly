@@ -1,0 +1,112 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.cds--multiselect-combobox,
+.cds--multiselect-combobox.cds--hide-checkbox {
+  margin-top: 5px;
+  background-color: #fcfcfc;
+  position: relative;
+
+  .cds--form-item {
+    &.cds--checkbox-wrapper {
+      padding-top:7px;
+      padding-bottom:7px;
+      margin:0;
+    }
+
+  }
+  .cds--search-input:focus {
+    outline-color: $rc-brand-darkblue;
+  }
+
+  .cds--dropdown.cds--list-box.disabled {
+    background-color: #e5e6e7;
+    &:hover {
+      outline: none;
+    }
+    .cds--list-box__field {
+      &:hover {
+        outline: none;
+      }
+      cursor: not-allowed;
+      .cds--list-box__label {
+        color: #85868f;
+      }
+    }
+  }
+
+  .cds--checkbox-label {
+    width:100%;
+//    border-bottom: 0.01rem solid rgba(164, 155, 155, .25);
+//    padding-bottom: .2rem;
+  }
+
+  .cds--data-table-filters-window__checkbox-list {
+    overflow-y: auto;
+    max-height: 20rem;
+    z-index: 20;
+    position: absolute;
+    background-color: #f8f8f8;
+    width:100%;
+    box-shadow: $rc-brand-menu-shadow;
+    .cds--data-table-filters-window__checkbox-list-item {
+      &:hover {
+        background-color: $rc-brand-menu-hover;
+      }
+      &:active {
+        background-color: $rc-brand-menu-active;
+      }
+    }
+
+    &-group {
+      @extend .cds--data-table-filters-window__checkbox-list;
+      .cds--checkbox-list-group {
+        border-bottom: 0.0625rem solid #e7e8ec;
+      }
+      .cds--checkbox-label {
+        border-bottom: none;
+        padding: 0;
+      }
+      .cds--checkbox-group-label-text {
+        text-transform: capitalize;
+        font-weight:700;
+        cursor: default;
+        margin-top: 0;
+        margin-left: 1.7rem;
+        font-size: larger;
+      }
+    }
+  }
+}
+.cds--multiselect-combobox {
+  .cds--data-table-filters-window__checkbox-list-group
+  .cds--data-table-filters-window__checkbox-list-item
+  .cds--checkbox-label {
+    padding-left: 1.7rem;
+  }
+}
+
+
+.cds--hide-checkbox .cds--checkbox-label {
+  &::before {
+    display: none;
+  }
+  &::after {
+    border:0;
+  }
+}
+
+.cds--filter__dropdown {
+  position: absolute;
+}
+.cds--accordion {
+  .cds--search {
+    margin-bottom: 0 !important;
+  }
+}

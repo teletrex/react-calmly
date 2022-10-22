@@ -1,0 +1,56 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+@mixin icon {
+  .#{$prefix}--icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+    min-width: 190px;
+    min-height: 180px;
+    position: relative;
+    margin: 1px;
+
+    &-name {
+      height: 33%;
+      width: 100%;
+      text-align: center;
+
+      &_label {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.75rem;
+      }
+    }
+
+    &-element {
+      height: 33%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-variable {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 0.5rem;
+
+      span {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+@include exports('icon') {
+  @include icon;
+}

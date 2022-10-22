@@ -1,0 +1,77 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import 'node_modules/@carbon/styles/index';
+
+/// Text input styles
+/// @access private
+/// @group text-input
+.#{$prefix}--text-input {
+  border-bottom: none;
+  text-overflow: ellipsis;
+  background-color: $rc-brand-background;
+
+  &::placeholder {
+    color: $active-ui;
+  }
+
+  &:read-only {
+    &:not(:disabled):not(div) {
+      background: none;
+      padding-left: 0;
+      outline: none;
+    }
+  }
+
+  &__label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__information-icon {
+    cursor: pointer;
+  }
+
+  &[type='number'] {
+    font-family: font-family('national-2');
+  }
+}
+
+.#{$prefix}--text-input-wrapper {
+  .#{$prefix}--form__helper-text {
+    margin-top: rem(-6px);
+  }
+}
+
+//-----------------------------
+// Disabled & Error icon spacing
+//-----------------------------
+
+.#{$prefix}--text-input__field-wrapper {
+  ~ .#{$prefix}--form-requirement.#{$prefix}--form-requirement--warning {
+    color: $text-02;
+  }
+
+  &.#{$prefix}--text-input--data-warning {
+    input.bx--text-input--warning {
+      outline: rem(2px) solid $support-03;
+    }
+
+    .#{$prefix}--text-input__invalid-icon {
+      fill: $support-03;
+    }
+  }
+
+  .#{$prefix}--text-input__invalid-icon {
+    width: rem(16px);
+    height: rem(16px);
+  }
+}

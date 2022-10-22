@@ -1,0 +1,194 @@
+
+# MagicTable
+
+Read the overview for the MagicTable at // TODO:
+
+The MagicTable displays a configurable table of properly formatted data. This control is responsible for displaying
+the data provided to it, formatted according to the properties provided.  Handlers are provided to handle the user events to respond and manipulate the data provided to the table.
+
+MagicTable will display the latest data passed in as an array of rows to dataRows and format it according to the array of column descriptions passed to the config property.
+
+**Note:**  Each row needs to have a unique value set for the 'id' property.  MagicTable relies on this id to work.
+
+Rows can be selected as batches on which batch actions can be taken.  These batch actions can be specified and displayed when rows are selected.
+
+By adding the TableConfigurationModal component, users can rearrange the columns and change column visibility with a pop-up dialog.
+
+Table search functionality and additional button actions can be added for taking action on the data in the table as a whole, such as exporting or creating a new entry.
+
+Single row actions can be specified and can be displayed in an ellipsis menu or as buttons on the right side of each row.
+
+Filtering and sorting events are supported that can callout to the application for querying filtered and sorted data.
+
+Additional functionality is explained in the properties below.
+
+
+### <a name="config"></a> Column Configuration
+
+The Column object for defining a configuration is the following.  This configuration is then passed to a hook to convert it
+to a format for the MagicTable.
+
+|field|type|default|description|allowed values|
+|:-|:-|:-|:-|:-|
+|id|String|
+|title|String|
+|subTitle|String|
+|titleSymbol|String|
+|titleSymbolTooltip|String|
+|sortable|boolean|false|
+|format|String|string| number, currency, checkbox| // TBD
+|dataType|String|"String"|
+|dragLock|boolean|false|
+|editorType|String|null|
+|isFilterable|boolean|false|
+|defaultVisible|boolean |false|
+|requiredForUiState|boolean |false|
+|hiddenFromConfigurator|boolean |false|
+|alwaysVisible|boolean | false|
+|defaultWidth |Integer |200|
+|editorProps|EditorProps|null|
+|filterType|String |"default"|
+
+
+
+In your code, do the following:
+
+```import {useTableFormatters} from '@ppmd-ui/components'````
+
+Call useTableFormatters(events, locale, currency).getConfig(config)on the  config json object shown in the attachment you provided to get the configuration to pass into the config in MagicTable.  The returned myConfig will also enable hover tooltips on truncated values, format the cells properly with currency and locale information provided.
+
+```const myConfig = useTableFormatters(events, locale, currency).getConfig(config)```
+Then pass myConfig to the config parameter in MagicTable.
+
+The optional parameters of this call are below.
+
+For events, you can pass in handlers to support editing in the table if needed.
+
+```{onCellChange, onCellBlur, onCellClick, onEnterKey, onLinkClick, getInitialValue }```
+
+The event handlers beginning with “on” provided above will get called with the following.
+
+```(event, column, row.id, row, inputValue, initialValue, format)```
+
+For locale, pass in the locale from your user object.  “en-US” etc.
+
+For currency, pass in the currency from your user object.  “USD”  etc.
+
+### <a name="properties"></a>Properties
+| property | required | description | propType | default |
+|:-|:-|:-|:-|:-|
+|***General***|
+|id|optional| Unique id for the MagicTable instance | string | ?? | 'review' |
+|t|required| Translation context. The result of calling useTranslation() |
+|className|optional| Style classname for this component |
+|size|unused|
+|title|unused|
+|isLoading| optional | Set to true to show the Loading Indicator, ie. when a user takes an action that will update all of the data in the table| boolean |
+|***Column Configuration***|
+|config|required|An array of configuration objects describing the behavior of each column. See [Column Configuration](#config) | object |  |
+|resizableColumns|optional| Set to true to enable resizing the columns by dragging the handles on the right of each column header. | false|
+|onResizeColumns|required if resizableColumns is set to true. | Function is called with an array ??? of the columns and their widths| f(columnWidths)|
+|dataRows|optional| Array of row objects with column id as keys| object|  ||
+|getIsRowDisabled|optional| Function called with the row object, should return true if the row should be disabled | boolean: f(row) | null | |
+|freezeFirstDataColumn|optional| set to true to freeze the first column of data to prevent it from scrolling away.|boolean|
+|draggableColumns|optional| Set to true to enable dragging the column headers to change the column order|
+|onDragAndDropDone|required if draggableColumns is set to true| Function called with the column order when a column header being dragged is dropped|
+|menus|required if any columns are using dropdown editors| A data structure providing the dropdown menus for each column in the table using any of dropdown type of editors|
+|dateFormat|optional| Date format  to be used for presenting and editing date values| string|
+|***Column Filtering***|
+|hasColumnFilters|optional| Set to true to enable column filters|
+|columnFilters|optional| Set to the current state of the column filters| ???|
+|onColumnFilterApply|optional| Function called when a column filter's Apply button is clicked|
+|onColumnFilterReset|optional| Function called when a column filter's Reset button is clicked|
+|***Sorting***|
+|allColumnsSortable|optional| setting isSortable on a column will enable sorting on that column. allColumnsSortable overrides that setting to make all Columns sortable.|
+|onSort|required if any columns are marked sortable?? in the config| Called with ??? when a user clicks the sort control in a column header|
+|sortingDir|optional| Current sort order. 'ASC' for ascending, 'DESC' for descending or null | string|
+|sortingFieldID| optional| Column id of column currently sorted| string|
+|***Vertical Table Sizing***|
+|height|optional|Maximum height of table in CSS height| string|  | |
+|resizeToWindow|optional| Set to true to have the bottom of the table set to the bottom of the browser window| boolean | false|
+|resizeToContent|optional| Set to true to have the table fit the data.  The table will be as long as needed to show all the rows.| which overrides which?|
+|doResize|optional| Set to a different value to force the table to resize.  Useful if the page contents has changed to provide more or less vertical space for the table. Table resizes if the value of this property is changed|string or number|
+| ***Row Selection***|
+|hasSelection|optional| Set to true to enable row selection and make associated checkboxes visible on left side of each row.| boolean| false| |
+|onSelectionChange|required if hasSelection is true| Called with all rows currently selected when a row selection is checked or unchecked | Array of rows | |
+|hasSelectionType|optional| Enables a dropdown next to the header row selection checkbox that enables selecting rows in the page, all the rows loaded, or all rows matching the query | boolean|
+|onSelectionTypeChange|required if hasSelectionType is true| Called when the hasSelectionType dropdown is changed|
+|onHeaderRowSelectorClick| optional | Called when the header row selector is clicked.  Used to handle a selection of all rows in the query whether loaded in the table or not.| f(checked:boolean)
+|headerCheckboxId| optional| id for the header row selector checkbox possible deprecation|
+|selectedRows|optional| Array of the currently selected rows.  Selected rows are managed by consuming component.
+|***Actions and Controls***|
+|batchActions|optional|Array of batch action definitions that described the actions available when one or more rows are selected|
+|onBatchAction|optional| Function called when a batch action is clicked|
+|hideBatchActionToolbar|optional| Set to true to prevent the batch action toolbar from showing when a row is selected.  Essentially turns off the batch action toolbar|
+|actions|optional| Array of action definitions that described the actions that appear on the top right of the table.  Often used for cog button, export, add buttons|
+|onAction|optional| Callback when user clicks any of the actions described in the actions property|
+|customActions| ???|
+|actionToolbar| ??? |
+|renderRowActions|optional|Array of action descriptions for the row level actions|
+|validateRow|optional| Function to validate the values in the row when being edited. Pass in a handler to validate all the cells in the row.  This will let you validate cells against each other if necessary.  The function is passed the row of values as a hash and should return an array of invalid column ids which will get highlighted for that row.|
+|twoLinesPerRow|optional| Enables text to wrap to a second row instead of being truncated on a single row|
+|***Pagination***|
+|scrollableRows|unused| always true|  // always true.
+|hasPagination| optional| Set to true to enable the pagination bar at the bottom of the table|
+|onPageChange| required if hasPagination is true| Called when the user clicks the next or previous page buttons|function(page???)|
+|***Search***|
+|searchPlaceholderText|optional|Placeholder for the search field at the top of the table| string| 'Search...'|
+|onSearchChange|
+|onSearch|
+|searchText|
+|***Row Drawers***|
+|renderRowDrawer|optional| Contents of the row drawer for a given row|
+|rowDrawerHeight|optional| Maximum height of the row drawer| number|
+|hasRowDrawers|optional| Set to true to enable row drawers for each row|
+|***Tree Table***|
+|isTreeTable|optional|Set to true to enable tree table functionality.  Subrows are provided in a subrow property for each row and the data should be the same as the parent row.  To have different data shown, use row drawers instead.|
+|startWithTreeOpen|optional|Set to true to set all the subrows to be visible when table is displayed|
+|indentTreeTableSelection|optional| Set to true to indent the checkboxes in the tree table.  Set to false to have all the row selection checkboxes aligned to the left of the table.|
+|*** Empty State ***|
+|enableEmptyStates|optional| Set to true to show an icon, text, and or button when the table has no data to show|
+|emptyStateType|optional| Object to describe the empty state display| object|
+
+
+
+
+
+
+## <a name="converting"></a>Differences between carbon ConfigurableTable and react-calmly MagicTable
+Take the following into consideration when converting tables from ConfigurableTable to MagicTable.
+
+**allColumnsSortable:**
+
+**columnsWidth:**  Removed, column widths come via config.
+
+**resizeToWindow={true}**   New.  True for table to resize to bottom of browser window. False, use height parameter.
+
+**doResize={handleTableResize}**   New, for resizing the table to the window if desired.
+
+**config={config}**   column widths here are used for initial and updated column widths now.
+
+**dataRows = {data.rows}**    was  data={data.rows}
+
+**totalItems = {data.rows.size}** was total={data.row.size}
+
+**freezeFirstDataColumn={true}**   New, for freezing the first column of data (in addition to selection checkboxes and/or row opening widgets.  Selection checkboxes are now always pinned to the left of the table while scrolling.
+
+***Toolbar changes***
+
+**renderToolbar:** Removed.  Use properties of ConfigurableTableToolbar as properties to MagicTable itself.
+
+**actionToolbar ={ JSX }:** New, replaces renderToolbar. Why, so action toolbar is also covered by the batch action toolbar, components are rendered neater and consistent with the design.
+
+**actions:** New, same as ConfigurableTableToolbar
+
+**batchActions:** New, same as ConfigurableTableToolbar
+
+**searchPlaceholderText={‘Search...'}**  New, same as ConfigurableTableToolbar
+
+**onSearchChange={debouncedHandleSearchChange}**  New, same as ConfigurableTableToolbar
+
+**onAction={onActionsTriggered}**  New, same as ConfigurableTableToolbar
+
+**isEmptyView={false}**  New, same as ConfigurableTableToolbar
+

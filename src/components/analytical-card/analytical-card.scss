@@ -1,0 +1,33 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.#{$prefix}--analytical-card {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  font-size: 0.8rem;
+
+  .align-vertically {
+    align-items: center;
+  }
+  .gridgap-40 {
+    grid-gap: 40px;
+  }
+  .rows {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+  }
+
+  .four-column {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
+}

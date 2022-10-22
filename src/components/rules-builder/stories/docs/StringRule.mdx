@@ -1,0 +1,60 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - StringRule
+
+## Overview
+
+`StringRule` is a predefined rule type that allows to create text queries.
+
+<Preview>
+  <Story id="experimental-rulesbuilder-stringrule--usage" />
+</Preview>
+
+## Operators
+
+The `StringRule` supports the following operators:
+
+| Operator                                   |    inputType     |
+| ------------------------------------------ | :--------------: |
+| `IS`                                       |  `singleValue`   |
+| `IS_NOT`                                   |  `singleValue`   |
+| `CONTAINS`                                 |  `singleValue`   |
+| `DOES_NOT_CONTAIN`                         |  `singleValue`   |
+| `STARTS_WITH`                              |  `singleValue`   |
+| `DOES_NOT_START_WITH`                      |  `singleValue`   |
+| `ENDS_WITH`                                | `multipleValues` |
+| `DOES_NOT_END_WITH`                        | `multipleValues` |
+| `IS_ONE_OF_THE_FOLLOWING`                  | `multipleValues` |
+| `IS_NOT_ONE_OF_THE_FOLLOWING`              | `multipleValues` |
+| `CONTAINS_ONE_OF_THE_FOLLOWING`            | `multipleValues` |
+| `DOES_NOT_CONTAIN_ONE_OF_THE_FOLLOWING`    | `multipleValues` |
+| `STARTS_WITH_ONE_OF_THE_FOLLOWING`         | `multipleValues` |
+| `DOES_NOT_START_WITH_ONE_OF_THE_FOLLOWING` | `multipleValues` |
+| `ENDS_WITH_ONE_OF_THE_FOLLOWING`           | `multipleValues` |
+| `DOES_NOT_END_WITH_ONE_OF_THE_FOLLOWING`   | `multipleValues` |
+| `IS_BLANK`                                 |      `none`      |
+| `IS_NOT_BLANK`                             |      `none`      |
+
+You can also create a custom operator using the following format
+
+| Field       |   Type   |                          Description |
+| ----------- | :------: | -----------------------------------: |
+| `label`     | `string` | Value displayed in operator dropdown |
+| `value`     | `string` |                   Unique operator id |
+| `inputType` | `string` |    One of supported rule input types |
+
+## Supported `inputTypes`
+
+| inputType        |        Description        |          Value          |
+| ---------------- | :-----------------------: | :---------------------: |
+| `none`           | Value defined by operator |         `null`          |
+| `singleValue`    |     Sets single value     |        `string`         |
+| `multipleValues` |   Sets multiple values    | `[string, ..., string]` |
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on
+

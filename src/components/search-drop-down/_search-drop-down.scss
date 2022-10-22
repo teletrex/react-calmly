@@ -1,0 +1,101 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+.#{$prefix}--search-drop-down {
+  max-width: rem(512px);
+  position: relative;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $ui-background;
+
+    .#{$prefix}--search-header,
+    .#{$prefix}--search-element {
+      background-color: $ui-background;
+    }
+  }
+
+  &--secondary {
+    background-color: $ui-02;
+
+    .#{$prefix}--search-header,
+    .#{$prefix}--search-element {
+      background-color: $ui-02;
+    }
+  }
+
+  &--underlined {
+    color: $active-ui;
+    font-family: font-family('national-2');
+    font-size: rem(14px);
+    font-weight: font-weight('regular');
+    line-height: rem(18px);
+    letter-spacing: rem(0.16px);
+
+    .#{$prefix}--search-input {
+      //border-bottom: rem(1px) solid red; //$ui-04;
+      border:none;
+      &:focus {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &--in-portal {
+    z-index: 100; // z(dropdown);
+  }
+
+  .#{$prefix}--search-header {
+// TODO:   @include type-style('productive-heading-01');
+
+    color: $text-01;
+    padding: rem(11px) rem(16px);
+  }
+
+  .#{$prefix}--search-element {
+// TODO:@include type-style('body-short-01');
+
+    color: $text-02;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: rem(11px) rem(16px);
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: rem(1px);
+      width: calc(100% - 2 * 1rem);
+      border-bottom: rem(1px) solid $ui-03;
+    }
+
+    &:hover,
+    &--selected {
+      background-color: $hover-field;
+    }
+  }
+
+  &--list {
+    box-shadow: 0 rem(2px) rem(6px) 0 rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 100%;
+    overflow-y: auto;
+  }
+}
+
+// Story styling
+.#{$prefix}--insightflag--icon.search-dd-story-insight {
+  display: inline-block;
+  margin-right: rem(4px);
+  position: unset;
+  top: unset;
+  right: unset;
+}

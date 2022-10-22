@@ -1,0 +1,22 @@
+import { Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# InsightsFlag
+
+You can use `InsightsFlag` to display animated badge.
+
+## Example
+
+<Canvas>
+    <Story id="atoms-badge-insights--usage" />
+</Canvas>
+
+
+
+## Component API
+
+| Parameter name     |             Type             |  Default value  | Required  |                                  Description                                       |
+| -------------------| :--------------------------: | :-------------: | :-------: | ---------------------------------------------------------------------------------- |
+| children           | *OneOf(string, node)*        | `null`          | No        | Content to put into notification. Desirably button on which notification is needed |
+| className          | *string*                     | `''`            | No        | Custom className added to flag container                                           |
+| showButton         | *boolean*                    | `true`          | No        | Show `children` flag. Set to false renders only notification icon                  |
+| showFlag           | *boolean*                    | `true`          | No        | Show notification icon flag                                                        |

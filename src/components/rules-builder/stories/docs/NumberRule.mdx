@@ -1,0 +1,56 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - NumberRule
+
+## Overview
+
+`NumberRule` is a predefined rule type that allows to create numeric queries.
+
+<Preview>
+  <Story id="experimental-rulesbuilder-numberrule--usage" />
+</Preview>
+
+## Operators
+
+The `NumberRule` supports the following operators:
+
+
+| Operator                      |    inputType     |
+| ----------------------------- | :--------------: |
+| `IS`                          |  `singleValue`   |
+| `IS_NOT`                      |  `singleValue`   |
+| `IS_LESS`                     |  `singleValue`   |
+| `IS_LESS_OR_EQUAL`            |  `singleValue`   |
+| `IS_GREATER`                  |  `singleValue`   |
+| `IS_GREATER_OR_EQUAL`         |  `singleValue`   |
+| `IS_ONE_OF_THE_FOLLOWING`     | `multipleValues` |
+| `IS_NOT_ONE_OF_THE_FOLLOWING` | `multipleValues` |
+| `IS_BETWEEN`                  |     `range`      |
+| `IS_BLANK`                    |      `none`      |
+| `IS_NOT_BLANK`                |      `none`      |
+
+
+You can also create a custom operator using the following format
+
+| Field       |   Type   |                          Description |
+| ----------- | :------: | -----------------------------------: |
+| `label`     | `string` | Value displayed in operator dropdown |
+| `value`     | `string` |                   Unique operator id |
+| `inputType` | `string` |    One of supported rule input types |
+
+## Supported `inputTypes`
+
+| inputType        |           Description            |          Value          |
+| ---------------- | :------------------------------: | :---------------------: |
+| `none`           |    Value defined by operator     |         `null`          |
+| `singleValue`    |     Sets define single value     |        `number`         |
+| `multipleValues` |   Sets define multiple values    | `[number, ..., number]` |
+| `range`          | Sets define pair of range values |   `[number, number]`    |
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on
+

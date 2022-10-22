@@ -1,0 +1,1839 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RulesBuilder should move down 1`] = `
+<div
+  class="bx--rules-builder"
+>
+  <div>
+    <div
+      aria-describedby="DndDescribedBy-6"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx--rule-element--item--criteria-dropdown bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select criteria"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Name
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select operator"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Select operator
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="bx--conjunction"
+    >
+      <div
+        class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline bx-proposal-dropdown-wrapper--small"
+      >
+        <div
+          class="bx-proposal-dropdown"
+          role="listbox"
+        >
+          <span>
+            <div
+              class="bx-proposal-dropdown__field"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="bx-proposal-dropdown__field__label"
+              >
+                And
+              </span>
+              <div
+                class="bx-proposal-dropdown__field__menu-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-describedby="DndDescribedBy-6"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx--rule-element--item--criteria-dropdown bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select criteria"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Age
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select operator"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Select operator
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    aria-label="Add new rule"
+    class="bx--rules-builder--add-btn bx--btn bx--btn--sm bx--btn--primary bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--right bx--tooltip--align-center"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="bx--assistive-text"
+    >
+      Add new rule
+    </span>
+    +
+  </button>
+</div>
+`;
+
+exports[`RulesBuilder should move up 1`] = `
+<div
+  class="bx--rules-builder"
+>
+  <div>
+    <div
+      aria-describedby="DndDescribedBy-7"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx--rule-element--item--criteria-dropdown bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select criteria"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Name
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select operator"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Select operator
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="bx--conjunction"
+    >
+      <div
+        class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline bx-proposal-dropdown-wrapper--small"
+      >
+        <div
+          class="bx-proposal-dropdown"
+          role="listbox"
+        >
+          <span>
+            <div
+              class="bx-proposal-dropdown__field"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="bx-proposal-dropdown__field__label"
+              >
+                And
+              </span>
+              <div
+                class="bx-proposal-dropdown__field__menu-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-describedby="DndDescribedBy-7"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx--rule-element--item--criteria-dropdown bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select criteria"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Age
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select operator"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Select operator
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    aria-label="Add new rule"
+    class="bx--rules-builder--add-btn bx--btn bx--btn--sm bx--btn--primary bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--right bx--tooltip--align-center"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="bx--assistive-text"
+    >
+      Add new rule
+    </span>
+    +
+  </button>
+</div>
+`;
+
+exports[`RulesBuilder should render correctly 1`] = `
+<div
+  class="bx--rules-builder"
+>
+  <div>
+    <div
+      aria-describedby="DndDescribedBy-0"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx--rule-element--item--criteria-dropdown bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select criteria"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Age
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select operator"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Select operator
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="bx--conjunction"
+    >
+      <div
+        class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline bx-proposal-dropdown-wrapper--small"
+      >
+        <div
+          class="bx-proposal-dropdown"
+          role="listbox"
+        >
+          <span>
+            <div
+              class="bx-proposal-dropdown__field"
+              role="button"
+              tabindex="0"
+            >
+              <span
+                class="bx-proposal-dropdown__field__label"
+              >
+                And
+              </span>
+              <div
+                class="bx-proposal-dropdown__field__menu-icon"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-describedby="DndDescribedBy-0"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx--rule-element--item--criteria-dropdown bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select criteria"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Name
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div
+            class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+          >
+            <div
+              class="bx-proposal-dropdown"
+              role="listbox"
+            >
+              <span>
+                <div
+                  aria-label="Select operator"
+                  class="bx-proposal-dropdown__field"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span
+                    class="bx-proposal-dropdown__field__label"
+                  >
+                    Select operator
+                  </span>
+                  <div
+                    class="bx-proposal-dropdown__field__menu-icon"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="16"
+                      preserveAspectRatio="xMidYMid meet"
+                      style="will-change: transform;"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    aria-label="Add new rule"
+    class="bx--rules-builder--add-btn bx--btn bx--btn--sm bx--btn--primary bx--btn--icon-only bx--tooltip__trigger bx--tooltip--a11y bx--tooltip--right bx--tooltip--align-center"
+    tabindex="0"
+    type="button"
+  >
+    <span
+      class="bx--assistive-text"
+    >
+      Add new rule
+    </span>
+    +
+  </button>
+</div>
+`;
+
+exports[`RulesBuilder should render isReadOnly correctly 1`] = `
+<div
+  class="bx--rules-builder"
+>
+  <div>
+    <div
+      aria-describedby="DndDescribedBy-1"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item bx--rule-element--item--readonly"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <span
+            class="bx--rule-criteria--readonly"
+          >
+            Age
+          </span>
+          <span
+            class="bx--text-space-left"
+          />
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="bx--conjunction"
+    >
+      <span
+        class="bx--conjunction--readonly"
+      >
+        And
+      </span>
+    </div>
+    <div
+      aria-describedby="DndDescribedBy-1"
+      aria-roledescription="sortable"
+      class="bx--rule-element-container"
+      data-testid="rule-container"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="bx--rule-element--item bx--rule-element--item--readonly"
+      >
+        <button
+          aria-label="Draggable item"
+          class="bx--rule-element--item--draggable-btn"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="bx--rule-element--item--btn--icon"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3h2v2H5zm4 0h2v2H9zM5 7h2v2H5zm4 0h2v2H9zm-4 4h2v2H5zm4 0h2v2H9z"
+            />
+          </svg>
+        </button>
+        <div
+          class="bx--rule-element--item--content"
+        >
+          <span
+            class="bx--rule-criteria--readonly"
+          >
+            Name
+          </span>
+          <span
+            class="bx--text-space-left"
+          />
+        </div>
+        <div
+          class="bx--rule-element--item--controls"
+        >
+          <button
+            aria-label="Create group"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 32 32"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20 6h10v2H20zm0 6h7v2h-7zm0 6h10v2H20zm0 6h7v2h-7zM14 4h2v24h-2zM3.85 22.5l-1.41-1.38L8.73 15 2.44 8.88 3.85 7.5l7.71 7.5-7.71 7.5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Delete rule"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="delete-rule"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="bx--rule-element--item--btn--icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 2c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6m0-1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7z"
+              />
+              <path
+                d="M5 7.5h6v1H5z"
+              />
+            </svg>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-label="open and close list of options"
+            class="bx--rule-element--item--overflow-menu bx--overflow-menu"
+            data-testid="overflow-menu"
+            direction="bottom"
+            group-id="default_overflow_menus"
+            i18n="[object Object]"
+            type="button"
+          >
+            <svg
+              aria-label="open and close list of options"
+              class="bx--overflow-menu__icon"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              role="img"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="8"
+                cy="3"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="8"
+                r="1"
+              />
+              <circle
+                cx="8"
+                cy="13"
+                r="1"
+              />
+              <title>
+                open and close list of options
+              </title>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RulesBuilder skeleton should render correctly 1`] = `
+<div
+  class="bx--rules-builder bx--rules-builder-skeleton"
+>
+  <div
+    class="bx--rule-element-container"
+  >
+    <div
+      class="bx--rule-element--item"
+    >
+      <div
+        class="bx--label bx--skeleton"
+      />
+      <div
+        class="bx--label bx--skeleton"
+      />
+      <div
+        class="bx--label bx--skeleton"
+      />
+    </div>
+  </div>
+  <div
+    class="bx--rule-element-container"
+  >
+    <div
+      class="bx--rule-element--item"
+    >
+      <div
+        class="bx--label bx--skeleton"
+      />
+      <div
+        class="bx--label bx--skeleton"
+      />
+      <div
+        class="bx--label bx--skeleton"
+      />
+    </div>
+  </div>
+  <div
+    class="bx--rule-element-container"
+  >
+    <div
+      class="bx--rule-element--item"
+    >
+      <div
+        class="bx--label bx--skeleton"
+      />
+      <div
+        class="bx--label bx--skeleton"
+      />
+      <div
+        class="bx--label bx--skeleton"
+      />
+    </div>
+  </div>
+</div>
+`;

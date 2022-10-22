@@ -1,0 +1,116 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+
+
+.#{$prefix}--rule-element--item {
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  min-height: rem(56px);
+  margin: rem(8px) 0;
+  background-color: $field-01;
+
+  &--overflow-menu,
+  &--draggable-btn {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .#{$prefix}--rule-element--item--overflow-menu,
+    .#{$prefix}--rule-element--item--draggable-btn {
+      visibility: visible;
+    }
+  }
+
+  &--error {
+    border: 2px solid $danger;
+    margin-bottom: 0;
+  }
+
+  &--dragging {
+    cursor: grabbing;
+  }
+
+  &--error-icon {
+    fill: $danger;
+    margin-left: rem(6px);
+    margin-right: rem(6px);
+  }
+
+  &--error-text {
+    color: $danger;
+    margin-top: rem(8px);
+    margin-bottom: rem(11px);
+    line-height: rem(15px);
+    font-size: 0.75rem;
+  }
+
+  &--content {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    padding: rem(8px) 0;
+  }
+
+  &--controls {
+    align-items: center;
+    display: flex;
+    padding: 0 rem(8px);
+    margin-left: auto;
+  }
+
+  &--draggable-btn {
+    height: 100%;
+    min-height: rem(56px);
+    padding: 0 rem(3px);
+    background-color: $field-01;
+    border: 0;
+
+    &:hover {
+      background: none;
+      cursor: grab;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    svg {
+      vertical-align: bottom;
+    }
+  }
+
+  &--btn {
+    &--icon {
+      fill: $icon-01;
+    }
+  }
+
+  &--criteria-dropdown {
+    width: 200px;
+  }
+
+  &:not(:hover) {
+    .#{$prefix}--list-box__menu-icon,
+    .#{$prefix}--number__controls,
+    .#{$prefix}--multilevel-dropdown--wrapper
+      .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu--close {
+      visibility: hidden;
+    }
+  }
+
+  &--light {
+    .#{$prefix}--rule-element--item--draggable-btn {
+      background-color: $ui-02;
+    }
+  }
+}

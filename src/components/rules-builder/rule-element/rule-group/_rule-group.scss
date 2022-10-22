@@ -1,0 +1,83 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+
+
+.#{$prefix}--rule-element--group {
+  position: relative;
+  padding: rem(8px) 0 rem(8px) rem(16px);
+  margin: rem(8px) 0;
+
+  &--bracket {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(3px);
+    height: 100%;
+    padding: 0;
+    cursor: pointer;
+    background-color: $interactive-04;
+    border: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: rem(32px);
+      height: rem(3px);
+      cursor: pointer;
+      background-color: $interactive-04;
+      content: '';
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    &--remove-btn {
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: rem(-8px);
+      display: none;
+      width: rem(20px);
+      height: rem(20px);
+      background-color: $interactive-04;
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      &--icon {
+        fill: $icon-03;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .#{$prefix}--rule-element--group--bracket--remove-btn {
+        display: flex;
+      }
+    }
+
+    &:focus {
+      outline: none;
+
+      .#{$prefix}--rule-element--group--bracket--remove-btn {
+        outline: rem(2px) solid $interactive-04;
+      }
+    }
+  }
+}

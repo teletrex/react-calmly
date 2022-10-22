@@ -1,0 +1,383 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhenRelation should render correctly 1`] = `
+<div>
+  <div
+    class="cds--input-field-container"
+    data-testid="input-field-when-relation"
+  >
+    <div
+      class="cds--number-input-wrapper"
+    >
+      <div
+        class="cds--form-item"
+      >
+        <div
+          class="cds--number cds--number--helpertext cds--number-input-wrapper_carbon-input"
+        >
+          <div
+            class="cds--number__input-wrapper"
+          >
+            <input
+              aria-label="Numeric input field with increment and decrement buttons"
+              id="TestWhenRelationElement"
+              max="Infinity"
+              min="0"
+              name="TestWhenRelationElement"
+              pattern="[0-9]*"
+              placeholder="Enter value"
+              step="1"
+              type="number"
+              value=""
+            />
+            <div
+              class="cds--number__controls"
+            >
+              <button
+                aria-atomic="true"
+                aria-label="Increment number. Press Space or Enter in order to use icon."
+                aria-live="polite"
+                class="cds--number__control-btn up-icon"
+                focusable="false"
+                tabindex="-1"
+                title="Increment number. Press Space or Enter in order to use icon."
+                type="button"
+                unselectable="on"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="up-icon"
+                  focusable="false"
+                  height="4"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 8 4"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 4l4-4 4 4z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-atomic="true"
+                aria-label="Decrement number. Press Space or Enter in order to use icon."
+                aria-live="polite"
+                class="cds--number__control-btn down-icon"
+                focusable="false"
+                tabindex="-1"
+                title="Decrement number. Press Space or Enter in order to use icon."
+                type="button"
+                unselectable="on"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="down-icon"
+                  focusable="false"
+                  height="4"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 8 4"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 0L4 4 0 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div
+      class="bx-proposal-dropdown-wrapper"
+    >
+      <div
+        class="bx-proposal-dropdown"
+        role="listbox"
+      >
+        <span>
+          <div
+            aria-label="Select period"
+            class="bx-proposal-dropdown__field"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="bx-proposal-dropdown__field__label"
+            >
+              days
+            </span>
+            <div
+              class="bx-proposal-dropdown__field__menu-icon"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="bx-proposal-dropdown-wrapper"
+    >
+      <div
+        class="bx-proposal-dropdown"
+        role="listbox"
+      >
+        <span>
+          <div
+            aria-label="Select..."
+            class="bx-proposal-dropdown__field"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="bx-proposal-dropdown__field__label"
+            >
+              ago
+            </span>
+            <div
+              class="bx-proposal-dropdown__field__menu-icon"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WhenRelation should render correctly for read-only 1`] = `
+<div>
+  <span
+    class="cds--rule-value-readonly"
+  >
+    <span
+      class="cds--text-space-left"
+    >
+      7
+    </span>
+    <span
+      class="cds--text-space-left"
+    >
+      months
+    </span>
+    <span
+      class="cds--text-space-left"
+    >
+      away
+    </span>
+  </span>
+</div>
+`;
+
+exports[`WhenRelation should render correctly with a provided value 1`] = `
+<div>
+  <div
+    class="cds--input-field-container"
+    data-testid="input-field-when-relation"
+  >
+    <div
+      class="cds--number-input-wrapper"
+    >
+      <div
+        class="cds--form-item"
+      >
+        <div
+          class="cds--number cds--number--helpertext cds--number-input-wrapper_carbon-input"
+        >
+          <div
+            class="cds--number__input-wrapper"
+          >
+            <input
+              aria-label="Numeric input field with increment and decrement buttons"
+              id="TestWhenRelationElement"
+              max="Infinity"
+              min="0"
+              name="TestWhenRelationElement"
+              pattern="[0-9]*"
+              placeholder="Enter value"
+              step="1"
+              type="number"
+              value="7"
+            />
+            <div
+              class="cds--number__controls"
+            >
+              <button
+                aria-atomic="true"
+                aria-label="Increment number. Press Space or Enter in order to use icon."
+                aria-live="polite"
+                class="cds--number__control-btn up-icon"
+                focusable="false"
+                tabindex="-1"
+                title="Increment number. Press Space or Enter in order to use icon."
+                type="button"
+                unselectable="on"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="up-icon"
+                  focusable="false"
+                  height="4"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 8 4"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 4l4-4 4 4z"
+                  />
+                </svg>
+              </button>
+              <button
+                aria-atomic="true"
+                aria-label="Decrement number. Press Space or Enter in order to use icon."
+                aria-live="polite"
+                class="cds--number__control-btn down-icon"
+                focusable="false"
+                tabindex="-1"
+                title="Decrement number. Press Space or Enter in order to use icon."
+                type="button"
+                unselectable="on"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="down-icon"
+                  focusable="false"
+                  height="4"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 8 4"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 0L4 4 0 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div
+      class="bx-proposal-dropdown-wrapper"
+    >
+      <div
+        class="bx-proposal-dropdown"
+        role="listbox"
+      >
+        <span>
+          <div
+            aria-label="Select period"
+            class="bx-proposal-dropdown__field"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="bx-proposal-dropdown__field__label"
+            >
+              months
+            </span>
+            <div
+              class="bx-proposal-dropdown__field__menu-icon"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="bx-proposal-dropdown-wrapper"
+    >
+      <div
+        class="bx-proposal-dropdown"
+        role="listbox"
+      >
+        <span>
+          <div
+            aria-label="Select..."
+            class="bx-proposal-dropdown__field"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="bx-proposal-dropdown__field__label"
+            >
+              away
+            </span>
+            <div
+              class="bx-proposal-dropdown__field__menu-icon"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                style="will-change: transform;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+                />
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

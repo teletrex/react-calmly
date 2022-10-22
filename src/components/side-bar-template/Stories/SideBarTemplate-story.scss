@@ -1,0 +1,110 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+// IMPORTANT: This import path should _not_ be used outside our source tree
+// as `src` directory is _not_ meant to be shipped in our NPM package.
+// Use e.g. `@import '~carbon-components/scss/globals/scss/styles.scss'` instead.
+
+@use "~@carbon/styles/scss";
+
+// @import '~carbon-components/src/globals/scss/css--helpers'; // SEE THE NOTE ABOVE
+
+.sidebar-story {
+  .#{$prefix}--hr {
+    margin: 0;
+  }
+
+  .#{$prefix}--fieldset {
+    margin-bottom: 0;
+  }
+
+  .#{$prefix}--accordion__content {
+    .#{$prefix}--form-item {
+      margin-bottom: rem(20px);
+    }
+  }
+
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d0d0d8;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+
+    &--content {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      svg {
+        fill: #8c8c8c;
+        margin: auto;
+      }
+    }
+
+    &--label {
+      height: 24px;
+      width: 100%;
+      color: #565656;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 8px;
+    }
+
+    &:hover {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .content-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 9px;
+  }
+
+  .layout {
+    .#{$prefix}--side-bar-template__bar-content,
+    .#{$prefix}--side-bar-template__bar-content--marginless,
+    .#{$prefix}--side-bar-template__bar-footer,
+    .#{$prefix}--side-bar-template__sticky-top-container,
+    &--full-page-template,
+    &--header {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(231, 232, 236, 1) 0%,
+          rgba(231, 232, 236, 1) 100%
+        ),
+        linear-gradient(to bottom, rgba(41, 171, 135, 1), 0%, rgba(41, 171, 135, 1) 100%);
+      background-clip: content-box, padding-box;
+      border: 2px solid #13173d;
+    }
+
+    .#{$prefix}--form-item {
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    &--full-page-template {
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 16px;
+    }
+  }
+}

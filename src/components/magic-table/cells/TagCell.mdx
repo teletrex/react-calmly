@@ -1,0 +1,26 @@
+import TagCell from "./TagCell";
+
+
+# TagCell
+
+This is a cell used by the Magic Grid, not usually directly by developers, by specifiying the formatType 'tag'.
+
+The value is a combination of text and a number separated with a hyphen. Example: "Completed-2".
+The number determines the color of the tag.
+
+| Property | Description | Type | Default |
+|-|-|-|-|
+| value| A string and a number separated with a hyphen. | string| none|
+
+
+
+### Value examples
+
+| value | color | all numbers that render this color |
+|-|-|-|
+| Completed-2 | <TagCell value={"Completed-2"}/>|1,2,201,202|
+| Failed-4 | <TagCell value={"Failed-4"}/>||
+| Warning-0 | <TagCell value={"Warning-0"}/>||
+| Neutral-8 | <TagCell value={"Neutral-8"}/>||
+
+

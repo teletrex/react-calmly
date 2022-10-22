@@ -1,0 +1,62 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+
+
+// Common styles
+.#{$prefix}--rule-element--item--content {
+  align-items: flex-start;
+  display: flex;
+
+  .#{$prefix}--text-space-left {
+    &:before {
+      content: ' ';
+      white-space: pre;
+    }
+  }
+
+  .#{$prefix}--text-space-right {
+    &:after {
+      content: ' ';
+      white-space: pre;
+    }
+  }
+
+  .#{$prefix}--add-tags--inline {
+    margin-left: rem(10px);
+
+    .#{$prefix}--add-tags--container {
+      align-items: end;
+    }
+
+    & .#{$prefix}--text-input {
+      height: rem(40px);
+    }
+
+    .#{$prefix}--add-tags--cancel,
+    .#{$prefix}--add-tags--submit {
+      height: rem(40px);
+    }
+  }
+
+  .#{$prefix}--number-input-wrapper {
+    &_carbon-input,
+    .#{$prefix}--number__input-wrapper {
+      width: rem(120px);
+    }
+
+    &_carbon-input.#{$prefix}--number input[type='number'] {
+      min-width: rem(120px);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

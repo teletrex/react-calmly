@@ -1,0 +1,48 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '../mixins';
+
+@mixin national2 {
+  $teletrex-font-path: '' !default;
+
+  @include font-face(
+    'National 2',
+    '#{$teletrex-font-path}teletrex-theme/fonts/National_2/National2Web-Light',
+    300
+  );
+  @include font-face(
+    'National 2',
+    '#{$teletrex-font-path}teletrex-theme/fonts/National_2/National2Web-LightItalic',
+    300,
+    italic
+  );
+  @include font-face(
+    'National 2',
+    '#{$teletrex-font-path}teletrex-theme/fonts/National_2/National2Web-Regular',
+    400
+  );
+  @include font-face(
+    'National 2',
+    '#{$teletrex-font-path}teletrex-theme/fonts/National_2/National2Web-RegularItalic',
+    400,
+    italic
+  );
+  @include font-face(
+    'National 2',
+    '#{$teletrex-font-path}teletrex-theme/fonts/National_2/National2Web-Medium',
+    500
+  );
+  @include font-face(
+    'National 2',
+    '#{$teletrex-font-path}teletrex-theme/fonts/National_2/National2Web-MediumItalic',
+    500,
+    italic
+  );
+}

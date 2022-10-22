@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <style>
+    .g {
+      display:grid;
+      grid-template-columns: auto auto 60%;
+      width:420px;
+      border:1px solid red;
+    }
+    .gn {
+      display:grid;
+      grid-template-columns: auto auto auto;
+      width:420px;
+      border:1px solid red;
+    }
+    .g div,
+    .gn div{
+      border:1px solid blue;
+    }
+    
+    .n  {
+      display:grid;
+      justify-content: right;
+    }
+
+  </style>
+  <body>
+  
+
+    <div class="g">
+      <div>Left</div>
+      <div></div>
+      <div>Right</div>
+    </div>
+    <div class="g">
+      <div>LongLeft</div>
+            <div></div>
+      <div>Right</div>
+    </div>
+    <div class="g">
+      <div>1</div>
+            <div></div>
+      <div>Right</div>
+    </div>
+    <div class="g">
+      <div>22</div>
+            <div></div>
+      <div>Right</div>
+    </div>
+
+    <div class="gn">
+      <div>Left</div>
+      <div></div>
+      <div class="n">22,000</div>
+    </div>
+    <div class="gn">
+      <div>LongLeft</div>
+            <div></div>
+      <div class="n">40,000</div>
+    </div>
+    <div class="gn">
+      <div>1</div>
+            <div></div>
+      <div class="n">5,000</div>
+    </div>
+    <div class="gn">
+      <div>22</div>
+            <div></div>
+      <div class="n">1,000,000</div>
+    </div>
+    
+  </body>
+</html>

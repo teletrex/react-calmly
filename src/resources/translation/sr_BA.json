@@ -1,0 +1,31 @@
+{
+  "Hello {{name}}": "[G'Ｈｅｌｌｏ, [{{name}}] (ｉｎ English)ฏูİı｜]",
+  "Sample text": "[G'Ｔｈｉｓ ｉｓ ｓａｍple text (in English)ฏูİı｜]",
+  "export": "[G'Exportฏูİı｜]",
+  "exporting": "[G'Ｅｘporting...ฏูİı｜]",
+  "export.description": "[G'Ｃｌｉｃｋ Ｅｘｐｏｒｔ button to start exporting grid data.ฏูİı｜]",
+  "your.export.is.ready.to.download": "[G'Ｙｏｕｒ ｅｘｐｏｒｔ is ready to download.ฏูİı｜]",
+
+
+  "editGrid": "[G'Edit Gridฏูİı｜]",
+  "search": "[G'Searchฏูİı｜]",
+  "apply": "[G'Applyฏูİı｜]",
+  "Cancel": "[G'Clearฏูİı｜]",
+  "cancel": "[G'Cancelฏูİı｜]",
+  "save": "[G'Saveฏูİı｜]",
+  "edit": "[G'Editฏูİı｜]",
+  "run": "[G'Runฏูİı｜]",
+  "delete": "[G'Deleteฏูİı｜]",
+  "close": "[G'Closeฏูİı｜]",
+  "sorting" : "[G'Sortingฏูİı｜]",
+  "select" : "[G'Selectฏูİı｜]",
+  "choose" : "[G'Selectฏูİı｜]",
+  "gridconfig.order": "[G'Orderฏูİı｜]",
+  "gridconfig.columnname": "[G'Ｃｏlumn Nameฏูİı｜]",
+  "gridconfig.visible": "[G'Visibleฏูİı｜]",
+  "gridconfig.width": "[G'Ｃｏlumn Widthฏูİı｜]",
+  "gridconfig.commitTryAgain": "[G'Ａ ｒｏｗ ｉｓ ｓｔｉｌｌ ｂｅing edited, please check or cancel the row and try again.ฏูİı｜]",
+
+  "settings": "[G'Settingsฏูİı｜]",
+  "saved": "[G'Savedฏูİı｜]"
+}

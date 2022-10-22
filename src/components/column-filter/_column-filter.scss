@@ -1,0 +1,124 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+.#{$prefix}--overflow-menu-options--open {
+  min-width: fit-content;
+}
+
+.#{$prefix}--column-filter {
+  width: fit-content;
+
+  &--applied &__status {
+    display: block;
+  }
+
+  &__trigger.#{$prefix}--overflow-menu[open] {
+    background-color: $ui-02;
+    width: 40px;
+  }
+
+  &__status {
+    display: none;
+    position: absolute;
+    right: calc(50% - #{0.875rem});
+    top: calc(50% - #{0.875rem});
+  }
+
+  &__wrapper {
+    background: $ui-02;
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    max-height: 21.25rem;
+  }
+
+  &__content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__title {
+// TODO:   @include type-style('productive-heading-02');
+
+    color: $text-01;
+    margin-bottom: 1rem;
+  }
+
+  &__subtitle {
+//  TODO:  @include type-style('label-01');
+
+    color: $text-02;
+    margin-bottom: .25rem;
+  }
+
+  &__tags {
+    margin-bottom: 1rem;
+    max-height:100px;
+    overflow: auto;
+    min-height:50px;
+  }
+
+  &__search {
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+    background-color: white;
+  }
+
+  &__options {
+    overflow: auto;
+  }
+
+  &__empty-state-text {
+    justify-self: center;
+    text-align: center;
+    color: $text-02;
+  }
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--disabled .#{$prefix}--column-filter__results-count {
+      color: $disabled-02;
+    }
+  }
+
+  &__checkbox-wrapper {
+    overflow: hidden;
+  }
+
+  &__checkbox-label {
+    width: 100%;
+
+    .#{$prefix}--checkbox-label-text {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__results-count {
+// TODO:   @include type-style('body-short-01');
+
+    color: $text-01;
+    margin-left: 0.625rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+  }
+
+  &__footer-btn {
+    flex-grow:2;
+    max-width:50%;
+  }
+}
+

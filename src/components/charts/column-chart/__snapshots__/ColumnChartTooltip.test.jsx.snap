@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColumnChartTooltip verify if created 1`] = `
+<div
+  class="bx--column-chart__tooltip"
+>
+  <div
+    class="bx--column-chart__tooltip-name"
+  >
+    2017 Q4
+  </div>
+  <div
+    class="bx--column-chart__tooltip-value"
+  >
+    86
+  </div>
+</div>
+`;

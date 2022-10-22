@@ -1,0 +1,47 @@
+{
+  status: "ok",
+  widgetDefinitions: {
+    "weekly-activity-tracker": {
+      creator: "react-calmly",
+      component: "WeeklyActivityPlannerWidget",
+      package: "@react-calmly/components",
+      title: "User Management"
+    },
+    "executive-summary": {
+      creator: "react-calmly",
+      component: "ExecutiveSummaryWidget",
+      package: "@react-calmly/components",
+      title: "Executive Summary"
+    },
+    "deals-by-week": {
+      creator: "react-calmly",
+      component: "DealsByWeekWidget",
+      package: "@react-calmly/components",
+      title: "Deals by week"
+    },
+    "sales-by-week": {
+      creator: "react-calmly",
+      component: "SalesByTheWeekWidget",
+      package: "@react-calmly/components",
+      title: "Sales Summary this week"
+    },
+    "promo-effectiveness": {
+      creator: "react-calmly",
+      component: "SalesEffectivnessWidget",
+      package: "@react-calmly/components",
+      title: "Sales Effectiveness"
+    },
+    "campaign-success": {
+      creator: "react-calmly",
+      component: "CampaignSuccessWidget",
+      package: "@react-calmly/components",
+      title: "Campaign Success"
+    },
+    "journey-map-path-to-purchase": {
+      creator: "react-calmly",
+      component: "JourneyMapPathToPurchaseWidget",
+      package: "@react-calmly/components",
+      title: "Journey Map - Path to Purchase"
+    }
+  }
+}

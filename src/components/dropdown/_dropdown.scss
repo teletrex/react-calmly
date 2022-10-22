@@ -1,0 +1,95 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+/*
+
+.#{$prefix}--dropdown__wrapper {
+  .#{$prefix}--list-box.#{$prefix}--list-box--inline {
+    background-color: transparent;
+  }
+
+  .#{$prefix}--list-box {
+    &__menu {
+      max-height: 16rem;
+      min-width: 12.5rem;
+      .#{$prefix}--dropdown__search-wrapper .#{$prefix}--list-box__menu-item__option {
+        height: 3.25rem;
+        border-bottom: transparent;
+
+        .#{$prefix}--search-input {
+          background-color: $field-02;
+        }
+      }
+
+      &-item--disabled {
+        .#{$prefix}--list-box__menu-item__option {
+          color: $disabled-02;
+        }
+      }
+    }
+
+    &__open {
+      display: block;
+    }
+
+    &__close {
+        display: none;
+    }
+
+    &__menu-item__option {
+      border-bottom: 0.625rem solid $hover-ui;
+    }
+
+    &__menu-item--active {
+      pointer-events: all;
+    }
+
+    &__field {
+      height: 100%;
+
+      > * {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.#{$prefix}--menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.#{$prefix}--file-icon {
+  margin-right: 0.625rem;
+}
+
+.#{$prefix}--icon-wrapper {
+  .#{$prefix}--list-box__menu-item__option {
+    display: flex;
+
+    &__text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.#{$prefix}--skeleton {
+  &.#{$prefix}--list-box--inline .#{$prefix}--list-box__field {
+    padding: 0 0.5rem 0 0.5rem;
+    justify-content: flex-end;
+  }
+
+  .#{$prefix}--list-box__field {
+    padding: 0 1rem 0 1rem;
+    justify-content: flex-end;
+  }
+}
+
+
+*/

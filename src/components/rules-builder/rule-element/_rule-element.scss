@@ -1,0 +1,44 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+
+@import './rule-conjunction/rule-conjunction';
+@import './rule-group/rule-group';
+@import './rule-operand/rule-operand';
+
+.#{$prefix}--rule-element {
+  &-container {
+    position: relative;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__screen {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    background-color: $text-02;
+  }
+
+  &__drop {
+    color: $interactive-04;
+    background-color: #cae4de;
+    border: rem(2px) solid $interactive-04;
+  }
+}

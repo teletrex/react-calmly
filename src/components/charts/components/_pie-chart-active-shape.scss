@@ -1,0 +1,17 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+@import '~@carbon/styles';
+@import 'src/teletrex-theme/teletrex-theme';
+
+  .#{$prefix}--pie-chart-active-shape {
+    fill: $chart-hover;
+  }
+

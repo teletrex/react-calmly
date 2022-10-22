@@ -1,0 +1,189 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+$action-toolbar-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+
+
+  .#{$prefix}--action-toolbar {
+    display: inline-flex;
+    flex-flow: unset;
+
+    &.action-toolbar-horizontal {
+      box-shadow: $action-toolbar-shadow;
+      flex-direction: row;
+
+      .action-toolbar-item-wrapper:not(:first-child) {
+        & > * {
+          border: 0;
+          border-left: solid rem(1px) $ui-03;
+        }
+
+        &:first-of-type > * {
+          border-left-color: transparent;
+        }
+      }
+    }
+
+    &.action-toolbar-vertical {
+      box-shadow: $action-toolbar-shadow;
+      flex-direction: column;
+
+      .action-toolbar-item-wrapper {
+        & > * {
+          border: 0;
+          border-top: solid rem(1px) $ui-03;
+        }
+
+        &:first-of-type > * {
+          border-top-color: transparent;
+        }
+      }
+    }
+
+    &.action-toolbar-single {
+      flex-direction: row;
+
+      .action-toolbar-item-wrapper {
+        & > * {
+          border: 0;
+        }
+      }
+    }
+
+    & > .action-toolbar-item-wrapper {
+      margin: 0;
+      position: relative;
+      width: rem(48px);
+      height: rem(48px);
+    }
+
+    .action-toolbar-item-wrapper {
+      & > * {
+        background-color: $ui-02;
+        color: $icon-02;
+        margin: 0 !important;
+        min-height: auto;
+        width: rem(48px);
+        height: rem(48px);
+
+        &:hover {
+          background: $hover-ui;
+          color: $icon-02;
+        }
+
+        &:focus {
+          @include focus-outline('outline');
+
+          background-color: $ui-02;
+          border-left-color: $ui-03;
+        }
+      }
+
+      &:disabled,
+      &--disabled {
+        cursor: not-allowed;
+
+        & > * {
+          color: $disabled-02;
+          background-color: $disabled-01;
+          border-color: transparent;
+          outline: none;
+          fill: $disabled-02;
+        }
+      }
+
+      .#{$prefix}--toolbar-search {
+        &--active {
+          .#{$prefix}--search-input {
+            background-color: transparent;
+          }
+        }
+
+        &__btn {
+          margin-top: rem(7px);
+          margin-left: rem(9px);
+        }
+      }
+
+      .#{$prefix}--tooltip__trigger {
+        &.#{$prefix}--tooltip--bottom {
+          &::before {
+            bottom: rem(-3px);
+          }
+
+          &:hover,
+          &:focus {
+            .#{$prefix}--assistive-text {
+              bottom: rem(-8px);
+            }
+          }
+        }
+
+        &.#{$prefix}--tooltip--top {
+          &::before {
+            top: rem(-3px);
+          }
+
+          &:hover,
+          &:focus {
+            .#{$prefix}--assistive-text {
+              top: rem(-8px);
+            }
+          }
+        }
+      }
+
+      .#{$prefix}--btn {
+        padding-left: rem(15px);
+
+        &--icon-only {
+          padding-left: rem(13px);
+        }
+
+        &.#{$prefix}--btn--disabled {
+          background-color: $disabled-01;
+
+          &__icon,
+          > svg {
+            color: $disabled-02;
+          }
+        }
+
+        &:focus {
+          @include focus-outline('outline');
+
+          background-color: $ui-02;
+        }
+
+        &.#{$prefix}--btn--icon-only.#{$prefix}--tooltip__trigger:focus {
+          @include focus-outline('outline');
+        }
+      }
+
+      .#{$prefix}--overflow-menu {
+        &.#{$prefix}--overflow-menu--open,
+        &.#{$prefix}--overflow-menu--open .#{$prefix}--overflow-menu__trigger {
+          background-color: $ui-01;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &.#{$prefix}--toolbar .#{$prefix}--overflow-menu--open > .#{$prefix}--overflow-menu__icon {
+      fill: $icon-01;
+    }
+
+    .#{$prefix}--btn__icon {
+      width: auto;
+      height: auto;
+    }
+  }
+

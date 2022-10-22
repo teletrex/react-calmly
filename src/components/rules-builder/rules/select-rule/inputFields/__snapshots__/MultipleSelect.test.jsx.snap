@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultipleSelect should render correctly 1`] = `
+<div>
+  <div
+    class="bx--multi-select__wrapper bx--list-box__wrapper"
+  >
+    <div
+      class="bx--multi-select bx--list-box"
+      id="TestSelectRuleElement"
+      role="button"
+      tabindex="0"
+    >
+      <button
+        aria-disabled="false"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="downshift-0-label downshift-0-toggle-button"
+        class="bx--list-box__field"
+        id="downshift-0-toggle-button"
+        type="button"
+      >
+        <span
+          class="bx--list-box__label"
+          id="multiselect-field-label-multi_select_id_2"
+        >
+          Choose an option
+        </span>
+        <div
+          class="bx--list-box__menu-icon"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            height="16"
+            name="chevron--down"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+            />
+            <title />
+          </svg>
+        </div>
+      </button>
+      <div
+        aria-labelledby="downshift-0-label"
+        aria-multiselectable="true"
+        class="bx--list-box__menu bx--list-box__close"
+        id="downshift-0-menu__menu"
+        role="listbox"
+        tabindex="-1"
+      >
+        <div
+          aria-selected="false"
+          class="bx--dropdown__search-wrapper bx--list-box__menu-item"
+          id="downshift-0-item-0"
+          role="option"
+        >
+          <div
+            class="bx--list-box__menu-item__option"
+          >
+            <span
+              class="bx--list-box__menu-item__option__text"
+            >
+              <div
+                aria-label="Search..."
+                class="bx--search bx--search--sm"
+                role="search"
+              >
+                <svg
+                  aria-label="Search..."
+                  class="bx--search-magnifier"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  role="img"
+                  style="will-change: transform;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 14.3L10.7 10c1.9-2.3 1.6-5.8-.7-7.7S4.2.7 2.3 3 .7 8.8 3 10.7c2 1.7 5 1.7 7 0l4.3 4.3.7-.7zM2 6.5C2 4 4 2 6.5 2S11 4 11 6.5 9 11 6.5 11 2 9 2 6.5z"
+                  />
+                </svg>
+                <label
+                  class="bx--label"
+                  for="search__input__id_1"
+                  id="search__input__id_1-label"
+                >
+                  Search...
+                </label>
+                <input
+                  aria-label="dropdown-TestSelectRuleElement-search"
+                  class="bx--search-input"
+                  i18n="[object Object]"
+                  id="search__input__id_1"
+                  placeholder="Search..."
+                  title="Search..."
+                  type="text"
+                  value=""
+                />
+                <button
+                  aria-label="Clear search input"
+                  class="bx--search-close bx--search-close--hidden"
+                  title="Clear input"
+                  type="button"
+                >
+                  <svg
+                    aria-label="Clear search input"
+                    focusable="false"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    role="img"
+                    style="will-change: transform;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MultipleSelect should render correctly for read-only 1`] = `
+<div>
+  <span
+    class="bx--rule-value-readonly bx--text-space-left"
+  >
+    Option 3
+  </span>
+</div>
+`;
+
+exports[`MultipleSelect should render correctly with a provided value 1`] = `
+<div>
+  <div
+    class="bx--multi-select__wrapper bx--list-box__wrapper"
+  >
+    <div
+      class="bx--multi-select bx--multi-select--selected bx--list-box"
+      id="TestSelectRuleElement"
+      role="button"
+      tabindex="0"
+    >
+      <button
+        aria-disabled="false"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        aria-labelledby="downshift-3-label downshift-3-toggle-button"
+        class="bx--list-box__field"
+        id="downshift-3-toggle-button"
+        type="button"
+      >
+        <div
+          aria-label="Clear Selection"
+          class="bx--list-box__selection bx--tag--filter bx--list-box__selection--multi"
+          role="button"
+          tabindex="0"
+        >
+          1
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+            />
+          </svg>
+        </div>
+        <span
+          class="bx--list-box__label"
+          id="multiselect-field-label-multi_select_id_5"
+        >
+          Choose an option
+        </span>
+        <div
+          class="bx--list-box__menu-icon"
+        >
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            height="16"
+            name="chevron--down"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+            />
+            <title />
+          </svg>
+        </div>
+      </button>
+      <div
+        aria-labelledby="downshift-3-label"
+        aria-multiselectable="true"
+        class="bx--list-box__menu bx--list-box__close"
+        id="downshift-3-menu__menu"
+        role="listbox"
+        tabindex="-1"
+      >
+        <div
+          aria-selected="false"
+          class="bx--dropdown__search-wrapper bx--list-box__menu-item"
+          id="downshift-3-item-0"
+          role="option"
+        >
+          <div
+            class="bx--list-box__menu-item__option"
+          >
+            <span
+              class="bx--list-box__menu-item__option__text"
+            >
+              <div
+                aria-label="Search..."
+                class="bx--search bx--search--sm"
+                role="search"
+              >
+                <svg
+                  aria-label="Search..."
+                  class="bx--search-magnifier"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  role="img"
+                  style="will-change: transform;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 14.3L10.7 10c1.9-2.3 1.6-5.8-.7-7.7S4.2.7 2.3 3 .7 8.8 3 10.7c2 1.7 5 1.7 7 0l4.3 4.3.7-.7zM2 6.5C2 4 4 2 6.5 2S11 4 11 6.5 9 11 6.5 11 2 9 2 6.5z"
+                  />
+                </svg>
+                <label
+                  class="bx--label"
+                  for="search__input__id_1"
+                  id="search__input__id_1-label"
+                >
+                  Search...
+                </label>
+                <input
+                  aria-label="dropdown-TestSelectRuleElement-search"
+                  class="bx--search-input"
+                  i18n="[object Object]"
+                  id="search__input__id_1"
+                  placeholder="Search..."
+                  title="Search..."
+                  type="text"
+                  value=""
+                />
+                <button
+                  aria-label="Clear search input"
+                  class="bx--search-close bx--search-close--hidden"
+                  title="Clear input"
+                  type="button"
+                >
+                  <svg
+                    aria-label="Clear search input"
+                    focusable="false"
+                    height="16"
+                    preserveAspectRatio="xMidYMid meet"
+                    role="img"
+                    style="will-change: transform;"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

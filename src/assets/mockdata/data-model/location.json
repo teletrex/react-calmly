@@ -1,0 +1,39 @@
+{
+  status : "ok",
+  result : {
+    dataModelName : "Location",
+    attributes: [
+      {
+        "attribute" : "id",
+        "name" : "id",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "storename",
+        "name" : "Store Name",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "city",
+        "name" : "City",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "locationcode",
+        "name" : "Location Code",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "state",
+        "name" : "State",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "streetaddress",
+        "name" : "Street Address",
+        "type": "string"  // string, number, currency, time, enum
+      }
+    ]
+  }
+}
+

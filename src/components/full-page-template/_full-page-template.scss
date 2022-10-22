@@ -1,0 +1,119 @@
+* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+//@import 'src/teletrex-theme/typography/productive';
+//@import 'src/teletrex-theme/typography/tokens';
+//@import 'src/teletrex-theme/teletrex-theme';
+
+//@include theme();
+
+/// Full page template styles
+/// @access private
+/// @group full-page-template
+
+.#{$prefix}--full-page-template {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0 rem(16px);
+//    background-color: $ui-02;
+
+  &__heading {
+    padding: rem(24px) rem(16px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-wrapper {
+//      color: $text-01;
+  }
+
+  &__subheader-wrapper {
+    padding: rem(4px) 0 rem(12px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__subheader-left {
+    display: flex;
+    min-height: rem(48px);
+    justify-content: center;
+    flex-direction: column;
+
+    > p {
+      padding: rem(4px) 0;
+      font-weight: font-weight('regular');
+//      color: $text-02;
+      line-height: rem(18px);
+      letter-spacing: rem(0.16px);
+      font-family: 'National 2', sans-serif;
+      font-size: rem(14px);
+    }
+  }
+
+  &__header-left {
+    padding-right: rem(16px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header-right {
+    align-self: flex-end;
+    margin: rem(13px) 0;
+
+    .#{$prefix}--toolbar {
+      margin: 0;
+    }
+
+    &__marginless {
+      align-self: center;
+      margin: 0;
+
+      .#{$prefix}--action-toolbar {
+        margin: 0;
+      }
+    }
+
+    &__title-aligned {
+      align-self: flex-start;
+      margin: 0;
+    }
+  }
+
+  &__content {
+    min-height: rem(1px);
+    padding: 0 rem(16px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__scrollable-table {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: rem(1px);
+    justify-content: space-between;
+  }
+}
+
+// full-page-template is inside breadcrumbs template and breadcrumbs exist
+.#{$prefix}--breadcrumbs-template {
+  &__content:not(:only-child) {
+    .#{$prefix}--full-page-template {
+      &__heading {
+        padding-top: 0;
+      }
+    }
+  }
+}

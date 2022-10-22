@@ -1,0 +1,81 @@
+import { Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# Side Bar Template
+
+## Overview
+
+The `SideBarTemplate` allows a user to display content to the side of a pages main content, typically used for navigation.  Content provided to `SideBar` as `children` will be displayed as the main content.
+
+### Default
+<Canvas>
+  <Story id='templates-side-bar-template--default' />
+</Canvas>
+
+### Configurable Layout
+
+The appearance of a `SideBarTemplate` can be configured with layout and component properties:
+- Use `marginlessPanel`, `overlay`, `place`, and `size` to control the `SideBarTemplate` size and its relation to the main content.
+- Provide content to `actionBar`, `sideBarBody`, `sideBarFooter`, and `sideBarHeader` properties to display content in these sections.
+
+### Expanding/Collapsing
+
+The `SideBarTemplate` provides several options for expanding or collapsing the `SideBarTemplate`.
+- `show` controls whether `SideBarTemplate` is expanded or collapsed.
+- `showCloseButton` and `showExpander` controls the `SideBarTemplate` Close Button and Expander elements that can actively expand or collapse the `SideBar`.
+- `toggleShowOnClose` prevents the Close Button from collapsing the `SideBarTemplate`.
+- `controlledOutside` will not display the `SideBarTemplate` open bar, if expansion will be handled externally.
+
+### Templates
+
+The `SideBarTemplate` can be used alongside multiple other templates to render a desired page layout.  The template components should be rendered as `children` in the following order to display properly.
+```
+<BreadcrumbsTemplate>
+  <SideBarTemplate>
+    <FullPageTemplate />
+  </SideBarTemplate>
+</BreadcrumbsTemplate>
+```
+
+#### With FullPage Template
+<Canvas>
+  <Story id='templates-side-bar-template--with-full-page-template' />
+</Canvas>
+
+#### With Breadcrumbs Template
+<Canvas>
+  <Story id='templates-side-bar-template--with-breadcrumbs-template' />
+</Canvas>
+
+### Action Bar
+Content can be displayed in an Action Bar over the main page content by passing it to `SideBarTemplate` via the `actionBar` property.
+
+<Canvas>
+  <Story id='templates-side-bar-template--with-action-bar' />
+</Canvas>
+
+## Component API
+
+| Parameter name        |             Type             |  Default value  | Required  |                                  Description                                      |
+| --------------------- | :--------------------------: | :-------------: | :-------: | --------------------------------------------------------------------------------- |
+| actionBar             | *OneOf(node, array of node)* | `null`          | No        | Optional content to display above main content                                    |
+| ariaLabel             | *string*                     | `'side-bar'`    | No        | Custom value to display as the `aria-label` for SideBar `aside` node              |
+| children              | *node*                       | `null`          | No        | Main content to be displayed within `content` section of SideBar                  |
+| className             | *string*                     | `''`            | No        | Custom `class` for main SideBar `div`                                             |
+| controlledOutside     | *boolean*                    | `false`         | No        | If true, hide a closed SideBar's open bar if SideBar will be controlled outside   |
+| isResponsive          | *boolean*                    | `false`         | No        | If true, SideBar will not display expander on `'lg'` or greater breakpoints       |
+| marginlessPanel       | *boolean*                    | `false`         | No        | If true, remove padding from SideBar                                              |
+| onCloseCallback       | *function*                   | `noop`          | No        | Optional callback to be called `onClose`                                          |
+| overlay               | *boolean*                    | `false`         | No        | If true, main content will occupy full width and SideBar will overlay on top      |
+| place                 | *string*                     | `'left'`        | No        | Select the which side of main content to display on, options `left`, `right`      |
+| scrollContentToTop    | *boolean*                    | `false`         | No        | If true, main section will scroll to top on content change                        |
+| scrollContentToTopDep | *OneOf(object, node)*        | `null`          | No        | Dependency for scroll to top functionality                                        |
+| show                  | *boolean*                    | `false`         | No        | If true, display the SideBar                                                      |
+| showCloseButton       | *boolean*                    | `true`          | No        | If true, display the SideBar close button                                         |
+| showExpander          | *boolean*                    | `false`         | No        | If true, display the SideBar expander                                             |
+| showSeparator         | *boolean*                    | `true`          | No        | If true, display the SideBar separator                                            |
+| sideBarBody           | *node*                       | `null`          | No        | Content to display in the body of the SideBar                                     |
+| sideBarFooter         | *node*                       | `null`          | No        | Content to display in the footer of the SideBar                                   |
+| sideBarHeader         | *node*                       | `null`          | No        | Content to display in the header of the SideBar                                   |
+| size                  | *OneOf()*                    | `'default'`     | No        | Select the size of the SideBar, options: `treeNav`, `default`, `wide`, `half`     |
+| toggleShowOnClose     | *boolean*                    | `true`          | No        | If false, will not toggle between opened and closed when close button is clicked  |
+| triggerRef            | *instance of Element*        |                 | No        | Provide element to focus when SideBar is closed                                   |

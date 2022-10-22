@@ -1,0 +1,216 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneOfValues should render correctly 1`] = `
+<div>
+  <div
+    class="cds--input-field-container"
+    data-testid="date-rule-one-of-values"
+  >
+    <div
+      class="cds--form-item"
+    >
+      <div
+        class="cds--date-picker cds--date-picker--single"
+        id="TestDateRuleElement--date-rule-picker-1"
+      >
+        <span
+          class="cds--date-picker-input__wrapper--relative"
+        >
+          <div
+            class="cds--date-picker-container cds--date-picker--nolabel"
+          >
+            <div
+              class="cds--date-picker-input__wrapper"
+            >
+              <input
+                autocomplete="off"
+                class="cds--date-picker__input flatpickr-input"
+                id="TestDateRuleElement--date-rule-value-1"
+                pattern="d{1,2}/d{1,2}/d{4}"
+                placeholder="MM/DD/YYYY"
+                type="text"
+                value=""
+              />
+              <svg
+                aria-label="Open calendar"
+                class="cds--date-picker__icon"
+                focusable="false"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                style="will-change: transform;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13,2h-2V1h-1v1H6V1H5v1H3C2.4,2,2,2.4,2,3v10c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V3C14,2.4,13.6,2,13,2z M13,13H3V6h10V13z M13,5H3V3h2v1h1V3h4v1h1V3h2V5z"
+                />
+                <title>
+                  Open calendar
+                </title>
+              </svg>
+            </div>
+          </div>
+          <svg
+            aria-hidden="true"
+            class="cds--date-picker-input__error cds--date-picker-input__error--hidden"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm2.7 10.5L4.5 5.3l.8-.8 6.2 6.2-.8.8z"
+            />
+            <path
+              d="M10.7 11.5L4.5 5.3l.8-.8 6.2 6.2-.8.8z"
+              data-icon-path="inner-path"
+              fill="none"
+              opacity="0"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OneOfValues should render correctly for read-only 1`] = `
+<div>
+  <span>
+    :
+  </span>
+  <span
+    class="cds--text-space-left cds--rule-value-readonly"
+  >
+    Wed Nov 11 2020
+  </span>
+  <span>
+    ,
+  </span>
+  <span
+    class="cds--text-space-left cds--rule-value-readonly"
+  >
+    Sat Dec 12 2020
+  </span>
+</div>
+`;
+
+exports[`OneOfValues should render correctly with a provided value 1`] = `
+<div>
+  <div
+    class="cds--input-field-container"
+    data-testid="date-rule-one-of-values"
+  >
+    <div
+      class="cds--tag cds--tag--gray cds--tag--filter cds--tag--oval"
+      title=""
+    >
+      <div
+        class="cds--tag__label"
+      >
+        <span
+          class="cds--tag__text-ellipsis"
+        >
+          Wed Nov 11 2020
+        </span>
+      </div>
+      <button
+        aria-label="Remove"
+        title="Remove"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="cds--form-item"
+    >
+      <div
+        class="cds--date-picker cds--date-picker--single"
+        id="TestDateRuleElement--date-rule-picker-1"
+      >
+        <span
+          class="cds--date-picker-input__wrapper--relative"
+        >
+          <div
+            class="cds--date-picker-container cds--date-picker--nolabel"
+          >
+            <div
+              class="cds--date-picker-input__wrapper"
+            >
+              <input
+                autocomplete="off"
+                class="cds--date-picker__input flatpickr-input"
+                id="TestDateRuleElement--date-rule-value-1"
+                pattern="d{1,2}/d{1,2}/d{4}"
+                placeholder="MM/DD/YYYY"
+                type="text"
+                value=""
+              />
+              <svg
+                aria-label="Open calendar"
+                class="cds--date-picker__icon"
+                focusable="false"
+                height="16"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                style="will-change: transform;"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13,2h-2V1h-1v1H6V1H5v1H3C2.4,2,2,2.4,2,3v10c0,0.6,0.4,1,1,1h10c0.6,0,1-0.4,1-1V3C14,2.4,13.6,2,13,2z M13,13H3V6h10V13z M13,5H3V3h2v1h1V3h4v1h1V3h2V5z"
+                />
+                <title>
+                  Open calendar
+                </title>
+              </svg>
+            </div>
+          </div>
+          <svg
+            aria-hidden="true"
+            class="cds--date-picker-input__error cds--date-picker-input__error--hidden"
+            focusable="false"
+            height="16"
+            preserveAspectRatio="xMidYMid meet"
+            style="will-change: transform;"
+            viewBox="0 0 16 16"
+            width="16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm2.7 10.5L4.5 5.3l.8-.8 6.2 6.2-.8.8z"
+            />
+            <path
+              d="M10.7 11.5L4.5 5.3l.8-.8 6.2 6.2-.8.8z"
+              data-icon-path="inner-path"
+              fill="none"
+              opacity="0"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,116 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@use 'node_modules/@carbon/styles/index';
+
+
+$select-editor-option-height: 1.8rem;
+$select-editor-menu-height: calc ($select-editor-option-height * 500);
+
+.bx--select-editor {
+  position: relative;
+  align-items: center;
+  display: flex;
+  font-family: 'National 2';
+  padding:0;
+  width: 100%;
+  margin:0;
+  &[disabled]:hover {
+    cursor:not-allowed;
+  }
+  .bx--select-editor-closer {
+    height: 23px;
+    background-color: transparent;
+    width: 30px;
+    position: absolute;
+    right: 0px;
+  }
+
+  .bx--text-input {
+    background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg focusable="false"      preserveAspectRatio="xMidYMid meet"      aria-label="Open menu"      xmlns="http://www.w3.org/2000/svg"      width="16"      height="16"      viewBox="0 0 16 16"      role="img"      style="will-change: transform;">  <g transform="scale(1 -1) translate(0 -16)">  <path d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"></path></g><title>Open menu</title>      </svg>');
+    background-repeat: no-repeat;
+    background-position-x: 93%;
+    background-position-y: 5px;
+    padding-left: 10px;
+    padding-right:30px;
+  }
+  .bx--select-value, .bx--select-value-focus {
+    background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg focusable="false"    preserveAspectRatio="xMidYMid meet"    aria-label="Open menu"    name="chevron--down"    xmlns="http://www.w3.org/2000/svg"    width="16"    height="16"    viewBox="0 0 16 16"    role="img"    style="will-change: transform;">  <path d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"></path>    <title>Open menu</title>    </svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 5px;
+    height: 26px;
+    display:grid;
+    align-content: center;
+    padding-left:8px;
+    background-color: $rc-brand-background;
+    width:100%;
+    margin:2px;
+    &-focus {
+      border: 2px solid $rc-brand-darkblue;
+      margin:0;
+      background-position-y: 3px;
+      background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg focusable="false"      preserveAspectRatio="xMidYMid meet"      aria-label="Open menu"      xmlns="http://www.w3.org/2000/svg"      width="16"      height="16"      viewBox="0 0 16 16"      role="img"      style="will-change: transform;">  <g transform="scale(1 -1) translate(0 -16)">  <path d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"></path></g><title>Open menu</title>      </svg>');
+    }
+    .bx--select-text {
+      height:unset;
+      width:calc(100% - 20px);
+      overflow-x: hidden;
+      overflow-y: hidden;
+      text-overflow:ellipsis;
+    }
+  }
+}
+
+.bx--select-menu {
+  position: absolute;
+  z-index: 500;
+  background-color: whitesmoke;
+  max-height: $select-editor-menu-height;
+  overflow-y: visible;
+  margin:0;
+  font-size: .85rem;
+
+  .bx--select-menu-scroll {
+    overflow-y: auto;
+    max-height: $select-editor-menu-height;
+    height:auto;
+    margin:0;
+    padding:0;
+    box-shadow: $rc-brand-menu-shadow;
+    outline: none;
+  }
+
+  .bx--select-option {
+    display: grid;
+    align-items: center;
+    min-width: 150px;
+    min-height: $select-editor-option-height;
+    line-height: 1.1rem;
+    border: none;
+    background-color: $rc-brand-background;
+    padding-left: 10px;
+    padding-right: 2rem;
+    border-bottom: 0.01rem solid rgba(164, 155, 155, .25);
+    padding-bottom: .25rem;
+    padding-top: .3rem;
+  }
+
+  .bx--select-option {
+    &:hover {
+      background-color: $rc-brand-menu-hover;
+    }
+    &:active {
+      background-color: $rc-brand-menu-active;
+    }
+  }
+}
+
+
+

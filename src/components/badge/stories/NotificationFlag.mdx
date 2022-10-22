@@ -1,0 +1,23 @@
+import { Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# NotificationFlag
+
+
+`NotificationFlag` implements notification icon on a button component. It is a static badge.
+
+## Example
+
+<Canvas>
+    <Story id="badge-notification--usage" />
+</Canvas>
+
+## Component API
+
+| Parameter name               |             Type             |  Default value  | Required  |                                  Description                                       |
+| -----------------------------| :--------------------------: | :-------------: | :-------: | ---------------------------------------------------------------------------------- |
+| children                     | *OneOf(string, node)*        | `null`          | No        | Content to put into notification. Desirably button on which notification is needed |
+| className                    | *string*                     | `''`            | No        | Custom className added to flag container                                           |
+| handleNotificationBadgeClick | *function*                   | `noop`          | No        | Handler for clicking on notification badge                                         |
+| notificationColor            | *string*                     | `'#49f9b9'`     | No        | Color of notification badge                                                        |
+| showButton                   | *boolean*                    | `true`          | No        | Show `children` flag. Set to false renders only notification icon                  |
+| svgTitle                     | *string*                     | `''`            | No        | Title for notification icon svg                                                    |

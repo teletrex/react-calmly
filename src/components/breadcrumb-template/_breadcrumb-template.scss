@@ -1,0 +1,35 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+/// Breadcrumbs template styles
+/// @access private
+/// @group breadcrumbs-template
+
+  .#{$prefix}--breadcrumb-template {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    background-color: $ui-02;
+
+    &__breadcrumb-wrapper {
+      padding: rem(16px) rem(32px);
+
+      &:empty {
+        padding: rem(8px) rem(32px);
+      }
+    }
+
+    &__content {
+      min-height: rem(1px);
+      flex: 1;
+    }
+  }
+

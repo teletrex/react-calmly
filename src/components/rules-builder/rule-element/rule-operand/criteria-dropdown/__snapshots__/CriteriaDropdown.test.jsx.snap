@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CriteriaDropdown should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--inline"
+  >
+    <div
+      class="bx-proposal-dropdown"
+      role="listbox"
+    >
+      <span>
+        <div
+          aria-label="Select criteria"
+          class="bx-proposal-dropdown__field"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="bx-proposal-dropdown__field__label"
+          >
+            Select criteria
+          </span>
+          <div
+            class="bx-proposal-dropdown__field__menu-icon"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+              />
+            </svg>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CriteriaDropdown should render readOnly with selectedCriteriaKey 1`] = `
+<DocumentFragment>
+  <span
+    class="bx--rule-criteria--readonly"
+  />
+</DocumentFragment>
+`;

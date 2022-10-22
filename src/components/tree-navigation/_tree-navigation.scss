@@ -1,0 +1,130 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+@import '~@carbon/styles/scss/utilities';
+// layout?
+
+
+@import 'src/teletrex-theme/typography/productive';
+@import 'src/teletrex-theme/typography/tokens';
+@import 'src/teletrex-theme/teletrex-theme';
+@import 'src/teletrex-theme/mixins';
+
+@include theme();
+
+.tree-navigation-item {
+  $root: &;
+
+  &__label {
+    flex: 1;
+    margin: rem(7px) 0;
+
+    @include type-style('body-short-01');
+    @include clip-text();
+
+    color: $text-02;
+    z-index: 1;
+  }
+
+  &__header-chevron {
+    margin-top: rem(8px);
+
+    & > svg {
+      margin-right: 0.5rem;
+      fill: $icon-02;
+      transform: rotate(0);
+      transition: all $duration--fast-02 motion(standard, productive);
+    }
+
+    &--rotate {
+      & > svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--open > button > &__header-chevron > svg {
+    fill: $icon-01;
+  }
+
+  &__button {
+    padding: 0 rem(32px);
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: static;
+
+    &--selected > .tree-navigation-item__label {
+      color: $text-01;
+    }
+
+    &:focus {
+      @include focus-outline('outline');
+
+      > .tree-navigation-item__header-chevron > svg {
+        fill: $icon-01;
+      }
+    }
+
+    &--selected {
+      border-left: rem(3px) solid $interactive-04;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $hover-ui;
+    }
+  }
+
+  &--heading {
+    > .tree-navigation-item__button > #{$root}__label {
+      @include type-style('productive-heading-01');
+
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+
+  &--open:not(&--heading) > &__button > &__label {
+    color: $text-01;
+  }
+
+  &__button:focus .#{$prefix}--overflow-menu:hover {
+    border-top: rem(2px) solid #29ab87;
+    border-bottom: rem(2px) solid #29ab87;
+  }
+}
+
+.tree-navigation {
+  &--is-root {
+    position: relative;
+
+    > .tree-navigation-item {
+      padding-left: 0;
+
+      > .tree-navigation-item {
+        &__button > .tree-navigation-item {
+          &__label {
+// TODO:            @include type-style('productive-heading-01');
+
+            margin: rem(11px) 0;
+          }
+
+          &__header-chevron {
+            margin-top: rem(12px);
+          }
+        }
+      }
+    }
+  }
+}

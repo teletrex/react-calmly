@@ -1,0 +1,14 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.text-input-editor {
+  &.editing:focus {
+    outline: 2px solid $rc-brand-outline-active;
+  }
+}

@@ -1,0 +1,33 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+@mixin theme {
+  .#{$prefix}--theme {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 200px;
+
+    &-color {
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    &-color-variable {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include exports('theme') {
+  @include theme;
+}

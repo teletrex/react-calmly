@@ -1,0 +1,24 @@
+import { Preview, Story } from '@storybook/addon-docs/blocks';
+
+# Heading
+
+## Overview
+
+By default heading needs only `children` props.
+
+<Preview>
+  <Story id="atoms-heading--default" />
+</Preview>
+
+## Component API
+
+| Parameter name         |           Type            | Default value | Required | Description                                                                                           |
+| ---------------------- | :-----------------------: | :-----------: | :------: | ----------------------------------------------------------------------------------------------------- |
+| bold                   |         _boolean_         |    `false`    |    No    | Bold flag. Applies only to `H4` heading.                                                              |
+| children               |   _OneOf(string, node)_   |    `null`     |    No    | Text of the heading                                                                                   |
+| className              |         _string_          |     `''`      |    No    | Optional `className` to be applied to the heading                                                     |
+| extra                  |         _boolean_         |    `false`    |    No    | Extra large flag. Applies only to `H1` heading.                                                       |
+| forwardedRef           | _OneOf(object, function)_ |               |    No    | Allows to pass custom `ref`                                                                           |
+| productiveHeadingProps |         _object_          |     `{}`      |    No    | Allows to pass additional HTML attributes to heading element. Applies only to `H1`.                   |
+| headingProps           |         _object_          |     `{}`      |    No    | Allows to pass additional HTML attributes to heading element. Applies only to `H2`, `H3`, `H5`, `H6`. |
+| panelHeadingProps      |         _object_          |     `{}`      |    No    | Allows to pass additional HTML attributes to heading element. Applies only to `H4`.                   |

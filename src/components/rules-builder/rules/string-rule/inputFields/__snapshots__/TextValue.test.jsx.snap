@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextValue should render correctly 1`] = `
+<div>
+  <div
+    class="bx--form-item bx--text-input-wrapper"
+  >
+    <span
+      class="bx--text-input__label-wrapper bx--visually-hidden"
+    >
+      <label
+        class="bx--label"
+        for="TestStringRuleElement"
+      >
+        String rule
+      </label>
+      
+    </span>
+    <div
+      class="bx--text-input__field-wrapper"
+    >
+      <input
+        class="bx--text-input"
+        id="TestStringRuleElement"
+        name="TestStringRuleElement"
+        placeholder="Enter value"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextValue should render correctly for read-only 1`] = `
+<div>
+  <span
+    class="bx--rule-value-readonly bx--text-space-left"
+  >
+    abc
+  </span>
+</div>
+`;
+
+exports[`TextValue should render correctly with a provided value 1`] = `
+<div>
+  <div
+    class="bx--form-item bx--text-input-wrapper"
+  >
+    <span
+      class="bx--text-input__label-wrapper bx--visually-hidden"
+    >
+      <label
+        class="bx--label"
+        for="TestStringRuleElement"
+      >
+        String rule
+      </label>
+      
+    </span>
+    <div
+      class="bx--text-input__field-wrapper"
+    >
+      <input
+        class="bx--text-input"
+        id="TestStringRuleElement"
+        name="TestStringRuleElement"
+        placeholder="Enter value"
+        type="text"
+        value="abc"
+      />
+    </div>
+  </div>
+</div>
+`;

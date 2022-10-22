@@ -1,0 +1,27 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.#{$prefix}--eleven-tooltip {
+//  height: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height:unset;
+  border: unset;
+}
+
+.#{$prefix}--eleven-tooltip::after {
+   content: '';
+   display: block;
+}
+
+
+
+
+

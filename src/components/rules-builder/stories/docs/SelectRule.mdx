@@ -1,0 +1,71 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - SelectRule
+
+## Overview
+
+`SelectRule` is a predefined rule type that allows to select values from a provided data set.
+
+<Preview>
+  <Story id="experimental-rulesbuilder-selectrule--usage" />
+</Preview>
+
+
+## Rule config
+
+The `SelectRule` is defined by two additional config parameters in the `criteriaConfig` object:
+
+| Parameter     |    Type    | Default value  | Description                                                               |
+| ------------- | :--------: | :------------: | ------------------------------------------------------------------------- |
+| `options`     |  *array*   |      `[]`      | Set of available values (format: `{ label: 'Foo', value: 'FOO_VALUE' }`)  |
+| `isMultiple`  | *boolean*  |    `false`     | Multiple selection flag                                                   |
+
+
+## Operators
+
+The `SelectRule` supports the following operators:
+
+| Operator                                   |    inputType     |
+| ------------------------------------------ | :--------------: |
+| `IS`                                       |  `singleValue`   |
+| `IS_NOT`                                   |  `singleValue`   |
+| `CONTAINS`                                 |  `singleValue`   |
+| `DOES_NOT_CONTAIN`                         |  `singleValue`   |
+| `STARTS_WITH`                              |  `singleValue`   |
+| `DOES_NOT_START_WITH`                      |  `singleValue`   |
+| `ENDS_WITH`                                | `multipleValues` |
+| `DOES_NOT_END_WITH`                        | `multipleValues` |
+| `IS_ONE_OF_THE_FOLLOWING`                  | `multipleValues` |
+| `IS_NOT_ONE_OF_THE_FOLLOWING`              | `multipleValues` |
+| `CONTAINS_ONE_OF_THE_FOLLOWING`            | `multipleValues` |
+| `DOES_NOT_CONTAIN_ONE_OF_THE_FOLLOWING`    | `multipleValues` |
+| `STARTS_WITH_ONE_OF_THE_FOLLOWING`         | `multipleValues` |
+| `DOES_NOT_START_WITH_ONE_OF_THE_FOLLOWING` | `multipleValues` |
+| `ENDS_WITH_ONE_OF_THE_FOLLOWING`           | `multipleValues` |
+| `DOES_NOT_END_WITH_ONE_OF_THE_FOLLOWING`   | `multipleValues` |
+| `IS_BLANK`                                 |      `none`      |
+| `IS_NOT_BLANK`                             |      `none`      |
+
+You can also create a custom operator using the following format
+
+| Field       |  Type    |                                   Description |
+| ----------- | :------: | --------------------------------------------: |
+| `label`     | *string* |       Text displayed in the operator dropdown |
+| `value`     | *string* |                            Unique operator ID |
+| `inputType` | *string* | Value defining the type of the input component|
+
+## Supported `inputTypes`
+
+| inputType        |        Description        |          Value          |
+| ---------------- | :-----------------------: | :---------------------: |
+| `none`           | Value defined by operator |         `null`          |
+| `singleValue`    |     Sets single value     |        `string`         |
+| `multipleValues` |   Sets multiple values    | `[string, ..., string]` |
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on
+

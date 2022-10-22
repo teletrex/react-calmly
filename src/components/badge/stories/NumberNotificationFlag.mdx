@@ -1,0 +1,19 @@
+import { Canvas, Story } from '@storybook/addon-docs/blocks';
+
+# NumberNotificationFlag
+
+`NumberNotificationFlag` (count badge) implements number notification icon on a button component.
+
+## Example
+
+<Canvas>
+    <Story id="atoms-badge-numbernotification--usage" />
+</Canvas>
+
+## Component API
+
+| Parameter name               |             Type             |  Default value  | Required  |                                  Description                                       |
+| -----------------------------| :--------------------------: | :-------------: | :-------: | ---------------------------------------------------------------------------------- |
+| children                     | *OneOf(string, node)*        | `null`          | No        | Content to put into notification. Desirably button on which notification is needed |
+| numberOfNotifications        | *number*                     | `1`             | No        | Number displayed in notification                                                   |
+| showButton                   | *boolean*                    | `true`          | No        | Show `children` flag. Set to false renders only number notification icon           |

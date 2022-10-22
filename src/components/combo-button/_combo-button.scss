@@ -1,0 +1,22 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+.#{$prefix}--combo-button {
+  display:grid;
+  grid-template-columns: min-content auto;
+
+  .#{$prefix}--btn {
+    margin-left: 4px;
+    min-height: 32px;
+    max-height: 32px;
+  }
+  .#{$prefix}--btn__icon {
+    margin-right:0;
+  }
+}

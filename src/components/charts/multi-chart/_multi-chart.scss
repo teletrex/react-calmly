@@ -1,0 +1,160 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+
+
+$bounds-color: transparentize($chart-01, 0.8);
+$line-color: $chart-01;
+
+$legend-colors: (
+  line: $line-color,
+  alert: $chart-anomaly,
+  dashed: $chart-threshold,
+  bounds: $bounds-color,
+);
+
+@mixin multi-chart {
+  .#{$prefix}--multi-chart {
+    background-color: $ui-02;
+    display: flex;
+    flex-direction: column;
+    padding: rem(24px);
+    border: rem(1px) solid $ui-03;
+
+    &__header {
+      @include type-style('productive-heading-03');
+
+      margin-bottom: rem(10px);
+    }
+
+    &__legend {
+      @include type-style('caption-01');
+
+      display: flex;
+      flex-direction: row;
+      font-size: rem(12px);
+      margin-bottom: rem(15px);
+
+      &__item {
+        margin-right: rem(16px);
+      }
+
+      &__icon {
+        margin-right: rem(7px);
+
+        @each $type, $color in $legend-colors {
+          &__icon-#{$type} {
+            circle {
+              fill: $color;
+            }
+          }
+        }
+      }
+    }
+
+    &__chart {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; // this style fixes not proper resizing https://github.com/recharts/recharts/issues/172
+    }
+
+    &__chart-line {
+      .recharts-line-curve {
+        stroke: $line-color;
+      }
+    }
+
+    &__chart-dashed {
+      .recharts-line-curve {
+        stroke: $chart-threshold;
+      }
+    }
+
+    &__chart-line__inactive-dot {
+      fill: $line-color;
+      stroke: $line-color;
+      stroke-width: 1;
+
+      &--alert {
+        fill: $chart-anomaly;
+        stroke: $chart-anomaly;
+      }
+
+      &--selected {
+        fill: $chart-anomaly;
+        stroke-width: 12px;
+        stroke: transparentize($chart-anomaly, 0.7);
+      }
+    }
+
+    &__chart-area__dot {
+      opacity: 0;
+    }
+
+    .recharts {
+      &-cartesian-grid-horizontal {
+        line {
+          stroke: $interactive-02;
+        }
+      }
+
+      &-cartesian-axis-tick-line {
+        stroke: $interactive-02;
+      }
+
+      &-area-area {
+        fill: $bounds-color;
+      }
+
+      &-area-curve {
+        stroke: transparent;
+      }
+
+      &-tooltip-label,
+      &-tooltip-item,
+      &-label tspan {
+        @include type-style('productive-heading-01');
+
+        font-weight: 500;
+      }
+
+      &-cartesian-axis-tick-value tspan {
+        @include type-style('caption-01');
+
+        color: $text-01;
+      }
+
+      &-default-tooltip {
+        @include rechats-default-tooltip;
+
+        background-color: $ui-background;
+      }
+
+      &-tooltip-item span {
+        color: $text-01;
+        font-weight: 400;
+      }
+
+      &-area-dot {
+        fill: $interactive-01;
+        fill-opacity: 1;
+      }
+
+      &-active-dot {
+        circle {
+          @include chart-active-dot;
+        }
+      }
+    }
+  }
+}
+
+@include exports('multi-chart') {
+  @include multi-chart;
+}

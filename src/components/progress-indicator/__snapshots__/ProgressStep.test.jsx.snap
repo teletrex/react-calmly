@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressStep Renders ProgressStep Component as expected 1`] = `
+<ProgressStep
+  className=""
+  complete={false}
+  current={false}
+  description="Step 1: Getting Started"
+  disabled={false}
+  index={0}
+  interactive={true}
+  invalid={false}
+  label="label"
+  onClick={[MockFunction]}
+  stepButtonAriaLabel=""
+>
+  <li
+    aria-disabled={false}
+    className="bx--progress-step bx--progress-step--incomplete"
+  >
+    <div
+      aria-label="label"
+      className="bx--progress-step-button bx--progress-step-button--interactive"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <SVGIcon
+        complete={false}
+        current={false}
+        description="Step 1: Getting Started"
+        invalid={false}
+        prefix="bx"
+      >
+        <svg>
+          <title>
+            Step 1: Getting Started
+          </title>
+          <path
+            d="M8 1C4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 13c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"
+          />
+        </svg>
+      </SVGIcon>
+      <p
+        className="bx--progress-label"
+        title="label"
+      >
+        label
+      </p>
+      <span
+        className="bx--progress-line"
+      />
+    </div>
+  </li>
+</ProgressStep>
+`;

@@ -1,0 +1,40 @@
+{
+  status: "ok",
+  result : {
+    "objects" : [
+      "Deals",
+      "Sales",
+      "Promotions",
+      "Events",
+      "Campaigns"
+    ],
+    "dimensions": [
+      "Product",
+      "Location",
+      "Customer",
+      "Timeframe"
+    ],
+    "metrics": [
+      "Sales",
+      "GM",
+      "GM %",
+      "Volume",
+      "Conversions",
+      "Conversion Anomalies",
+      "Conversion Expected"
+    ],
+    "submetrics": [
+      "actual",
+      "expected",
+      "anomaly-bounds",
+      "predicted",
+      "planned"
+      ]
+  },
+  "views" : [
+    "Promotion Effectiveness",
+    "Campaign Success"
+  ]
+}
+
+}

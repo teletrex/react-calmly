@@ -1,0 +1,130 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+body {
+    overflow: hidden;
+}
+
+/* CSS-Grid useful classes */
+
+.two-column {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.four-column {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.flex-right {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.v-align-center {
+  align-items: center;
+}
+
+.v-align-baseline {
+  align-items:baseline;
+}
+
+.grid-gap-20 {
+  grid-gap: 20px;
+}
+
+.grid-gap-40 {
+  grid-gap: 40px;
+}
+
+.settings-icon{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.modal-sm {
+    .cds--modal-container {
+        min-height : 12rem;
+        width: 24rem;
+        max-width: 24rem;
+    }
+}
+
+.modal-md {
+    .cds--modal-content {
+        min-height : 22rem;
+    }
+    .cds--modal-header {
+        margin-bottom: 0.2rem !important;
+    }
+}
+
+.modal-lg {
+    .cds--modal-container {
+        width: 60rem;
+        max-width: 60rem;
+    }
+}
+
+.modal--hide-footer {
+    .cds--modal-container {
+        height: 35rem;
+    }
+    .cds--modal-footer {
+        display : none;
+    }
+}
+
+.modal-no-padding {
+    .cds--modal-content {
+        padding-right: 0;
+        padding-left: 0;
+        overflow: hidden;
+        height: 100%;
+        padding-bottom: 0;
+    }
+}
+
+
+.pop-up-modal__icon-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  cursor: pointer;
+  position : relative;
+
+  &:hover{
+    background-color: #2b2e50;
+  }
+
+  &.active{
+    background-color: #424564;
+  }
+}
+
+.rc-grey {
+  background-color: $rc-grey;
+}
+.rc-blue {
+  background-color: $rc-blue;
+}
+.rc-red {
+  background-color: $rc-red;
+}
+.rc-green {
+  background-color: $rc-green;
+}
+

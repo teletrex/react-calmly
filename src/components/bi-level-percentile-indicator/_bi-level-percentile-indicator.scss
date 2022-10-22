@@ -1,0 +1,24 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+
+.blpi, .blpiHigherOrder, .blpiLowerOrder {
+  background-color: rgb( 220,220,220);
+  height: 18px;
+}
+
+.blpiHigherOrder {
+  background-color: rgb(69,151,207);
+  top:0;
+}
+
+.blpiLowerOrder {
+  background-color: rgb(255,255,255);
+  width: 2px;
+}

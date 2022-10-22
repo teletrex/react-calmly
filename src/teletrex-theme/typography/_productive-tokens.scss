@@ -1,0 +1,88 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+$productive-heading-01: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(2),
+  font-weight: font-weight('medium'),
+  line-height: rem(18px),
+  letter-spacing: 0.16px,
+) ;
+
+$productive-heading-02: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(3),
+  font-weight: font-weight('medium'),
+  line-height: rem(22px),
+  letter-spacing: 0,
+);
+
+$productive-heading-03: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(5),
+  font-weight: font-weight('regular'),
+  line-height: rem(26px),
+  letter-spacing: 0,
+) ;
+
+$productive-heading-04: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(7),
+  font-weight: font-weight('regular'),
+  line-height: rem(36px),
+  letter-spacing: 0,
+) ;
+
+$productive-heading-05: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(8),
+  font-weight: font-weight('regular'),
+  line-height: rem(40px),
+  letter-spacing: 0,
+) ;
+
+$productive-heading-06: (
+  font-family: font-family('tiempos-fine'),
+  font-size: type-scale(10),
+  font-weight: font-weight('medium'),
+  line-height: rem(50px),
+  letter-spacing: 0,
+) ;
+
+$productive-heading-07: (
+  font-family: font-family('tiempos-fine'),
+  font-size: type-scale(12),
+  font-weight: font-weight('medium'),
+  line-height: rem(64px),
+  letter-spacing: 0,
+) ;
+
+$panel-heading-03: (
+  font-family: font-family('tiempos-fine'),
+  font-size: type-scale(5),
+  font-weight: font-weight('medium'),
+  line-height: rem(26px),
+  letter-spacing: 0,
+) ;
+
+$label-long-01: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(8),
+  font-weight: font-weight('light'),
+  line-height: rem(40px),
+  letter-spacing: 0,
+) ;
+
+$label-long-02: (
+  font-family: font-family('national-2'),
+  font-size: type-scale(10),
+  font-weight: font-weight('light'),
+  line-height: rem(40px),
+  letter-spacing: 0,
+) ;

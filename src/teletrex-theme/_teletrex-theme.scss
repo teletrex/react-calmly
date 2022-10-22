@@ -1,0 +1,188 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+@function to-list($value) {
+  @if type-of($value) == 'map' {
+    $keys: ();
+
+    @each $key, $val in $value {
+      $keys: append($keys, $key);
+    }
+
+    @return $keys;
+  }
+}
+
+// breakpoints: ('sm', 'md', 'lg', 'xlg', 'max');
+//$breakpoints: to-list($grid-breakpoints);
+$breakpoints: ('sm', 'md', 'lg', 'xlg', 'max');
+
+$ui-background: #f3f3f4;
+$ui-01: #f3f3f4;
+$ui-02: #ffffff;
+$ui-03: #e7e8ec;
+$ui-04: #898b9e;
+$ui-05: #5a5d77;
+$ui-06: red;
+$interactive-01: #047970;
+$interactive-02: #d0d1d8;
+$interactive-03: #047970;
+$interactive-04: #29ab87;
+$text-01: #13173d;
+$text-02: #5a5d77;
+$text-disabled: #5a5d77;
+$disabled: $text-disabled;
+$text-03: #5a5d77e6;
+$text-04: #ffffff;
+$text-05: #a1a2b1;
+$link-01: #047970;
+$icon-01: #13173d;
+$icon-02: #5a5d77;
+$icon-03: #ffffff;
+$field-01: #f3f3f4;
+$field-02: #ffffff;
+$inverse-01: #ffffff;
+$inverse-02: #424564;
+$support-01: #ce0110;
+$support-02: #29ab87;
+$support-03: #ff8c2a;
+$support-04: #0292d4;
+$support-05: #e81e32;
+$inverse-support-01: #ff465a;
+$inverse-support-02: #1bf7a8;
+$inverse-support-03: #ff8c2a;
+$inverse-support-04: #ffffff;
+$inverse-link: #1bf7a8;
+$overlay-01: #0a0c1f;
+$danger: #ce0110;
+$focus: #29ab87;
+$hover-primary: #047168;
+$hover-primary-text: #047168;
+$hover-secondary: #b8b9c5;
+$hover-tertiary: #047168;
+$hover-inverse-button: #ffffff;
+$hover-ui: #e7e8ec;
+$hover-row: #e7e8ec;
+$hover-danger: #c0010f;
+$active-primary: #046961;
+$active-secondary: #a1a2b1;
+$active-tertiary: #046961;
+$active-inverse-button: #ffffff;
+$active-ui: #b8b9c5;
+$active-danger: #b3010e;
+$selected-ui: #d9dae0;
+$highlight: #29ab87;
+$visited-link: #d846bf;
+$disabled-01: #e6e7e9;
+$disabled-02: #b6b6bc;
+$disabled-02: red;
+$disabled-03: #85868f;
+$skeleton-01: #e6e7e9;
+$skeleton-02: #b6b6bc;
+$hover-selected-ui: #ceced2;
+$inverse-hover-ui: #2a2e50;
+$inverse-focus-ui: #ffffff;
+// not included in the design
+$brand-01: #0062ff;
+$brand-02: #171717;
+$brand-03: #0062ff;
+$active-01: #bebebe;
+$hover-field: #e5e5e5;
+
+
+$ui-06: #13173d;
+$ui-07: #898a9d;
+$text-06: #13163c;
+$text-07: #595b76;
+$disabled-tertiary-border: #bdbdbd;
+$drag-drop-hover: #29ab87;
+$drag-drop-loading: #29ab87;
+$gradient-green: linear-gradient(#047970, #1bf7a8);
+$tag-01: #13173d;
+$tag-02: #047970;
+$tag-03: #045bb3;
+$tag-04: #be3c09;
+$tag-05: #d60015;
+$tag-06: #90007e;
+$tag-01-background-color: #e6e7e9;
+$tag-02-background-color: #d1fdee;
+$tag-03-background-color: #cefaff;
+$tag-04-background-color: #ffeeb3;
+$tag-05-background-color: #ffe8e4;
+$tag-06-background-color: #fdddfb;
+$tag-01-hover: #d0d1d8;
+$tag-02-hover: #bce4d6;
+$tag-03-hover: #b9e1e6;
+$tag-04-hover: #e6d1b0;
+$tag-05-hover: #e6d1cd;
+$tag-06-hover: #e4c7e2;
+$ui-warning: #f3ba00;
+$ui-complete: #29ab87;
+
+//Drag and Drop elements
+$drag-drop-item-background: #f3f3f4;
+$drag-drop-item-background-active: #e7e8ec;
+$drag-drop-item-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+$drag-drop-item-border-color: #d0d0d8;
+
+// slider tokens
+$slider-active: #047168;
+
+// chart tokens
+$chart-01: #29ab87;
+$chart-01-gradient: linear-gradient($chart-01, opacify($chart-01, 0.1));
+$chart-02: #0292d4;
+$chart-02-gradient: linear-gradient($chart-02, opacify($chart-02, 0.1));
+$chart-03: #d846bf;
+$chart-03-gradient: linear-gradient($chart-03, opacify($chart-03, 0.1));
+$chart-04: #f45d20;
+$chart-05: #f3ba00;
+$chart-06: #ff465a;
+$chart-07: #ff8c7b;
+$chart-threshold: #5a5d77;
+$chart-anomaly: #ff465a;
+$chart-hover: #13173d;
+$chart-venn-a: #047970;
+$chart-venn-b: #29ab87;
+$chart-venn-c: #1bf7a8;
+$chart-venn-d: #68afa9;
+$chart-venn-e: #8dfbd4;
+$chart-venn-f: #94d5c3;
+$chart-venn-g: #b4d7d4;
+$chart-funnel-a: #29ab87;
+$chart-funnel-b: #49b899;
+$chart-funnel-c: #74c8b1;
+$chart-funnel-d: #045bb3;
+$chart-funnel-e: #0292d4;
+$chart-funnel-f: #33ccff;
+
+// WIP - hold for now
+$ui-shell: #13173d;
+$hover-ui-shell: #2b2e50;
+$active-ui-shell: #424564;
+$navigation-01: #ffffff;
+$navigation-02: #b8b9c5;
+$disabled-ui-shell: #71738a;
+
+$spacing-01: 0.125rem !default;
+$spacing-02: 0.25rem !default;
+$spacing-03: 0.5rem !default;
+$spacing-04: 0.75rem !default;
+$spacing-05: 1rem !default;
+$spacing-06: 1.5rem !default;
+$spacing-07: 2rem !default;
+$spacing-08: 2.5rem !default;
+$spacing-09: 3rem !default;
+$spacing-10: 4rem !default;
+$spacing-11: 5rem !default;
+$spacing-12: 6rem !default;
+
+
+
+
+

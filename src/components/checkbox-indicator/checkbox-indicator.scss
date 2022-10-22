@@ -1,0 +1,16 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+
+.checkbox-indicator {
+  display:grid;
+  grid-template-columns: 1.1rem auto;
+  margin-left:10px;
+  align-items:center;
+}

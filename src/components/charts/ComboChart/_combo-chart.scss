@@ -1,0 +1,143 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+@import 'src/teletrex-theme/typography/productive';
+@import 'src/teletrex-theme/typography/tokens';
+@import 'src/teletrex-theme/teletrex-theme';
+// @import './shared-elements/mixins';
+
+@include theme();
+
+$legend-colors: (
+  line: $chart-funnel-f,
+  bar: $chart-01,
+);
+
+
+  .#{$prefix}--combo-chart {
+    background-color: $ui-02;
+    padding: rem(24px);
+    border: rem(1px) solid $ui-03;
+    position: relative;
+
+    &__chart {
+      position: relative;
+      height: 100%;
+    }
+
+    &__custom-legend {
+      position: absolute;
+      margin-top: rem(20px);
+      margin-right: rem(20px);
+      top: 0;
+      right: 0;
+    }
+
+    &__header {
+      @include type-style('productive-heading-03');
+
+      margin-bottom: rem(10px);
+      width: 85%;
+    }
+
+    &__legend {
+      @include type-style('caption-01');
+
+      display: flex;
+      flex-direction: row;
+      font-size: rem(12px);
+      margin-bottom: rem(15px);
+
+      &__item {
+        margin-right: rem(32px);
+      }
+
+      &__icon {
+        margin-right: rem(7px);
+
+        @each $type, $color in $legend-colors {
+          &__icon-#{$type} {
+            circle,
+            rect {
+              fill: $color;
+            }
+          }
+        }
+      }
+    }
+
+    &__controls {
+      position: absolute;
+      right: rem(24px);
+      top: rem(24px);
+
+      svg {
+        margin-right: rem(12px);
+        fill: $icon-01;
+      }
+    }
+
+    .recharts {
+      &-tooltip-label,
+      &-tooltip-item,
+      &-label tspan {
+        @include type-style('productive-heading-01');
+
+        font-weight: 500;
+      }
+
+      &-cartesian-axis {
+        &-tick-value tspan {
+          @include type-style('caption-01');
+
+          background-color: $ui-02;
+          color: $text-01;
+        }
+
+        &-tick-line {
+          stroke: $interactive-02;
+        }
+      }
+
+      &-bar-rectangle:hover path {
+        fill: $chart-hover;
+      }
+
+      &-line-dots circle:hover {
+        @include chart-active-dot;
+      }
+
+      &-tooltip {
+        &-wrapper {
+          & > .recharts-default-tooltip {
+            transform: translate(-50%, rem(8px));
+            background-color: $ui-background;
+          }
+        }
+
+        &-item-value,
+        &-item-name,
+        &-item-separator {
+          color: $text-01;
+          font-weight: 400;
+        }
+      }
+
+      &-default-tooltip {
+        @include rechats-default-tooltip;
+
+        &::before {
+          @include rechats-default-tooltip__caret;
+        }
+      }
+    }
+  }
+

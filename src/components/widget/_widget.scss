@@ -1,0 +1,471 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+$border: rem(2px) solid $hover-primary;
+$btn: '.#{$prefix}--btn';
+
+$footerheight: 32px;
+
+@mixin dragAndResizeStyle() {
+  opacity: 0.8;
+  box-shadow: 0 0 rem(4px) 0 $interactive-02;
+}
+
+@mixin widgetCommonStyle() {
+  background-color: $ui-02;
+  width: 100%;
+  height: calc(100%);
+  outline: none;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.#{$prefix}--scroll-container:focus {
+  outline: none;
+}
+
+.#{$prefix}--widget {
+  $root: &;
+
+  @include widgetCommonStyle();
+
+  position:relative;
+  padding: rem(16px) rem(16px) rem(24px) rem(24px);
+  border: rem(1px) solid #ccc;
+  border-radius:6px;
+
+
+  &cds--value-widget {
+    background-color: #337cba;
+    color:white;
+    padding:.4rem .7rem .8rem .7rem;
+    .cds--widget--header-title {
+      color:white;
+    }
+    .cds--btn--icon-only.cds--btn--ghost .cds--btn__icon,
+    .cds--btn--sm.cds--btn--icon-only.cds--btn--ghost .cds--btn__icon
+    {
+      path {
+        fill: white;
+      }
+    }
+    .cds--overflow-menu__icon {
+       circle {
+        fill:white;
+        stroke:white;
+      }
+    }
+    .value-grid {
+      display:flex;
+      flex-direction:row;
+      justify-content:flex-start;
+      align-items:center;
+    }
+    .value-change {
+      width:2rem;
+    }
+    .value-description {
+      font-size:.8rem;
+      padding-left:7px;
+    }
+    .value-text{}
+    .main-value {
+      font-size:1.8rem;
+      padding-bottom:3rem; // dear god, this should be done with flex but no worky.
+    }
+  }
+
+  &--tabs {
+    @include widgetCommonStyle();
+
+    #{$root} {
+      border-top: none;
+    }
+
+    > .#{$prefix}--tab-content {
+      padding: 0;
+    }
+  }
+
+  &:focus {
+    outline: unset;
+  }
+
+  &__slim {
+    padding: rem(8px) rem(12px) rem(16px) rem(16px);
+  }
+
+  &__footerheight {
+    min-height:$footerheight;
+  }
+
+  &__no-border {
+    border:none;
+  }
+  &__is-maximized {
+    top:10px;
+    height: calc(100vh - 100px);
+    left:10px;
+    z-index: 100;
+    transform: unset;
+  }
+
+  &__is-editing {
+//    border:3px dashed yellow;  The idea is to highlight the widget being edited.
+  }
+
+  &-grid {
+    .react-grid {
+      &-item {
+        $item: &;
+        $handle: '.react-resizable-handle';
+
+        > #{$handle} {
+          opacity: 0;
+          cursor: nwse-resize;
+
+          &.react-resizable-handle-se {
+            background-image: none;
+            overflow: hidden;
+
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              height: rem(10px);
+              width: rem(10px);
+              border-right: none;
+              border-bottom: none;
+              border-left: rem(1px) solid $hover-secondary;
+              right: rem(-2px);
+              bottom: rem(-2px);
+              transform: rotate(45deg);
+            }
+
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              height: rem(4px);
+              width: rem(4px);
+              border-left: rem(1px) solid $hover-secondary;
+              right: rem(1px);
+              bottom: rem(1px);
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        &:not(.react-resizable-hide):hover > #{$handle} {
+          opacity: 1;
+        }
+
+        &.react-draggable {
+          cursor: grab;
+
+          &-dragging {
+            @include dragAndResizeStyle();
+
+            &,
+            #{$root}:active {
+              cursor: grabbing;
+            }
+          }
+        }
+
+        &.resizing {
+          @include dragAndResizeStyle();
+        }
+      }
+
+      &-placeholder {
+        opacity: 1;
+        position: relative;
+        border: $border;
+        z-index: 0;
+        background-color: rgba($color: $highlight, $alpha: 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $hover-primary-text;
+
+        @include type-style('body-short-01');
+
+        letter-spacing: rem(0.2px);
+      }
+    }
+  }
+
+  &--header {
+    margin-bottom: rem(16px);
+
+    &-title {
+      flex-grow: 1;
+      color: $text-01;
+      height: min-content;
+      font-weight:500;
+    }
+
+    &-title-fancy {
+      padding: 1rem 0rem;
+      font-family: 'Tiempos Fine', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.625rem;
+      letter-spacing: 0;
+      color: $text-01;
+    }
+
+
+    &-value {
+      color: $text-01;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+
+      &:not(&__slim) {
+        min-height: rem(32px);
+        height: rem(32px);
+      }
+    }
+
+    &-content + &-metadata {
+      margin-top: rem(8px);
+    }
+
+    &-actions {
+      display: flex;
+
+      #{$btn}--icon-only#{$btn}--ghost {
+        &,
+        &:focus,
+        &:active,
+        &:hover {
+          color: $ui-06;
+          path {
+            fill: $ui-06;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding: rem(0px) rem(12px) rem(0px) rem(16px);
+    position:absolute;
+    bottom: 0px;
+    left:1px;
+    min-height:$footerheight ;
+    background-color: #f3f3f3;
+    width:calc(100% - 2px);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom: rem(1px) solid #ccc;
+    padding-right:10px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      -webkit-box-align: center;
+
+      &:not(&__slim) {
+        min-height: rem(32px);
+        height: rem(32px);
+      }
+    }
+
+    &-actions {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+
+      #{$btn}--icon-only#{$btn}--ghost {
+        &,
+        &:focus,
+        &:active,
+        &:hover {
+          color: $ui-06;
+        }
+        path {
+          fill: $ui-06;
+        }
+
+      }
+    }
+  }
+
+  &--truncated {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--empty {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 2;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+
+    &-image {
+      display: flex;
+      justify-content: center;
+
+      &:not(:only-child) {
+        margin-bottom: rem(32px);
+      }
+    }
+
+    &-text {
+      text-align: center;
+      margin-bottom: rem(32px);
+      max-width: rem(288px);
+    }
+  }
+
+  &--loading {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &--content {
+    flex-grow: 1;
+    min-width: min-content;
+    display: flex;
+    flex-direction: column;
+
+    &__shrink {
+      flex-shrink: 1;
+      flex-grow: unset;
+    }
+
+    &__overflow-hidden {
+      overflow: hidden;
+      min-width: unset;
+
+      .#{$prefix}--tab-content {
+        overflow: hidden;
+      }
+    }
+
+    &-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      // Firefox is allowing to focus wrapper when content is scrollable
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-bound {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &--chart-wrapper {
+    display: grid;
+    flex-grow: 1;
+    overflow: hidden;
+    grid-template-columns: minmax(auto, 100%);
+    grid-template-rows: minmax(auto, 100%);
+
+    &--overflow {
+      overflow: hidden;
+    }
+  }
+
+  &--group {
+    &-title {
+      margin-bottom: rem(18px);
+    }
+
+    &-button-wrapper {
+      margin-top: rem(16px);
+    }
+  }
+
+  // overrides for components commonly used inside widgets
+  &,
+  &--tabs {
+    .#{$prefix}--multi-chart {
+      padding: unset;
+      border: unset;
+    }
+
+    .#{$prefix}--line-chart {
+      padding: unset;
+      border: unset;
+    }
+
+    .#{$prefix}--structured-list {
+      margin-bottom: 0;
+    }
+
+    .#{$prefix}--data-table {
+      display: table;
+    }
+
+    .#{$prefix}--data-table-container {
+      overflow: unset;
+
+      &:not(.#{$prefix}--data-table-container--with-pagination) {
+        min-width: min-content;
+
+        .#{$prefix}--data-table {
+          min-width: auto;
+          display: table;
+        }
+      }
+
+      .#{$prefix}--data-table-wrapper {
+        overflow: unset;
+      }
+    }
+
+    .#{$prefix}--tabs__nav-item {
+      min-width: auto;
+    }
+
+    .#{$prefix}--tab-content {
+      flex-grow: 1;
+      padding-bottom: 0;
+
+      &[aria-hidden='false'] {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+

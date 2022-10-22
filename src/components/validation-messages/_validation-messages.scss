@@ -1,0 +1,19 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+.eleven-validation-messages {
+  border: 2px solid red;
+  color:black;
+  padding:10px;
+  padding-right:20px;
+  min-height: 25px;
+  fill:red;
+  display: grid;
+  grid-template-columns: auto 1%;
+}

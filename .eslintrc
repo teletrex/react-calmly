@@ -1,0 +1,110 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "modules": true,
+      "jsx": true
+    }
+  },
+  "plugins": ["babel", "react", "jsx-a11y", "import", "jest", "lodash", "react-hooks", "prettier"],
+  "settings": {
+    "react": {
+      "version": "16.9" // React version, default to the latest React stable release
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jest/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "globals": {
+    "__WEBPACK__": true,
+    "__DEV__": false
+  },
+  "rules": {
+    "react/prop-types": [
+      2,
+      {
+        "ignore": [
+          "intl",
+          "initialize",
+          "handleSubmit",
+          "location",
+          "match",
+          "history",
+          "input",
+          "className"
+        ]
+      }
+    ],
+    "react/jsx-closing-bracket-location": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+/*    "import/first": [
+      2,
+      {
+        "absolute-first": "true"
+      }
+    ],
+    */
+    "import/order": [
+      2,
+      {
+        "newlines-between": "always"
+      }
+    ],
+    "no-console": "error",
+    "no-prototype-builtins": 0, // not needed as we never mess with prototype
+    "no-nested-ternary": 0,
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "react/jsx-one-expression-per-line": 0,
+    "react/no-did-update-set-state": 0, //not needed after react 16: https://github.com/yannickcr/eslint-plugin-react/issues/1754
+    "react/no-array-index-key": 0,
+    "import/prefer-default-export": 0,
+    // https://nolanlawson.com/2018/03/20/smaller-lodash-bundles-with-webpack-and-babel/
+    "lodash/chaining": [2, "never"],
+    "lodash/import-scope": [2, "method"],
+    "react/destructuring-assignment": [2, "always", { "ignoreClassFields": true }],
+    "react/jsx-props-no-spreading": 0,
+    "react/state-in-constructor": [2, "never"],
+    "react/jsx-sort-props": "warn",
+    "react/jsx-sort-default-props": "warn",
+    "react/sort-prop-types": "warn",
+    "no-shadow": "off",
+    "no-restricted-imports": ["error", {
+      "patterns": [
+        "carbon-components-react/lib/*",
+        "recharts/lib/*",
+        "@carbon/icons-react/lib/*",
+        "react-i18next"
+      ]
+  }]
+  },
+  // Testcases have less eslint rules applied to them
+  "overrides": [
+    {
+      "files": ["**/*-fixture.{js,jsx}", "**/*.test.{js,jsx}", "**/*.story.{js,jsx}", "src/Examples/**/*", "**/stories/**/*"],
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "no-underscore-dangle": 0,
+        "no-shadow": 0,
+        "no-extend-native": 0,
+        "no-template-curly-in-string": 0,
+        "react/prop-types": 0,
+        "react/jsx-no-bind": 0
+      }
+    }
+  ]
+}

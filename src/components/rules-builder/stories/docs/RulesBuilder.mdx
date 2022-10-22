@@ -1,0 +1,234 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder
+
+## Overview
+
+`RulesBuilder` is a component that provides an interface for creating rule queries.
+
+It handles the visuals, user interactions and the whole logic related to displaying and manipulating the rules (creating, editing, removing, reordering, etc.). It also provides a set of generic, ready to use rules:
+
+- `StringRule`
+- `NumberRule`
+- `DateRule`
+
+as well as the `CustomRule`, which allows to create a fully customized component for handling a specific rule behavior.
+
+<Preview>
+  <Story id="experimental-rulesbuilder--default" />
+</Preview>
+
+## Skeleton state
+
+You can use the `RulesBuilderSkeleton` component to render a skeleton variant of the `RulesBuilder`. It is useful to display as a loading state while e.g. the data for your `RulesBuilder` is being fetched from an external resource like an API.
+
+<Preview>
+  <Story id="experimental-rulesbuilder--skeleton" />
+</Preview>
+
+## Component API
+
+The `RulesBuilder` component accepts the following parameters:
+
+| Parameter name      |    Type     | Default value                       | Required  | Description                                |
+| ------------------- | :---------: | :---------------------------------: | :-------: | ------------------------------------------ |
+| `criteriaConfig`    |  *object *  | `undefined`                         | Yes       | Rule definitions                           |
+| `criteriaDropdown`  |   *array*   | `undefined`                         | Yes       | Rule selector items                        |
+| `initialRules`      |  *object *  | `{ conjunction: 'AND', data: [] }`  | No        | Initial rule query object                  |
+| `isLight`           |  *boolean*  | `false`                             | No        | Light theme flag                           |
+| `isReadOnly`        |  *boolean*  | `false`                             | No        | Read-only mode flag                        |
+| `maxDepth`          |  *number*   | `Infinity`                          | No        | Max. number of rule indentations           |
+| `maxOperands`       |  *number*   | `Infinity`                          | No        | Max. number of rules within the query      |
+| `onRulesChange`     | *function*  | `() => {}`                          | No        | Handler function reacting to rule changes  |
+
+### `criteriaConfig`
+
+In order to define the rules that will be available in a `RulesBuilder` instance, we need to create a `criteriaConfig` object that will be passed to the `RulesBuilder`.
+
+This object consists of key-value pairs:
+- `RULE_ID` - a unique string that identifies the rule,
+- a configuration object of the following structure:
+
+| Field name                |       Type       | Default value | Required |
+| ------------------------- | :--------------: | :-----------: | :------: |
+| `type`                    |     *string*     |  `undefined`  |    Yes   |
+| `operators`               |     *array*      |  `[]`         |    No    |
+| `placeholder`             |     *object*     |  `{}`         |    No    |
+| `disableCriteriaReselect` |    *boolean*     |  `false`      |    No    |
+| `hasTimeframe`            |    *boolean*     |  `false`      |    No    |
+| `inputComponent`          | *ReactComponent* |  `undefined`  |    No    |
+
+
+**Example:**
+
+```js
+const CRITERIA_CONFIG = {
+  NUMBER: {
+    type: 'number',
+  },
+  STRING_CUSTOM_OPERATORS: {
+    type: 'string',
+    operators: [
+      'IS',
+      'CONTAINS',
+      {
+        value: 'IS_CUSTOM_OPERATOR',
+        label: 'Is custom operator',
+        inputType: 'singleValue',
+      },
+    ],
+    disableCriteriaReselect: true,
+  },
+  CUSTOM_RULE: {
+    type: 'custom_rule',
+    inputComponent: InputComponent,
+  },
+};
+```
+
+#### Type
+
+The `type` is the only config parameter that is required to be specified `criteriaConfig`. It can take one of the following values:
+
+- `number`
+- `string`
+- `date`
+- `custom`
+
+These are the built-in rule types available out fo the box. However, the `custom` rule allows to pass any kind of external rule handler using the `inputComponent` parameter.
+
+#### Operators
+
+Each rule type has a defined set of supported `operators`. Details can be found in the docs of specific rule types.
+
+Within the `operators` array, you may list which operators you want to be available by simply providing the operators values (see the tables of available operators in the docs of specific rules).
+You can also define custom operators by adding objects of the following structure to the said array:
+
+| Field       |  Type    |                                   Description |
+| ----------- | :------: | --------------------------------------------: |
+| `label`     | *string* |       Text displayed in the operator dropdown |
+| `value`     | *string* |                            Unique operator ID |
+| `inputType` | *string* | Value defining the type of the input component|
+
+#### Placeholder
+
+A rule can present different input types (e.g. depending on the selected operator) and thus may need different placeholders for different inputs. The `placeholder` object allows to specify such placeholders using specific keys, which are different for every rule (see the docs of specific rules for more details).
+
+#### Disabling criteria reselection
+
+A rule may contain custom operators with self-explanatory labels which may make the criteria name redundant. Or we might simply wish to hide the criteria name after selecting it for any other reason. In such cases we might want to set `disableCriteriaReselect` to `true` - this will hide the criteria dropdown and display only the operators.
+Note that, as the name of the parameter suggests, this makes it impossible to switch back to another rule, as the criteria dropdown wil not be available.
+
+#### Timeframe
+
+The `hasTimeframe` flag adds the `timeframe` selector to a rule entry. See the [Timeframe docs](?path=/docs/experimental-rulesbuilder-timeframe--usage) for more details.
+
+#### InputComponent
+
+The `CustomRule` allows to pass a React component (using the `inputComponent` parameter) to the rule body. This makes it possible to create custom data selectors, and does not limit us to the predefined rules. For details please visit the [CustomRule docs](?path=/docs/experimental-rulesbuilder-customrule--usage).
+
+
+### `criteriaDropdown`
+
+Users can choose from the available rules by using the *Criteria dropdown*, which is configured with the `criteriaDropdown` array.
+
+| Field     |   Type   |                            Description                             |
+| --------- | :------: | :----------------------------------------------------------------: |
+| `id`      | *string* | RULE_ID (corresponding to entries in `criteriaConfig`) or GROUP_ID |
+| `text`    | *string* |                  Text displayed in a dropdown item                 |
+| `sublist` | *array*  | Array of nested dropdown entries (only for Criteria group entries) |
+
+Entries that contain a `sublist` can’t be selected, so it is important that they are provided with a custom `GROUP_ID` instead of a defined `RULE_ID`.
+
+#### Examples
+
+```js
+const CRITERIA_DROPDOWN = [
+  {
+    id: 'AGE',
+    text: 'Age',
+  },
+  {
+    id: 'NAME',
+    text: 'Name',
+  },
+  {
+    id: 'CRITERIA_GROUP',
+    text: 'Grouped criteria',
+    sublist: [
+      {
+        id: 'BIRTHDAY',
+        text: 'Birthday',
+      },
+      {
+        id: 'CUSTOM_RULE',
+        text: 'Custom rule',
+      },
+    ],
+  },
+];
+```
+
+### `initialRules` and callback query structure
+
+`RulesBuilder` can be populated with predefined queries. Data returned in the `onRulesChange` handler has exactly the same format.
+
+#### Rule structure
+
+```js
+const RULE_ENTRY = {
+  criteriaKey: string, // RULE_ID
+  data: RULE_DATA || RULE_GROUP,
+  timeframe: {
+    operator: string, // timeframe operator value
+    value: object || number || array || null,
+  }
+  errorMessage: string,
+}
+```
+
+Note `data` can contain either the rule data or a conjunction group. The rule data is simply the operator and value, while the conjunction group specifies a new nesting with its own conjunction (and/or) and an array of rules / conjunction groups within it.
+
+The relevant structures are:
+
+```js
+const RULE_DATA = {
+  operator: string, // operator value
+  value: number || string || array || object || null,
+}
+```
+
+```js
+const RULE_GROUP = {
+  conjunction: string, // 'AND' || 'OR'
+  data: [
+    RULE_ENTRY,
+    RULE_GROUP,
+  ],
+}
+```
+
+Note that a `RULE_GROUP` *must* have the `conjunction` defined and *must not* contain the `criteriaKey`.
+
+#### Handling rule structures
+
+The `initialValues` parameter takes an object of the `RULE_GROUP` structure (it's required to have a conjunction set for the top level).
+
+```js
+const INITIAL_RULES = {
+  conjunction: CONJUNCTION_ID, // Conjunction per level
+  data: [
+    RULE_ENTRY,
+    RULE_GROUP,
+  ], // Array of rule entries and rule groups
+};
+```
+
+The `onRulesChange` handler is called whenever a change in the rules builder is registered, and is provided with a `RULE_GROUP` structure that represents the current state of the query.
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on

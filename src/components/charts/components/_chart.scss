@@ -1,0 +1,237 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+$bounds-color: transparentize($chart-01, 0.8);
+$line-color: $chart-01;
+
+$legend-colors: (
+  legend-1 : $line-color,
+  legend-2 : $chart-02,
+  legend-3 : $chart-03,
+  legend-4 : $chart-04,
+  legend-5 : $chart-05,
+  legend-6 : $chart-06,
+  legend-7 : $chart-07,
+
+);
+
+.activity-ring-chart svg {
+  transform: rotate(-90deg);
+
+  circle {
+    @each $type, $color in $legend-colors {
+      &.#{$type} {
+        stroke: $color;
+      }
+    }
+  }
+}
+
+.#{$prefix}--click-tooltip {
+  width: fit-content;
+  pointer-events: all;
+  .click-tooltip-close-box {
+    position: absolute;
+    top: 0.36rem;
+    right:2px;
+    margin-right:-5px;
+    &:hover {
+      background-color: $rc-brand-menu-hover;
+    }
+  }
+  .click-tooltip-content {
+    margin-right:20px;
+    margin-left:5px;
+    margin-bottom:3px;
+  }
+}
+
+
+.#{$prefix}--chart {
+  background-color: $ui-02;
+  display: flex;
+  flex-direction: column;
+  padding: rem(24px);
+  border: rem(1px) solid $ui-03;
+
+
+  &__header {
+    //TODO:      @include type-style('productive-heading-03');
+
+    margin-bottom: rem(10px);
+  }
+
+  &__legend {
+    //TODO:      @include type-style('caption-01');
+
+    display: flex;
+    flex-direction: row;
+    font-size: rem(12px);
+    margin-bottom: rem(15px);
+
+    &__item {
+      margin-right: rem(16px);
+    }
+
+    &__icon {
+      margin-right: rem(7px);
+      /* legend colors */
+      @each $type, $color in $legend-colors {
+        &__icon-#{$type} {
+          circle {
+            fill: $color;
+            stroke: $color;
+          }
+        }
+      }
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; // this style fixes not proper resizing https://github.com/recharts/recharts/issues/172
+  }
+  /* lines in the chart */
+  &__chart-line {
+    @each $type, $color in $legend-colors {
+      &__icon-#{$type} {
+        stroke: $color;
+        fill: $color; /* dots on lines */
+        .recharts-line-curve {
+          stroke: $color;
+        }
+      }
+    }
+  }
+
+  /* vertical reference lines in the chart */
+  &__chart-reference-line {
+    .recharts-rectangle {
+      stroke: red;
+      fill: red; /* dots on lines */
+      opacity:0.5;
+    }
+  }
+
+
+  &__chart-dashed {
+    .recharts-line-curve {
+      stroke: $chart-threshold;
+    }
+  }
+
+  &__chart-line__inactive-dot {
+    @each $type, $color in $legend-colors {
+      &__icon-#{$type} {
+        stroke: $color;
+        fill: $color; /* dots on lines */
+      }
+    }
+    //      fill: $line-color;
+    //      stroke: $line-color;
+    stroke-width: 10;
+
+    &--alert {
+      fill: $chart-anomaly;
+      stroke: $chart-anomaly;
+    }
+
+    &--selected {
+      fill: $chart-anomaly;
+      stroke-width: 12px;
+      stroke: transparentize($chart-anomaly, 0.7);
+    }
+  }
+
+  &__chart-area__dot {
+    opacity: 100;
+    stroke-width: 10;
+
+  }
+  &__chart-area__tactic-dot {
+    opacity: 100;
+    @each $type, $color in $legend-colors {
+      &__icon-#{$type} {
+        fill: $color;
+        stroke: white;
+        stroke-width: 0px;
+      }
+    }
+  }
+  /* Scatter Dots in the chart */
+  @each $type, $color in $legend-colors {
+    &__icon-#{$type} {
+      fill: $color;
+    }
+  }
+  .recharts {
+    &-cartesian-grid-horizontal {
+      line {
+        stroke: $interactive-02;
+      }
+    }
+    &-indicator {
+      font-size: 50px;
+      font-weight:200;
+    }
+
+    &-cartesian-axis-tick-line {
+      stroke: $interactive-02;
+    }
+
+    &-area-area {
+      fill: $bounds-color;
+    }
+
+    &-area-curve {
+      stroke: transparent;
+    }
+
+    &-tooltip-label,
+    &-tooltip-item,
+    &-label tspan {
+      // TODO:        @include type-style('productive-heading-01');
+      font-weight: 500;
+    }
+
+    &-cartesian-axis-tick-value tspan {
+      // TODO:       @include type-style('caption-01');
+      color: $text-01;
+    }
+
+    &-default-tooltip {
+      // TODO:        @include rechats-default-tooltip;
+      background-color: $ui-background;
+    }
+
+    &-tooltip-item span {
+      color: $text-01;
+      font-weight: 400;
+    }
+
+    &-area-dot {
+      fill: $interactive-01;
+      fill-opacity: 1;
+    }
+
+    &-active-dot {
+      circle {
+        //          @include chart-active-dot;
+      }
+    }
+  }
+  .two-column {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+}
+
+
+

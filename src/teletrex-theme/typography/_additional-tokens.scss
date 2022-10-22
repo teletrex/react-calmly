@@ -1,0 +1,164 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+$quotation-01: (
+  font-family: font-family('serif'),
+  font-size: type-scale(5),
+  font-weight: font-weight('regular'),
+  line-height: 130%,
+  letter-spacing: 0,
+  breakpoints: (
+    md: (
+      font-size: type-scale(5),
+    ),
+    lg: (
+      font-size: type-scale(6),
+      line-height: 125%,
+    ),
+    xlg: (
+      font-size: type-scale(7),
+      line-height: 129%,
+    ),
+    max: (
+      font-size: type-scale(8),
+      line-height: 125%,
+    ),
+  ),
+) ;
+
+$quotation-02: (
+  font-family: font-family('serif'),
+  font-size: type-scale(8),
+  font-weight: font-weight('light'),
+  line-height: 125%,
+  letter-spacing: 0,
+  breakpoints: (
+    md: (
+      font-size: type-scale(9),
+      line-height: 122%,
+    ),
+    lg: (
+      font-size: type-scale(10),
+      line-height: 119%,
+    ),
+    xlg: (
+      font-size: type-scale(11),
+      line-height: 117%,
+    ),
+    max: (
+      font-size: type-scale(13),
+    ),
+  ),
+) ;
+
+$display-01: (
+  font-family: font-family('sans'),
+  font-size: type-scale(10),
+  font-weight: font-weight('light'),
+  line-height: 119%,
+  letter-spacing: 0,
+  breakpoints: (
+    md: (
+      font-size: type-scale(10),
+    ),
+    lg: (
+      font-size: type-scale(12),
+    ),
+    xlg: (
+      font-size: type-scale(13),
+      line-height: 117%,
+    ),
+    max: (
+      font-size: type-scale(15),
+      line-height: 113%,
+    ),
+  ),
+) ;
+
+$display-02: (
+  font-family: font-family('sans'),
+  font-size: type-scale(10),
+  font-weight: font-weight('semibold'),
+  line-height: 119%,
+  letter-spacing: 0,
+  breakpoints: (
+    md: (
+      font-size: type-scale(10),
+    ),
+    lg: (
+      font-size: type-scale(12),
+    ),
+    xlg: (
+      font-size: type-scale(13),
+      line-height: 116%,
+    ),
+    max: (
+      font-size: type-scale(15),
+      line-height: 113%,
+    ),
+  ),
+) ;
+
+$display-03: (
+  font-family: font-family('sans'),
+  font-size: type-scale(10),
+  font-weight: font-weight('light'),
+  line-height: 119%,
+  letter-spacing: 0,
+  breakpoints: (
+    md: (
+      font-size: type-scale(14),
+      line-height: 115%,
+    ),
+    lg: (
+      font-size: type-scale(17),
+      line-height: 111%,
+      letter-spacing: -0.64px,
+    ),
+    xlg: (
+      font-size: type-scale(20),
+      line-height: 107%,
+      letter-spacing: -0.64px,
+    ),
+    max: (
+      font-size: type-scale(23),
+      line-height: 105%,
+      letter-spacing: -0.96px,
+    ),
+  ),
+) ;
+
+$display-04: (
+  font-family: font-family('sans'),
+  font-size: type-scale(10),
+  font-weight: font-weight('semibold'),
+  line-height: 119%,
+  letter-spacing: 0,
+  breakpoints: (
+    md: (
+      font-size: type-scale(14),
+      line-height: 115%,
+    ),
+    lg: (
+      font-size: type-scale(17),
+      line-height: 111%,
+      letter-spacing: -0.64px,
+    ),
+    xlg: (
+      font-size: type-scale(20),
+      line-height: 107%,
+      letter-spacing: -0.64px,
+    ),
+    max: (
+      font-size: type-scale(23),
+      line-height: 105%,
+      letter-spacing: -0.96px,
+    ),
+  ),
+) ;

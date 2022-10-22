@@ -1,0 +1,281 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+
+.#{$prefix}--multilevel-dropdown--wrapper {
+  &--inline {
+    display: inline-grid;
+    background: transparent;
+    padding: rem(0px) rem(6px);
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option {
+    position: relative;
+    width: 100%;
+    height: rem(40px);
+    max-height: rem(40px);
+    cursor: pointer;
+    color: #13173d;
+    background: $field-01;
+    white-space: nowrap;
+
+    &--inline {
+      background: transparent;
+    }
+
+    &--list {
+      font-family: 'National 2', sans-serif;
+      font-size: rem(14px);
+      font-weight: 400;
+      line-height: rem(18px);
+      letter-spacing: rem(0.16px);
+      color: $ui-05;
+
+      &--box-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'National 2', sans-serif;
+        font-size: rem(14px);
+        font-weight: 400;
+        line-height: rem(18px);
+        letter-spacing: rem(0.16px);
+        height: rem(40px);
+        color: $text-01;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        transition: background 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+
+        &--text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &--arrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: none;
+
+          &--disabled {
+            fill: $disabled-02;
+          }
+        }
+
+        &--open {
+          transform: rotate(180deg);
+          transition: transform 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        &--close:not(&--arrow--disabled) {
+          transform: rotate(0deg);
+          transition: transform 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+      }
+
+      &--box-menu-nested {
+        box-shadow: rem(0px) rem(2px) rem(6px) rem(0px)
+          rgba(0, 0, 0, 0.3);
+
+        &--item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: 'National 2', sans-serif;
+          font-size: rem(14px);
+          font-weight: 400;
+          line-height: rem(18px);
+          letter-spacing: rem(0.16px);
+          height: rem(40px);
+          color: $ui-05;
+          cursor: pointer;
+          user-select: none;
+          position: relative;
+          transition: background 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+          background-color: $field-01;
+          padding: 0 rem(21px) 0 rem(16px);
+
+          &--selected {
+            color: #13173d;
+            background-color: $hover-ui;
+          }
+
+          &--selected:hover {
+            background-color: $selected-ui !important;
+          }
+
+          &--selected:focus {
+            background-color: $selected-ui !important;
+          }
+        }
+
+        &--item:after {
+          left: rem(16px);
+          right: rem(21px);
+          content: '';
+          display: block;
+          height: rem(1px);
+          position: absolute;
+          top: rem(39px);
+          background-color: $hover-ui;
+          z-index: 100;
+          outline: unset;
+        }
+
+        &--item:focus-within::after {
+          background-color: $hover-ui;
+        }
+      }
+    }
+
+    &--light {
+      background: $ui-02;
+    }
+  }
+
+  .#{$prefix}--multilevel-dropdown--icon-set {
+    position: relative;
+    height: rem(40px);
+    max-height: rem(40px);
+    cursor: pointer;
+    color: $text-01;
+
+    &--icon-list {
+      font-family: 'National 2', sans-serif;
+      font-size: rem(14px);
+      font-weight: 400;
+      line-height: rem(18px);
+      letter-spacing: rem(0.16px);
+      color: $ui-05;
+
+      &--box-menu-nested {
+        display: none;
+        position: absolute;
+        top: rem(0px);
+        left: rem(250px);
+        margin: rem(0px);
+        padding: rem(0px);
+
+        &--item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: 'National 2', sans-serif;
+          font-size: rem(14px);
+          font-weight: 400;
+          line-height: rem(18px);
+          letter-spacing: rem(0.16px);
+          height: rem(40px);
+          color: $ui-05;
+          cursor: pointer;
+          user-select: none;
+          position: relative;
+          transition: background 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+          padding: rem(0px) rem(14px) rem(0px) rem(18px);
+          outline: unset;
+        }
+
+        &--item:after {
+          content: '';
+          display: block;
+          height: rem(1px);
+          position: absolute;
+          top: rem(39px);
+          margin-left: -45%;
+          background-color: $hover-ui;
+          z-index: 100;
+        }
+
+        &--item:focus-within::after {
+          background-color: $hover-ui;
+        }
+
+        &--item:hover {
+          background-color: $selected-ui;
+        }
+
+        &--item:focus {
+          background-color: $selected-ui;
+        }
+      }
+    }
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu-nested--item--span {
+    width: 80%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .#{$prefix}--multilevel-dropdown--limited-height {
+    max-height: rem(256px);
+    overflow-y: auto;
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option
+    .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu-nested--item,
+  .#{$prefix}--multilevel-dropdown--choose-an-option
+    .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu {
+    padding: rem(0px) rem(16px);
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu:focus,
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu-nested--item:focus,
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu:hover,
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu-nested--item:hover {
+    background-color: $hover-ui;
+    color: #13173d;
+    outline: unset;
+    z-index: 100;
+  }
+
+  .#{$prefix}--multilevel-dropdown--icon-set--icon-list--box-menu-nested--item:active,
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu:active,
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu-nested--item:active {
+    background-color: $selected-ui;
+    color: #13173d;
+    outline: unset;
+    z-index: 100;
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option
+    .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu-nested {
+    display: none;
+    position: absolute;
+    top: rem(0px);
+    left: rem(0px);
+    margin: rem(0px);
+    padding: rem(0px);
+  }
+
+  .#{$prefix}--multilevel-dropdown--icon-list {
+    width: rem(50px);
+  }
+
+  &.#{$prefix}--multilevel-dropdown--disabled {
+    cursor: not-allowed;
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option.#{$prefix}--multilevel-dropdown--disabled {
+    pointer-events: none;
+
+    .bx--multilevel-dropdown--choose-an-option--list--box-menu--text {
+      color: $disabled-02;
+    }
+  }
+
+  .#{$prefix}--multilevel-dropdown--choose-an-option--list--box-menu:focus {
+    outline: rem(2px) solid $interactive-04;
+    outline-offset: rem(-2px);
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,26 @@
+{
+  status: "ok",
+  widgetDefinitions: [
+    {
+      id: "iam-navigation",
+      source: "react-calmly",
+      component: "IAMNavigation",
+      package: "@react-calmly/components",
+      title: "User Management"
+    },
+    {
+      id: "iam-summary",
+      source: "react-calmly",
+      component: "IAMSummary",
+      package: "@react-calmly/components",
+      title: "User Management"
+    },
+    {
+      id: "user-management-grid",
+      source: "react-calmly",
+      component: "UserManagementNavigation",
+      package: "@react-calmly/components",
+      title: ""
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+* 
+* </LICENSE>
+*  */
+
+
+
+.eleven-pager-control {
+  display:grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1.3rem 1.3rem 1.3rem 1.3rem 1.3rem;
+}

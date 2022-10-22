@@ -1,0 +1,39 @@
+{
+  status : "ok",
+  result : {
+    dataModelName : "Product",
+    attributes: [
+      {
+        "attribute" : "id",
+        "name" : "id",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "upc",
+        "name" : "UPC",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "size",
+        "name" : "Size",
+        "type": "number"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "UOM",
+        "name" : "UOM",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "description",
+        "name" : "Description",
+        "type": "string"  // string, number, currency, time, enum
+      },
+      {
+        "attribute" : "description",
+        "name" : "Description",
+        "type": "string"  // string, number, currency, time, enum
+      }
+    ]
+  }
+}
+

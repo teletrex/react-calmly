@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartMetrics Renders correctly 1`] = `
+<div
+  class="bx--chart-metrics bx--chart-metrics-multiple"
+  data-testid="chart-metrics"
+>
+  <div
+    class="bx-proposal-dropdown-wrapper bx-proposal-dropdown-wrapper--multiselect"
+  >
+    <div
+      class="bx-proposal-dropdown__label"
+    >
+      <span>
+        Metrics
+      </span>
+    </div>
+    <div
+      class="bx-proposal-dropdown__helper-text"
+    >
+      <span>
+        Select up to 2 metrics
+      </span>
+    </div>
+    <div
+      class="bx-proposal-dropdown"
+      role="listbox"
+    >
+      <span>
+        <div
+          aria-label="Select metrics"
+          class="bx-proposal-dropdown__field bx-proposal-dropdown__field--multiselect"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="bx-proposal-dropdown__field__label"
+          >
+            <div
+              class="bx--tag bx--tag--filter bx--tag--filter bx--tag--oval"
+              title=""
+            >
+              <div
+                class="bx--tag__label"
+              >
+                <span
+                  class="bx--tag__text-ellipsis"
+                >
+                  1
+                </span>
+              </div>
+              <button
+                aria-label="Remove"
+                title="Remove"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="16"
+                  preserveAspectRatio="xMidYMid meet"
+                  style="will-change: transform;"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+                  />
+                </svg>
+              </button>
+            </div>
+            Select metrics
+          </span>
+          <div
+            class="bx-proposal-dropdown__field__menu-icon"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              height="16"
+              preserveAspectRatio="xMidYMid meet"
+              style="will-change: transform;"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 11L3 6l.7-.7L8 9.6l4.3-4.3.7.7z"
+              />
+            </svg>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,129 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+@import 'node_modules/@carbon/styles/index';
+
+
+.#{$prefix}--progress {
+  &__warn > path{
+//    fill: $ui-warning;
+  }
+  &__complete > path{
+//    fill: $ui-complete;
+  }
+  &-label:active {
+    color: $text-01;
+    border-bottom: 1px solid $ui-shell;
+    box-shadow: unset;
+  }
+
+  &-step--current,
+  &-step--complete {
+    .#{$prefix}--progress-line {
+      background-color: $support-02;
+    }
+
+    svg {
+      fill: $support-02;
+    }
+  }
+
+  &-step--incomplete {
+    svg {
+      fill: $ui-03;
+    }
+  }
+
+  &-step--disabled {
+    pointer-events: none;
+  }
+
+  &--vertical {
+    max-width: rem(200px);
+
+    .#{$prefix}--progress {
+      &-step {
+        min-height: rem(56px);
+
+        &-button {
+          display: inline-flex;
+        }
+
+        &-button svg {
+          display: inline-block;
+        }
+      }
+
+      &-label {
+        display: inline-block;
+      }
+
+      &-optional {
+        display: block;
+        margin-left: rem(32px);
+      }
+    }
+  }
+
+  .#{$prefix}--progress-step-tooltip {
+    &:focus {
+      outline: unset;
+
+      .#{$prefix}--progress-label {
+        border-bottom: rem(2px) solid $focus;
+      }
+    }
+  }
+
+  .#{$prefix}--progress-step-button {
+    &--interactive {
+      &:focus {
+        outline: unset;
+
+        .#{$prefix}--progress-label {
+          border-bottom: rem(2px) solid $focus;
+        }
+      }
+
+      .#{$prefix}--progress-label {
+        &:active {
+          outline: unset;
+          border: none;
+        }
+      }
+    }
+
+    &:not(.#{$prefix}--progress-step-button--interactive) {
+      cursor: default;
+      outline: none;
+      box-shadow: none;
+
+      .#{$prefix}--progress-label {
+        cursor: default;
+        outline: none;
+        box-shadow: none;
+        border-bottom: none;
+
+        &:hover,
+        &:active {
+          color: currentColor;
+        }
+      }
+    }
+  }
+}
+
+.#{$prefix}--skeleton {
+  .#{$prefix}--progress-step--incomplete {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+  }
+}

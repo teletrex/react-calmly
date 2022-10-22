@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EllipsisAxisTick verify if created when the value is "2019 Q1" 1`] = `
+<svg>
+  <g>
+    <text
+      class="recharts-text"
+      font-size="11"
+      text-anchor="end"
+      width="50"
+      x="0"
+      y="0"
+    >
+      <tspan
+        dy="0em"
+        x="0"
+      >
+        2019 Q1
+      </tspan>
+    </text>
+    <title>
+      2019 Q1
+    </title>
+  </g>
+</svg>
+`;
+
+exports[`EllipsisAxisTick verify if created when the value is 150000000 1`] = `
+<svg>
+  <g>
+    <text
+      class="recharts-text"
+      font-size="11"
+      text-anchor="end"
+      width="50"
+      x="0"
+      y="0"
+    >
+      <tspan
+        dy="0em"
+        x="0"
+      >
+        150000000
+      </tspan>
+    </text>
+    <title>
+      150000000
+    </title>
+  </g>
+</svg>
+`;
+
+exports[`EllipsisAxisTick verify if created when the value is null 1`] = `
+<svg>
+  <g>
+    <text
+      class="recharts-text"
+      font-size="11"
+      text-anchor="end"
+      width="50"
+      x="0"
+      y="0"
+    >
+      <tspan
+        dy="0em"
+        x="0"
+      />
+    </text>
+    <title />
+  </g>
+</svg>
+`;
+
+exports[`EllipsisAxisTick verify if created when the value is undefined 1`] = `
+<svg>
+  <g>
+    <text
+      class="recharts-text"
+      font-size="11"
+      text-anchor="end"
+      width="50"
+      x="0"
+      y="0"
+    >
+      <tspan
+        dy="0em"
+        x="0"
+      />
+    </text>
+    <title />
+  </g>
+</svg>
+`;

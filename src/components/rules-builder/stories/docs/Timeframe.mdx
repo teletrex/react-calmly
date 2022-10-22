@@ -1,0 +1,78 @@
+import { Props, Story, Source, Preview } from '@storybook/addon-docs/blocks';
+
+import RulesBuilder from '../../RulesBuilder';
+
+# RulesBuilder - Timeframe
+
+## Overview
+
+`Timeframe` is the rule decorator that allows us to extend rule data with timeframe selectors. There are no restrictions regarding the usage of timeframe, and can be used in any type of rule.
+
+<Preview>
+  <Story id="experimental-rulesbuilder-timeframe--usage" />
+</Preview>
+
+## Usage
+
+In order to decorate the rule with a timeframe selector you need to add additional property to the criteria config.
+
+```js
+const CRITERIA_CONFIG = {
+  SCORE: { type: 'number', hasTimeframe: true },
+};
+```
+
+All the rules with `hasTimeframe` set as `true` will be decorated with timeframe components.
+
+### Structure
+
+Rules with timeframe will contain additional data field that refers only to `timeframe` selectors
+
+```js
+const INITIAL_RULES = {
+  conjunction: CONJUNCTION_AND.id,
+  data: {
+    criteriaKey: 'SCORE',
+    data: { operator: 'IS', value: 30 },
+    timeframe: {
+      operator: 'WITHIN_THE_LAST',
+      value: {
+        value: 7,
+        period: 'DAYS',
+      },
+    },
+  }
+},
+```
+
+The rules `data` structures can be enriched with timeframe objects, providing more context to the overall output. Timeframes use their own set of predefined timeframe operators (not to be confused with regular rule operators).
+
+| Operator          |   inputType    |
+| ----------------- | :------------: |
+| `ON`              | `singleValue`  |
+| `AFTER`           | `singleValue`  |
+| `BEFORE`          | `singleValue`  |
+| `EXACTLY`         | `whenRelation` |
+| `MORE_THAN`       | `whenRelation` |
+| `LESS_THAN`       | `whenRelation` |
+| `WITHIN_THE_LAST` | `withinPeriod` |
+| `BETWEEN`         |    `range`     |
+| `ON_TODAY`        |     `none`     |
+| `BEFORE_TODAY`    |     `none`     |
+| `AT_ANY_TIME`     |     `none`     |
+
+The supported input types are
+
+| inputType      |                 Description                  |                          Value                           |
+| -------------- | :------------------------------------------: | :------------------------------------------------------: |
+| `none`         |          Value defined by operator           |                          `null`                          |
+| `singleValue`  |            Sets the single value             |                       `timestamp`                        |
+| `whenRelation` | Sets the amount of period in the past/future | `{ period: string, value: number, whenRelation: string}` |
+| `withinPeriod` |       Sets the amount of given period        |            `{ period: string, value: number}`            |
+| `range`        |              Sets time interval              |                 `[timestamp, timestamp]`                 |
+
+## Feedback
+
+Help us improve this component by providing feedback, asking questions
+on Slack, or updating this file on GitHub
+

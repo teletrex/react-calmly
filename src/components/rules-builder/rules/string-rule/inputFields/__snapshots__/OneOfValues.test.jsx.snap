@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneOfValues should render correctly 1`] = `
+<div>
+  <div
+    class="cds--add-tags cds--add-tags--inline cds--add-tags--inline-input-always-on"
+  >
+    <div
+      class="cds--add-tags--container"
+    >
+      <div
+        class="cds--add-tags--input-container"
+      >
+        <div
+          class="cds--form-item cds--text-input-wrapper"
+        >
+          <span
+            class="cds--text-input__label-wrapper cds--visually-hidden"
+          >
+            <label
+              class="cds--label"
+              for="TestStringRuleElement"
+            >
+              Tags
+            </label>
+
+          </span>
+          <div
+            class="cds--text-input__field-wrapper"
+          >
+            <input
+              aria-label="Tag input"
+              class="cds--text-input cds--add-tags--input"
+              id="TestStringRuleElement"
+              name="TestStringRuleElement"
+              placeholder="Enter value"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Add"
+        class="cds--add-tags--submit cds--button__with-icon cds--btn cds--btn--sm cds--btn--ghost cds--btn--disabled cds--btn--icon-only cds--tooltip__trigger cds--tooltip--a11y cds--tooltip--bottom cds--tooltip--align-center"
+        disabled=""
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="cds--assistive-text"
+        >
+          Add
+        </span>
+        <svg
+          aria-hidden="true"
+          aria-label="Add"
+          class="cds--btn__icon"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          role="img"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 10.6L2.5 7.1l-.7.7 3.5 3.5.7.7 7.1-7.1-.7-.7z"
+          />
+        </svg>
+      </button>
+      <button
+        aria-label="Cancel"
+        class="cds--add-tags--cancel cds--button__with-icon cds--btn cds--btn--sm cds--btn--ghost cds--btn--icon-only cds--tooltip__trigger cds--tooltip--a11y cds--tooltip--bottom cds--tooltip--align-center"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="cds--assistive-text"
+        >
+          Cancel
+        </span>
+        <svg
+          aria-hidden="true"
+          aria-label="Cancel"
+          class="cds--btn__icon"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          role="img"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OneOfValues should render correctly for read-only 1`] = `
+<div>
+  <span
+    class="cds--rule-value-readonly cds--text-space-left"
+  >
+    abc
+  </span>
+</div>
+`;
+
+exports[`OneOfValues should render correctly with a provided value 1`] = `
+<div>
+  <div
+    class="cds--add-tags cds--add-tags--inline cds--add-tags--inline-input-always-on"
+  >
+    <div
+      class="cds--tag cds--tag--gray cds--add-tags--filter-tag cds--tag--filter cds--tag--oval"
+      id="tag-abc"
+      title=""
+    >
+      <div
+        class="cds--tag__label"
+      >
+        <span
+          class="cds--tag__text-ellipsis"
+        >
+          abc
+        </span>
+      </div>
+      <button
+        aria-label="Remove"
+        title="Remove"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="cds--add-tags--container"
+    >
+      <div
+        class="cds--add-tags--input-container"
+      >
+        <div
+          class="cds--form-item cds--text-input-wrapper"
+        >
+          <span
+            class="cds--text-input__label-wrapper cds--visually-hidden"
+          >
+            <label
+              class="cds--label"
+              for="TestStringRuleElement"
+            >
+              Tags
+            </label>
+
+          </span>
+          <div
+            class="cds--text-input__field-wrapper"
+          >
+            <input
+              aria-label="Tag input"
+              class="cds--text-input cds--add-tags--input"
+              id="TestStringRuleElement"
+              name="TestStringRuleElement"
+              placeholder="Enter value"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="Add"
+        class="cds--add-tags--submit cds--button__with-icon cds--btn cds--btn--sm cds--btn--ghost cds--btn--disabled cds--btn--icon-only cds--tooltip__trigger cds--tooltip--a11y cds--tooltip--bottom cds--tooltip--align-center"
+        disabled=""
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="cds--assistive-text"
+        >
+          Add
+        </span>
+        <svg
+          aria-hidden="true"
+          aria-label="Add"
+          class="cds--btn__icon"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          role="img"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 10.6L2.5 7.1l-.7.7 3.5 3.5.7.7 7.1-7.1-.7-.7z"
+          />
+        </svg>
+      </button>
+      <button
+        aria-label="Cancel"
+        class="cds--add-tags--cancel cds--button__with-icon cds--btn cds--btn--sm cds--btn--ghost cds--btn--icon-only cds--tooltip__trigger cds--tooltip--a11y cds--tooltip--bottom cds--tooltip--align-center"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="cds--assistive-text"
+        >
+          Cancel
+        </span>
+        <svg
+          aria-hidden="true"
+          aria-label="Cancel"
+          class="cds--btn__icon"
+          focusable="false"
+          height="16"
+          preserveAspectRatio="xMidYMid meet"
+          role="img"
+          style="will-change: transform;"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 4.7l-.7-.7L8 7.3 4.7 4l-.7.7L7.3 8 4 11.3l.7.7L8 8.7l3.3 3.3.7-.7L8.7 8z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

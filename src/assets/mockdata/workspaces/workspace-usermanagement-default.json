@@ -1,0 +1,21 @@
+{
+  status: "ok",
+  workspace : {
+    id: "workspace-management-default",
+    title: "User Management",
+    template: "application",
+    widgets: [
+      {
+        widgetId: "iam-navigation"
+      },
+      {
+        widgetId: "iam-summary",
+      },
+      {
+        widgetId: "user-management-grid"
+      },
+    ],
+    layout: {}
+  }
+}
+

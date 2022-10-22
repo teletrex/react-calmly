@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomLegend verify if created 1`] = `
+<div
+  class="bx--recharts__legend"
+  data-testid="recharts__legend"
+>
+  <button
+    class="bx--recharts__legend_title"
+    data-testid="legend-title"
+    type="button"
+  >
+    <span>
+      Legend
+    </span>
+  </button>
+  <ul
+    data-testid="legend-items"
+  >
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2016 Q1"
+          id="leg-2016 Q11"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2016 Q11"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2016 Q1
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2016 Q2"
+          id="leg-2016 Q22"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2016 Q22"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2016 Q2
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2016 Q3"
+          id="leg-2016 Q33"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2016 Q33"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2016 Q3
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2016 Q4"
+          id="leg-2016 Q44"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2016 Q44"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2016 Q4
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2017 Q1"
+          id="leg-2017 Q15"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2017 Q15"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2017 Q1
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2017 Q2"
+          id="leg-2017 Q26"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2017 Q26"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2017 Q2
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2017 Q3"
+          id="leg-2017 Q37"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2017 Q37"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2017 Q3
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2017 Q4"
+          id="leg-2017 Q48"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2017 Q48"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2017 Q4
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2018 Q1"
+          id="leg-2018 Q19"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2018 Q19"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2018 Q1
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2018 Q2"
+          id="leg-2018 Q210"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2018 Q210"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2018 Q2
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2018 Q3"
+          id="leg-2018 Q311"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2018 Q311"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2018 Q3
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2018 Q4"
+          id="leg-2018 Q412"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2018 Q412"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2018 Q4
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2019 Q1"
+          id="leg-2019 Q113"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2019 Q113"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2019 Q1
+          </span>
+        </label>
+      </div>
+    </li>
+    <li>
+      <div
+        class="bx--form-item bx--checkbox-wrapper"
+      >
+        <input
+          checked=""
+          class="bx--checkbox"
+          data-testid="checkbox-2019 Q2"
+          id="leg-2019 Q214"
+          type="checkbox"
+        />
+        <label
+          class="bx--checkbox-label"
+          for="leg-2019 Q214"
+        >
+          <span
+            class="bx--checkbox-label-text"
+          >
+            2019 Q2
+          </span>
+        </label>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

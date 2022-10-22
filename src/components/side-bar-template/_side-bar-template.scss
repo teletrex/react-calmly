@@ -1,0 +1,384 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+
+@import '~@carbon/styles';
+@import '~@carbon/styles/scss/utilities';
+@import '~@carbon/styles/scss/spacing';
+
+
+@import 'src/teletrex-theme/typography/productive';
+@import 'src/teletrex-theme/typography/tokens';
+@import 'src/teletrex-theme/teletrex-theme';
+
+@include theme();
+
+.#{$prefix}--side-bar-template {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  &__expander {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: rem(20px);
+    z-index: 100;
+    display: flex;
+    width: rem(32px);
+    height: rem(32px);
+    background: $ui-02;
+    border-radius: 50%;
+    box-shadow: 0 rem(2px) rem(6px) 0 rgba(0, 0, 0, 0.2);
+
+// TODO:    @include breakpoint-up('lg') {
+//      &--responsive {
+//        display: none;
+//      }
+//    }
+
+    &:hover {
+      background: $hover-ui;
+    }
+
+    &:focus {
+      border: rem(2px) solid $interactive-04;
+      border-radius: 50%;
+      outline: 0;
+    }
+
+    svg {
+      fill: $text-01;
+      width: rem(14px);
+      height: rem(14px);
+      transform: rotate(90deg);
+    }
+
+    &--collapsed {
+      left: rem(16px);
+    }
+
+    &--collapsed-right {
+      right: rem(16px);
+    }
+
+    &--half {
+      left: calc(50% + #{rem(16px)});
+    }
+
+    &--half-right {
+      right: calc(50% + #{rem(16px)});
+    }
+
+    &--default {
+      @media screen and (max-width: 1312px) {
+        left: rem(336px);
+      }
+
+      @media screen and (min-width: 1312px) {
+        left: rem(400px);
+      }
+    }
+
+    &--default-right {
+      @media screen and (max-width: 1312px) {
+        right: rem(336px);
+      }
+
+      @media screen and (min-width: 1312px) {
+        right: rem(400px);
+      }
+    }
+
+    &--wide {
+      @media screen and (min-width: 1056px) {
+        left: rem(400px);
+      }
+
+      @media screen and (min-width: 1312px) {
+        left: rem(528px);
+      }
+
+      @media screen and (min-width: 1584px) {
+        left: rem(592px);
+      }
+    }
+
+    &--wide-right {
+      @media screen and (min-width: 1056px) {
+        right: rem(400px);
+      }
+
+      @media screen and (min-width: 1312px) {
+        right: rem(528px);
+      }
+
+      @media screen and (min-width: 1584px) {
+        right: rem(592px);
+      }
+    }
+
+    &--treeNav {
+      left: rem(271px);
+
+      @media screen and (min-width: 1584px) {
+        left: rem(311px);
+      }
+    }
+
+    &--treeNav-right {
+      right: rem(271px);
+
+      @media screen and (min-width: 1584px) {
+        right: rem(311px);
+      }
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow: auto;
+
+    & + .#{$prefix}--side-bar-template__hidden-border {
+      border: none;
+    }
+
+    & + .#{$prefix}--side-bar-template__overlay {
+      right: 0;
+      left: auto;
+      box-shadow: rem(-5px) 0 rem(6px) rem(-5px) rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__open-bar {
+    border-right: rem(1px) solid $active-ui;
+    height: 100%;
+    display: flex;
+    width: rem(20px);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__bar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > h3 {
+      padding: rem(16px) rem(32px);
+
+// TODO:      @include type-style('panel-heading-03');
+
+      color: $text-01;
+    }
+
+    &__heading {
+      padding: rem(16px) rem(32px);
+      color: $text-06;
+
+// TODO:      @include breakpoint-down('xlg') {
+//        padding: rem(16px);
+//      }
+
+// TODO:      @include type-style('productive-heading-02');
+    }
+
+    &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $ui-02;
+      cursor: pointer;
+      border: none;
+      overflow: hidden;
+      outline: none;
+      z-index: 999;
+      color: $text-01;
+      padding: rem(10px);
+      line-height: 0;
+
+      &::-moz-focus-inner {
+        border: 0;
+      }
+
+      &--hidden {
+        display: none;
+      }
+    }
+
+    &__close:hover {
+      background-color: $ui-03;
+    }
+
+    &__close:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 rem(2px) $focus;
+    }
+  }
+
+  &__bar-content {
+    padding: $spacing-05;
+    flex-grow: 1;
+
+    &__heading {
+      color: $text-06;
+
+// TODO:      @include type-style('productive-heading-02');
+    }
+
+    &--marginless {
+      padding: 0;
+    }
+
+    &--with-footer {
+      overflow: auto;
+    }
+  }
+
+  .#{$prefix}--filter {
+    .#{$prefix}--checkbox {
+      &-wrapper {
+        overflow: hidden;
+      }
+
+      &-label {
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      &-label-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &-counter-text {
+        padding-left: rem(5px);
+      }
+    }
+  }
+
+  &__bar-footer {
+    display: flex;
+    display: -webkit-box;
+    flex-grow: 0;
+  }
+
+  &__wrapper {
+    background-color: $ui-02;
+    height: auto;
+    position: relative;
+    border-right: rem(1px) solid $ui-03;
+    overflow: auto;
+    z-index: 0;
+
+    &--treeNav {
+      width: rem(256px);
+
+      @media screen and (min-width: 1584px) {
+        width: rem(296px);
+      }
+
+      .#{$prefix}--side-bar-template__bar-content {
+        padding: $spacing-sm $spacing-xl $spacing-xl $spacing-xl;
+      }
+    }
+
+    &--default {
+      @media screen and (max-width: 1312px) {
+        width: rem(320px);
+      }
+
+      @media screen and (min-width: 1312px) {
+        width: rem(384px);
+      }
+    }
+
+    &--wide {
+      @media screen and (min-width: 1056px) {
+        width: rem(384px);
+      }
+
+      @media screen and (min-width: 1312px) {
+        width: rem(512px);
+      }
+
+      @media screen and (min-width: 1584px) {
+        width: rem(576px);
+      }
+    }
+
+    &--half {
+      width: 50%;
+    }
+
+    &--default,
+    &--half,
+    &--wide {
+      .#{$prefix}--side-bar-template__bar-content {
+        padding: rem(20px) $spacing-xl $spacing-xl $spacing-xl;
+
+// TODO:       @include breakpoint-down('xlg') {
+//          padding: rem(20px) rem(16px);
+//        }
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    bottom: rem(20px);
+    box-shadow: 0 rem(2px) rem(6px) 0 rgba(0, 0, 0, 0.3);
+    border: 0;
+
+    &.#{$prefix}--side-bar-template__hidden-border {
+      height: 100%;
+      box-shadow: none;
+    }
+  }
+
+  &__hidden-border {
+    border: none;
+  }
+
+  &__open-arrow {
+    width: rem(20px);
+    margin: 0;
+  }
+
+  .#{$prefix}--accordion__item {
+    border-top: rem(1px) solid transparent;
+    border-bottom: rem(1px) solid $ui-03;
+  }
+
+  &__sticky-top-container {
+    position: sticky;
+    display: flex;
+    width: 100%;
+    top: 0;
+    padding-right: rem(48px);
+    flex-direction: row-reverse;
+    background-color: $ui-background;
+  }
+
+  &__content + &__wrapper {
+    border-right: none;
+    border-left: rem(1px) solid $active-ui;
+
+    .#{$prefix}--side-bar-template {
+      &__open-bar {
+        border-left: rem(1px) solid $active-ui;
+        border-right: none;
+      }
+    }
+  }
+}

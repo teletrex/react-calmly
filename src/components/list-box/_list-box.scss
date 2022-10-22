@@ -1,0 +1,22 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+@import '~@carbon/styles';
+
+.#{$prefix}--list-box__wrapper {
+  .#{$prefix}--list-box {
+    border-bottom: none;
+  }
+
+  .#{$prefix}--list-box__menu-item--disabled {
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  status: "ok",
+  notifications: [
+    {
+      subTitle: "Alisha Barrett is requesting access to an application.",
+      title: "Access request",
+      kind: "info",
+      date: "May 19",
+      action: "usermgmt/",
+      actionText: "Manage Users",
+      notificationId: "1231-2133-1233-1222",
+      importance: 1
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "error",
+      date: "May 15",
+      actionText: "Resolve",
+      action: "overview",
+      importance: 2
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "error",
+      date: "May 22",
+      actionText: "Don't Panic",
+      action: "overview",
+      importance: 3
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "info",
+      date: "May 29",
+      actionText: "Dismiss",
+      action: "overview",
+      importance: 4
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "info",
+      date: "May 9",
+      actionText: "Dismiss",
+      action: "overview",
+      importance: 5
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "error",
+      date: "May 15",
+      actionText: "Resolve",
+      action: "overview",
+      importance: 6
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "warning",
+      date: "May 18",
+      actionText: "Resolve",
+      action: "overview",
+      importance: 7
+    },
+    {
+      title: "Notification Title",
+      subTitle: "Description text.",
+      kind: "success",
+      date: "May 22",
+      actionText: "Resolve",
+      action: "overview",
+      importance: 8
+    }
+  ]
+}

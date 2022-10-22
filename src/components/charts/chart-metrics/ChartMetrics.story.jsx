@@ -25,6 +25,7 @@ const props = () => ({
   label: text('label', ''),
   helperText: text('helper text', ''),
   limit: number('limit', 2),
+
 });
 
 storiesOf('Charts/ChartMetrics', module).add('default', () => <ChartMetrics {...props()} />);

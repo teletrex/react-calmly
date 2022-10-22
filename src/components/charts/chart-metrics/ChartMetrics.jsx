@@ -16,12 +16,12 @@ import omit from 'lodash/omit';
 import filter from 'lodash/filter';
 import classNames from 'classnames';
 
-import { Dropdown } from '@carbon/react';  // was new-dropdown
+import {Dropdown, MultiSelect} from '@carbon/react';  // was new-dropdown
 import { useTranslation } from '../../../translation';
 
 const { prefix } = settings;
 
-const ChartMetrics = ({ items, onChange, limit, width, placeholder, label, helperText }) => {
+const ChartMetrics = ({ items, onChange, limit, width, placeholder, label, helperText, size = 'sm'}) => {
   const { t } = useTranslation();
   const [metrics, setMetrics] = useState([]);
   const [selectedMetrics, setSelectedMetrics] = useState([]);
@@ -84,13 +84,29 @@ const ChartMetrics = ({ items, onChange, limit, width, placeholder, label, helpe
       data-testid="chart-metrics"
       style={style}
     >
-      <Dropdown
+      {isMultiselect &&
+      <MultiSelect
+        size={size}
         ariaLabel="Dropdown"
         helperText={
-          isMultiselect ? helperText || t('Select up to {{limit}} metrics', { limit }) : null
+          helperText || t('Select up to {{limit}} metrics', { limit })
         }
         id="chart_metrics"
-        isMultiselect={isMultiselect}
+        items={metrics}
+        itemToString={item => (item ? item.name : '')}
+        labelText={label || t('Metrics')}
+        onChange={handleMetricSelect}
+        placeholder={placeholder || t('selected')}
+        selectedItems={isMultiselect ? selectedMetrics : selectedMetrics[0]}
+      />
+
+      }
+      { !isMultiselect &&
+      <Dropdown
+        size={size}
+        ariaLabel="Dropdown"
+        helperText={ helperText }
+        id="chart_metrics"
         items={metrics}
         itemToString={item => (item ? item.name : '')}
         labelText={label || t('Metrics')}
@@ -98,6 +114,7 @@ const ChartMetrics = ({ items, onChange, limit, width, placeholder, label, helpe
         placeholder={placeholder || t('selected')}
         selectedItem={isMultiselect ? selectedMetrics : selectedMetrics[0]}
       />
+      }
     </div>
   );
 };

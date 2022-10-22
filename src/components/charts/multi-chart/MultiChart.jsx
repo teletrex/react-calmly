@@ -30,7 +30,7 @@ import { multichartAbsolutePosTooltipProps } from '../components/defaultTooltipP
 
 import { ActiveDashedDotWithAlert, ActiveLineDotWithAlert, InactiveDot } from './components/Dot';
 import Legend from './components/Legend';
-import { buildClass } from './className';
+import { buildClass } from '../components/className';
 
 export const defaultTooltipFormatter = (value, name) => {
   let finalName = `${name.charAt(0).toUpperCase()}${name.substr(1)}`;
@@ -289,7 +289,7 @@ MultiChart.defaultProps = {
   boundsLabel: undefined,
   chartMargin: {},
   dashedLabel: undefined,
-  height: '100%',
+  height: '100vh',
   interval: 'preserveEnd',
   lineLabel: undefined,
   onAnomalyClick: noop,

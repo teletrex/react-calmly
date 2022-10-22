@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -16,7 +16,7 @@ import { axisTypes } from './utilities';
 
 /*
 https://github.com/recharts/recharts/issues/961
-This component is responsible for truncating ticks inside the rechart 
+This component is responsible for truncating ticks inside the rechart
 charts in both quantity of lines and maximum width for single line.
 
 maxLines - used for limiting amount of lines in single tick
@@ -38,12 +38,12 @@ const EllipsisAxisTick = ({ axis, labelAngle, maxLines, payload, tickFormatter, 
         return;
       }
 
-      const getWordsByLines = (node, children) => node.getWordsByLines({ ...rest, children }, true);
+      const getWordsByLines = (node, children) => node.state.wordsByLines;
 
       let tempText = formattedValue?.toString() ?? '';
 
       let wordsByLines = getWordsByLines(node, tempText);
-      let longestLine = maxBy(wordsByLines, 'width');
+      let longestLine = maxBy(wordsByLines, word => word.length);
 
       const calculatedAngle = labelAngle * (Math.PI / 180);
       const wordInclination =
@@ -53,12 +53,12 @@ const EllipsisAxisTick = ({ axis, labelAngle, maxLines, payload, tickFormatter, 
       const axisLabelSpace = axis === axisTypes.x ? rest.height : rest.width;
       const wordLengthLimit = axisLabelSpace / wordInclination;
       const tempSuffix =
-        wordsByLines.length > maxLines || longestLine.width > wordLengthLimit ? '…' : '';
+        wordsByLines.length > maxLines || longestLine > wordLengthLimit ? '…' : '';
 
-      while (wordsByLines.length > maxLines || (longestLine.width > wordLengthLimit && tempText)) {
+      while (wordsByLines.length > maxLines || (longestLine > wordLengthLimit && tempText)) {
         tempText = tempText.slice(0, -1);
         wordsByLines = getWordsByLines(node, tempText + tempSuffix);
-        longestLine = maxBy(wordsByLines, 'width');
+        longestLine = maxBy(wordsByLines, word => word.length);
       }
 
       if (tempText !== text) {

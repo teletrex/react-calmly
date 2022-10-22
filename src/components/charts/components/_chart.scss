@@ -18,6 +18,11 @@ $legend-colors: (
   legend-6 : $chart-06,
   legend-7 : $chart-07,
 
+  line: $line-color,
+  alert: $chart-anomaly,
+  dashed: $chart-threshold,
+  bounds: $bounds-color,
+
 );
 
 .activity-ring-chart svg {

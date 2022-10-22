@@ -22,17 +22,12 @@ import {
   ReferenceArea
 } from 'recharts';
 
-import moment from "moment/moment";
-
-import Legend from '../components/Legend';
-
-import { buildClass } from '../components/className';
-
-import ClickTooltip from "../components/ClickTooltip";
-import ReferenceLineDot from "../components/ReferenceLineDot";
 
 import {SecondaryButton} from "@carbon/react";
-
+import Legend from '../components/Legend';
+import { buildClass } from '../components/className';
+import ClickTooltip from "../components/ClickTooltip";
+import ReferenceLineDot from "../components/ReferenceLineDot";
 
 const MultiLineChart = ({
   title,

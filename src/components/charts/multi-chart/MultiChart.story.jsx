@@ -200,7 +200,7 @@ const dateData = () => object('data', dateDataDefault);
 
 const defaultProps = data => ({
   width: text('Chart width', '100%'),
-  height: text('Chart height', '100%'),
+  height: text('Chart height', '90vh'),
   data,
 });
 
@@ -271,6 +271,7 @@ const MultiChartWithDates = () => {
   );
 };
 
+console.log(JSON.stringify(numberData()));
 storiesOf('Charts/Multi Chart', module)
   .add('default', () => (
     <MultiChart {...defaultProps(numberData())} tooltipFormatter={tooltipFormatter} />

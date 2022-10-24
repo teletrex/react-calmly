@@ -17,7 +17,7 @@ import CheckboxIndicator from '../../checkbox-indicator'
 import settings from '../../../settings';
 
 export default {
-  title: 'Components/ClickTooltip',
+  title: 'Containers/ClickTooltip',
   component: ClickTooltip
 }
 

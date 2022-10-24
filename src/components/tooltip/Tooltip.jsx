@@ -9,7 +9,6 @@
 
 import React, {useRef, useEffect, useState, useCallback} from "react";
 
-//import {Tooltip} from "@carbon/react";
 import settings from "../../settings";
 
 /* add in tracking the width for changes and calculating showTooltip */

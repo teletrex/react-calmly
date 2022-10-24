@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -41,21 +41,21 @@ export default {
   }
 }
 
-export const DefaultPromo_mdY = () => <DateInputEditor
+export const FormatAs_mdY = () => <DateInputEditor
   initialValue={"08/02/2021"}
   minDate = {"08/02/2021"}
   maxDate = {"08/10/2021"}
   dateFormat = {"m/d/Y"}
 />
 
-export const DefaultPromo_dmY = () => <DateInputEditor
+export const FormatAs_dmY = () => <DateInputEditor
   initialValue={"08/02/2021"}
   minDate = {"08/02/2021"}
   maxDate = {"08/10/2021"}
   dateFormat = {"d/m/Y"}
 />
 
-export const DefaultAPO_MdY = () => <DateInputEditor
+export const FormatAsText_MdY = () => <DateInputEditor
   //  initialValue={"May 12, 2021"}
   initialValue={"Aug 2, 2021"}
   minDate = {"Aug 2, 2021"}

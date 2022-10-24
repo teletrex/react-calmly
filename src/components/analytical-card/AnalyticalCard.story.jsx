@@ -68,6 +68,6 @@ export const Default = () =>
     totalPages={10}
     currentPage={2}
     valueIndicator={<ValueIndicator mainValue={0.5} title={"Lift %"}/>}
-    linkLabel={"Promotion Name is really long test "}
+    linkLabel={"This is a layout. View in ClickTooltip component. "}
     linkUrl={"https://networkdebuglfr.z20.web.core.windows.net"}
  />

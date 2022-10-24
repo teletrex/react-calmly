@@ -1,19 +1,10 @@
-* <LICENSE>
+/* <LICENSE>
 *
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
 *
 * </LICENSE>
 *  */
 
-
-
-@import '~@carbon/styles';
-
-//@import 'src/teletrex-theme/typography/productive';
-//@import 'src/teletrex-theme/typography/tokens';
-//@import 'src/teletrex-theme/teletrex-theme';
-
-//@include theme();
 
 /// Full page template styles
 /// @access private
@@ -24,7 +15,7 @@
   height: 100%;
   flex-direction: column;
   padding: 0 rem(16px);
-//    background-color: $ui-02;
+  background-color: $ui-02;
 
   &__heading {
     padding: rem(24px) rem(16px);
@@ -34,7 +25,7 @@
   }
 
   &__header-wrapper {
-//      color: $text-01;
+      color: $text-01;
   }
 
   &__subheader-wrapper {
@@ -53,7 +44,7 @@
     > p {
       padding: rem(4px) 0;
       font-weight: font-weight('regular');
-//      color: $text-02;
+      color: $text-02;
       line-height: rem(18px);
       letter-spacing: rem(0.16px);
       font-family: 'National 2', sans-serif;

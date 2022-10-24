@@ -11,7 +11,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PagerControl from "../pager-control";
 import LabeledDataSet from "../labeled-data-set";
-import ElevenTooltip from "../tooltip";
+import Tooltip from "../tooltip";
 import {Link} from "@carbon/react";
 import settings from "../../settings.js";
 
@@ -39,7 +39,7 @@ export const AnalyticalCard = (
       <div className={"two-column align-vertically"}>
         {(linkLabel && (
           onLinkClick || linkUrl
-        ) && <div style={{maxWidth:"200px"}}><ElevenTooltip text={linkLabel} align={"right"}><Link onClick={onLinkClick} href={linkUrl}> {linkLabel}</Link></ElevenTooltip></div>)
+        ) && <div style={{maxWidth:"200px"}}><Tooltip text={linkLabel} align={"right"}><Link onClick={onLinkClick} href={linkUrl}> {linkLabel}</Link></Tooltip></div>)
         ||
         linkLabel
         }

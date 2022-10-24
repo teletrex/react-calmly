@@ -23,7 +23,7 @@ export const Usage = () => (
     <Button
       hasIconOnly
       iconDescription="Button icon"
-      renderIcon=<Notification size={16}/>
+      renderIcon={()=><Notification size={16}/>}
       style={{ background: '#13173d' }}
       tooltipAlignment="center"
       tooltipPosition="bottom"

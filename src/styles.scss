@@ -16,6 +16,7 @@ $teletrex-font-path: './';
 @use '~@carbon/motion';
 
 
+
 :root {
   --short: 1.65rem;
 }
@@ -58,8 +59,8 @@ $base-font-size: 16px !default;
 
 @import './components/checkbox/_checkbox.scss';   // empty
 @import './components/badge/badge.scss';
-@import './components/dropdown/dropdown.scss';  Do not need. Empty.
-@import './components/configurable-action/configurable-action.scss';
+@import './components/dropdown/dropdown.scss'; //  Do not need. Empty.
+//@import './components/configurable-action/configurable-action.scss';
 //@import './components/ExtendedPagination/extended-pagination.scss';
 @import './components/full-page-template/full-page-template.scss';
 @import './components/side-bar-template/side-bar-template';

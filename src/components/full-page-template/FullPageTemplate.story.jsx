@@ -10,6 +10,8 @@
 // TODO: fix later, its a story warning.
 
 import React from 'react';
+import settings from '../../settings';
+
 import { storiesOf } from '@storybook/react';
 
 import omit from 'lodash/omit';
@@ -17,7 +19,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import noop from 'lodash/noop';
-import settings from '../../settings';
+
 
 import SideBarTemplate from '../side-bar-template';
 import {  Breadcrumb, BreadcrumbItem, Button, Tab, Tabs } from '@carbon/react';
@@ -32,6 +34,9 @@ import ConfigurableTable from '@carbon/react';
 import { TreeNavigationExample } from '../tree-navigation/stories/ExampleTreeNavigation';
 //import { ToolbarWithViewModeSwitcher } from '../data-table/stories/ConfigurableTableWithTiles.story';
 
+
+
+// TODO: Figure out the tabs styles...
 
 import FullPageTemplate from '.';
 
@@ -68,7 +73,7 @@ const ActionBar = props => (
   </ActionToolbar>
 );
 
-const ActionBarWitButtons = () => (
+const ActionBarWithButtons = () => (
   <div style={{ display: 'flex' }}>
     <Button kind="secondary" onClick={noop}>
       Primary
@@ -275,7 +280,7 @@ storiesOf('Templates/FullPage Template', module)
       }}
     >
       <FullPageTemplate
-        actionBar={<ActionBarWitButtons />}
+        actionBar={<ActionBarWithButtons />}
         header="Analytics Overview"
         subheader="Additional description"
       >
@@ -292,7 +297,7 @@ storiesOf('Templates/FullPage Template', module)
       }}
     >
       <FullPageTemplate
-        actionBar={<ActionBarWitButtons />}
+        actionBar={<ActionBarWithButtons />}
         header="Analytics Overview"
         subheader="Additional description"
       >

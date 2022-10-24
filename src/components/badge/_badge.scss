@@ -7,7 +7,6 @@
 
 
 
-
 .#{$prefix}--status {
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@
   &__xstext--content {
     color: $text-02;
 
-    //    @include type-style('label-01');
+    @include type-style('label-01');
   }
 
   &__stext--content,
@@ -75,7 +74,7 @@
   &__ltext--content {
     color: $text-02;
 
-    //    @include type-style('body-short-01');
+    @include type-style('body-short-01');
   }
 
   //  @each $breakpoint in $breakpoints {
@@ -114,10 +113,8 @@
       &--counter {
         background: $inverse-support-02;
         border: 2px solid $icon-01;
-//        padding: 0 $spacing-2xs;
+        padding: 0;
         border-radius: rem(16px);
-
-//        @include type-style('caption-01');
 
         text-align: center;
         min-width: rem(20px);
@@ -130,8 +127,6 @@
     padding: rem(1px) rem(5px) rem(2px) rem(5px);
     border-radius: rem(16px);
     line-height: rem(13px) !important;
-
-//    @include type-style('caption-01');
 
     text-align: center;
   }
@@ -202,9 +197,8 @@
 
 .#{$prefix}--generalflag {
   &--label {
-//    margin-left: $spacing-xs;
 
-//    @include type-style('code-01');
+    @include type-style('code-01');
   }
 }
 

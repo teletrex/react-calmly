@@ -6,15 +6,6 @@
 *  */
 
 
-
-@import '~@carbon/styles';
-
-@import 'src/teletrex-theme/typography/productive';
-@import 'src/teletrex-theme/typography/tokens';
-@import 'src/teletrex-theme/teletrex-theme';
-
-@include theme();
-
 .#{$prefix}--value-indicator {
   padding: $spacing-03;
 
@@ -26,14 +17,14 @@
   &--title {
     color: $text-01;
 
-    @include type-style('productive-heading-01');
+   @include type-style('productive-heading-01');
 
     margin-right: $spacing-02;
   }
 
   &--body {
     color: $text-01;
-
+    font-size: 4rem;
     @include type-style('label-long-01');
   }
 

@@ -7,9 +7,10 @@
 
 
 
-@import '~@carbon/styles/scss/utilities';
+@import '~@carbon/type';
 @import '../fonts/font-family';
 @import './additional-tokens';
 @import './expressive-tokens';
 @import './productive-tokens';
 @import './universal-tokens';
+@import './tokens';

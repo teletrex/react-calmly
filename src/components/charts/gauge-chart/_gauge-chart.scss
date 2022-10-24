@@ -28,11 +28,11 @@
   }
 
   svg text {
-//    @include type-style('label-long-02');
+    @include type-style('label-long-02');
   }
 
   &__title {
-//     @include type-style('productive-heading-04');
+    @include type-style('productive-heading-04');
 
     margin-bottom: rem(-4px);
     margin-left: rem(24px);

@@ -7,15 +7,6 @@
 
 
 
-@import '~@carbon/styles';
-
-@import 'src/teletrex-theme/typography/productive';
-@import 'src/teletrex-theme/typography/tokens';
-@import 'src/teletrex-theme/teletrex-theme';
-// @import './shared-elements/mixins';
-
-@include theme();
-
 $legend-colors: (
   line: $chart-funnel-f,
   bar: $chart-01,

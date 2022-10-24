@@ -6,6 +6,8 @@
 *  */
 
 
+@import './mixins';
+
 $bounds-color: transparentize($chart-01, 0.8);
 $line-color: $chart-01;
 
@@ -66,17 +68,14 @@ $legend-colors: (
 
 
   &__header {
-    //TODO:      @include type-style('productive-heading-03');
+    @include type-style('productive-heading-03');
 
     margin-bottom: rem(10px);
   }
 
   &__legend {
-    //TODO:      @include type-style('caption-01');
-
     display: flex;
     flex-direction: row;
-    font-size: rem(12px);
     margin-bottom: rem(15px);
 
     &__item {
@@ -201,17 +200,16 @@ $legend-colors: (
     &-tooltip-label,
     &-tooltip-item,
     &-label tspan {
-      // TODO:        @include type-style('productive-heading-01');
+      @include type-style('productive-heading-01');
       font-weight: 500;
     }
 
     &-cartesian-axis-tick-value tspan {
-      // TODO:       @include type-style('caption-01');
       color: $text-01;
     }
 
     &-default-tooltip {
-      // TODO:        @include rechats-default-tooltip;
+      @include rechats-default-tooltip;
       background-color: $ui-background;
     }
 

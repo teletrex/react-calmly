@@ -5,8 +5,6 @@
 * </LICENSE>
 *  */
 
-@import '~@carbon/styles';
-
 
 .#{$prefix}--operator--wrapper {
   margin: rem(8px) 0;
@@ -18,7 +16,7 @@
     cursor: pointer;
 
     &--list {
-// TODO:      @include type-style('body-short-01');
+      @include type-style('body-short-01');
 
       color: $ui-05;
 

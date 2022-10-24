@@ -6,18 +6,6 @@
 *  */
 
 
-
-@import '~@carbon/styles';
-@import '~@carbon/styles/scss/utilities';
-@import '~@carbon/styles/scss/spacing';
-
-
-@import 'src/teletrex-theme/typography/productive';
-@import 'src/teletrex-theme/typography/tokens';
-@import 'src/teletrex-theme/teletrex-theme';
-
-@include theme();
-
 .#{$prefix}--side-bar-template {
   height: 100%;
   width: 100%;
@@ -174,7 +162,7 @@
     > h3 {
       padding: rem(16px) rem(32px);
 
-// TODO:      @include type-style('panel-heading-03');
+      @include type-style('panel-heading-03');
 
       color: $text-01;
     }
@@ -187,7 +175,7 @@
 //        padding: rem(16px);
 //      }
 
-// TODO:      @include type-style('productive-heading-02');
+      @include type-style('productive-heading-02');
     }
 
     &__close {
@@ -230,7 +218,7 @@
     &__heading {
       color: $text-06;
 
-// TODO:      @include type-style('productive-heading-02');
+      @include type-style('productive-heading-02');
     }
 
     &--marginless {
@@ -285,9 +273,6 @@
         width: rem(296px);
       }
 
-      .#{$prefix}--side-bar-template__bar-content {
-        padding: $spacing-sm $spacing-xl $spacing-xl $spacing-xl;
-      }
     }
 
     &--default {
@@ -322,7 +307,7 @@
     &--half,
     &--wide {
       .#{$prefix}--side-bar-template__bar-content {
-        padding: rem(20px) $spacing-xl $spacing-xl $spacing-xl;
+        padding: rem(20px);
 
 // TODO:       @include breakpoint-down('xlg') {
 //          padding: rem(20px) rem(16px);

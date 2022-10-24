@@ -22,12 +22,14 @@ import settings from '../../settings';
 import SideBarTemplate from '../side-bar-template';
 import {  Breadcrumb, BreadcrumbItem, Button, Tab, Tabs } from '@carbon/react';
 
+import {Delete, Edit } from '@carbon/icons-react';
+
 import BreadcrumbsTemplate from '../breadcrumb-template';
 import ActionToolbar, { ActionToolbarItem } from '../action-toolbar';
 
 // Story imports
-//import ConfigurableTable from '../data-table/stories/ConfigurableTableBasic';
-//import { TreeNavigationExample } from '../tree-navigation/stories/ExampleTreeNavigation';
+import ConfigurableTable from '@carbon/react';
+import { TreeNavigationExample } from '../tree-navigation/stories/ExampleTreeNavigation';
 //import { ToolbarWithViewModeSwitcher } from '../data-table/stories/ConfigurableTableWithTiles.story';
 
 
@@ -46,7 +48,7 @@ const ActionBar = props => (
         hasIconOnly
         iconDescription="Button icon"
         onClick={buttonOnClickActionHandler}
-        renderIcon={Delete16}
+        renderIcon=<Delete size={16}/>
         tooltipAlignment="center"
         tooltipPosition="top"
       />
@@ -58,7 +60,7 @@ const ActionBar = props => (
         hasIconOnly
         iconDescription="Button disabled"
         onClick={buttonOnClickActionHandler}
-        renderIcon={Edit16}
+        renderIcon=<Edit size={16} />
         tooltipAlignment="center"
         tooltipPosition="top"
       />
@@ -87,14 +89,14 @@ const ButtonBar = () => (
     <Button
       iconDescription="Button icon"
       onClick={buttonOnClickActionHandler}
-      renderIcon={Delete16}
+      renderIcon={<Delete size={16} />}
     >
       Button
     </Button>
     <Button
       iconDescription="Button disabled"
       onClick={buttonOnClickActionHandler}
-      renderIcon={Edit16}
+      renderIcon={<Edit size={16} />}
     >
       Button 2
     </Button>
@@ -119,9 +121,9 @@ const ButtonBarWithIcons = () => {
       }}
     >
       <Button {...buttonProps} />
-      <Button {...buttonProps} renderIcon={Reset16} />
-      <Button {...buttonProps} renderIcon={Chat16} />
-      <Button {...buttonProps} renderIcon={Link16} />
+      <Button {...buttonProps} renderIcon={<Reset size={16} />} />
+      <Button {...buttonProps} renderIcon={<Chat size={16} />} />
+      <Button {...buttonProps} renderIcon={<Link size={16} />} />
       <Button onClick={buttonOnClickActionHandler}>New</Button>
     </div>
   );

@@ -44,14 +44,14 @@
   }
 
   &__title {
-// TODO:   @include type-style('productive-heading-02');
+    @include type-style('productive-heading-02');
 
     color: $text-01;
     margin-bottom: 1rem;
   }
 
   &__subtitle {
-//  TODO:  @include type-style('label-01');
+    @include type-style('label-01');
 
     color: $text-02;
     margin-bottom: .25rem;
@@ -104,7 +104,7 @@
   }
 
   &__results-count {
-// TODO:   @include type-style('body-short-01');
+    @include type-style('body-short-01');
 
     color: $text-01;
     margin-left: 0.625rem;

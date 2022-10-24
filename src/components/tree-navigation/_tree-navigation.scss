@@ -5,7 +5,7 @@
 * </LICENSE>
 *  */
 
-
+@import '~@carbon/styles/scss/utilities/_focus-outline';  // mixins.
 
 .#{$prefix}--tree-navigation-item {
   $root: &;
@@ -28,7 +28,7 @@
       margin-right: 0.5rem;
       fill: $icon-02;
       transform: rotate(0);
-//      transition: all $duration--fast-02 motion(standard, productive);
+      transition: all $duration-fast-01 motion(standard, productive);
     }
 
     &--rotate {
@@ -57,7 +57,7 @@
     }
 
     &:focus {
-//      @include focus-outline('outline');
+      @include focus-outline('outline');
 
       > .tree-navigation-item__header-chevron > svg {
         fill: $icon-01;
@@ -103,7 +103,7 @@
       > .tree-navigation-item {
         &__button > .tree-navigation-item {
           &__label {
-// TODO:            @include type-style('productive-heading-01');
+            @include type-style('productive-heading-01');
 
             margin: rem(11px) 0;
           }

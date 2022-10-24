@@ -3,11 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/badge/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/_badge.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/_combo-chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/ComboChart/_combo-chart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/components/_chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/components/_chart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/components/_custom-tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/components/_custom-tooltip.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/gauge-chart/_gauge-chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/gauge-chart/_gauge-chart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/column-filter/_column-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/column-filter/_column-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/full-page-template/FullPageTemplate.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/full-page-template/FullPageTemplate.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/heading/_heading.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heading/_heading.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rules-builder/_rules-builder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rules-builder/_rules-builder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rules-builder/rule-element/rule-conjunction/_rule-conjunction.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rules-builder/rule-element/rule-conjunction/_rule-conjunction.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search-drop-down/_search-drop-down.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-drop-down/_search-drop-down.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-bar-template/_side-bar-template.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-bar-template/_side-bar-template.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/_tree-navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/_tree-navigation.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/stories/treeData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/stories/treeData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/value-indicator/_value-indicator.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/value-indicator/_value-indicator.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/teletrex-theme/typography/_all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/teletrex-theme/typography/_all.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/teletrex-theme/typography/_productive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/teletrex-theme/typography/_productive.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/teletrex-theme/typography/_tokens.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/teletrex-theme/typography/_tokens.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +156,7 @@
       <workItem from="1665693445538" duration="1067000" />
       <workItem from="1665695149270" duration="1192000" />
       <workItem from="1666324165365" duration="8861000" />
-      <workItem from="1666465341490" duration="8300000" />
+      <workItem from="1666465341490" duration="17733000" />
     </task>
     <servers />
   </component>

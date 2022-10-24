@@ -9,9 +9,12 @@ $prefix: 'cds';
 
 $teletrex-font-path: './';
 
-
+@use "sass:map";
 @use 'sass:math';
 @use '~@carbon/styles';
+@use '~@carbon/type';
+@use '~@carbon/motion';
+
 
 :root {
   --short: 1.65rem;
@@ -31,14 +34,22 @@ $base-font-size: 16px !default;
   @return math.div($px, $base-font-size) * 1rem;
 }
 
-@import './teletrex-theme/typography/productive';
-@import './teletrex-theme/typography/tokens';
-@import './teletrex-theme/teletrex-theme';
+@function type-scale($scale) {
+  @return ($base-font-size * math.pow(2, $scale)) * 1rem;
+}
 
+
+@import './teletrex-theme/typography/all';
+
+
+@function type-style($style) {
+  @return(map.get($tokens,$style));
+}
 
 // general //
 
 @import './teletrex-theme/teletrex';
+@import './teletrex-theme/teletrex-theme';
 @import './teletrex-theme/eleven';
 @import './teletrex-theme/common';
 @import './teletrex-theme/component';
@@ -47,11 +58,11 @@ $base-font-size: 16px !default;
 
 @import './components/checkbox/_checkbox.scss';   // empty
 @import './components/badge/badge.scss';
-//@import './components/Dropdown/dropdown.scss';  Do not need. Empty.
-//@import './components/configurable-action/configurable-action.scss';
+@import './components/dropdown/dropdown.scss';  Do not need. Empty.
+@import './components/configurable-action/configurable-action.scss';
 //@import './components/ExtendedPagination/extended-pagination.scss';
-//@import './components/FullPageTemplate/full-page-template.scss';
-
+@import './components/full-page-template/full-page-template.scss';
+@import './components/side-bar-template/side-bar-template';
 @import './components/add-tags/add-tags';
 @import './components/checkbox-tree/_checkbox-tree.scss';
 @import './components/tree-navigation/tree-navigation';
@@ -80,19 +91,17 @@ $base-font-size: 16px !default;
 
 @import './components/checkbox-indicator/checkbox-indicator.scss';
 @import './components/pager-control/pager-control.scss';
-/*
+@import './components/value-indicator-with-bar-charts/value-indicator-with-bar-charts.scss';
+@import './components/value-indicator/value-indicator';
+
 @import './components/validation-messages/validation-messages.scss';
 @import './components/progress-indicator/_progress-indicator.scss';
-@import './components/value-indicator-with-bar-charts/value-indicator-with-bar-charts.scss';
+
 @import './components/widget/widget.scss';
-*/
+
 
 @import './components/charts/gauge-chart/_gauge-chart.scss';
 @import './components/hr/horizontal-line.scss';
+@import './components/rules-builder/_rules-builder.scss';
 
-
-/*@import './components/rules-builder/_rules-builder.scss';
-
-
-*/
 

@@ -53,14 +53,14 @@
   }
 
   .#{$prefix}--search-header {
-// TODO:   @include type-style('productive-heading-01');
+    @include type-style('productive-heading-01');
 
     color: $text-01;
     padding: rem(11px) rem(16px);
   }
 
   .#{$prefix}--search-element {
-// TODO:@include type-style('body-short-01');
+    @include type-style('body-short-01');
 
     color: $text-02;
     display: flex;

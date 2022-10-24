@@ -8,7 +8,7 @@
 
 
 
-@import '~@carbon/styles';
+
 @import './rule-element/rule-element';
 @import './rules/rules';
 
@@ -49,7 +49,7 @@
 
   // Read-only
   .#{$prefix}--rule-element--item--readonly {
-// TODO:    @include type-style('body-short-01');
+    @include type-style('body-short-01');
 
     color: $text-01;
 
@@ -88,7 +88,7 @@
   }
 
   .#{$prefix}--rule-text {
-// TODO:    @include type-style('body-short-01');
+    @include type-style('body-short-01');
   }
 
   .#{$prefix}--rule-element--group.#{$prefix}--rule-element--group--readonly {
@@ -103,7 +103,7 @@
   }
 
   .#{$prefix}--conjunction--readonly {
-// TODO:    @include type-style('label-01');
+    @include type-style('label-01');
 
     color: $text-01;
     display: block;

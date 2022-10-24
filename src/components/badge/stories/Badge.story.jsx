@@ -34,8 +34,3 @@ export const Default = () => (
   />
 );
 
-Default.parameters = {
-  'in-dsm': {
-    id: '5fa4088d3af120f21a39a4f8',
-  },
-};

@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -35,6 +35,7 @@ storiesOf('Charts/Ring Chart', module)
       <RingChart width={"100%"}
                  height={"100%"}
                  centerText={"1000"}
+                 title={"Ring Chart"}
                  data={data}
                  maxValue={1000}
       />

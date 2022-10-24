@@ -12,7 +12,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { buildClass } from '../className';
+import { buildClass } from '../../components/className';
 import { CircleFill } from '@carbon/icons-react';
 
 export const LegendItem = ({ className, value }) => (

@@ -7,212 +7,205 @@
 
 
 
-@import '~@carbon/styles';
 
-@import 'src/teletrex-theme/typography/productive';
-@import 'src/teletrex-theme/typography/tokens';
-@import 'src/teletrex-theme/teletrex-theme';
+.#{$prefix}--status {
+  display: flex;
+  align-items: center;
 
-@include theme();
-
-
-  .#{$prefix}--status {
-    display: flex;
-    align-items: center;
-
-    &__icon {
-      flex-shrink: 0;
-    }
-
-    &__icon-right {
-      justify-content: space-between;
-    }
-
-    &__xsicon {
-      margin: 0 rem(6px) 0 0;
-
-      &-right {
-        margin: 0 0 0 rem(6px);
-      }
-
-      height: rem(6px);
-      width: rem(6px);
-    }
-
-    &__sicon {
-      margin: 0 rem(6px) 0 0;
-
-      &-right {
-        margin: 0 0 0 rem(6px);
-      }
-
-      height: rem(8px);
-      width: rem(8px);
-    }
-
-    &__micon {
-      margin: 0 rem(8px) 0 0;
-
-      &-right {
-        margin: 0 0 0 rem(8px);
-      }
-
-      height: rem(10px);
-      width: rem(10px);
-    }
-
-    &__licon {
-      margin: 0 rem(3px) 0 0;
-
-      &-right {
-        margin: 0 0 0 rem(3px);
-      }
-
-      height: rem(12px);
-      width: rem(12px);
-    }
-
-    &__xstext--content {
-      color: $text-02;
-
-      @include type-style('label-01');
-    }
-
-    &__stext--content,
-    &__mtext--content,
-    &__ltext--content {
-      color: $text-02;
-
-      @include type-style('body-short-01');
-    }
-
-    @each $breakpoint in $breakpoints {
-      &__hide-#{$breakpoint} {
-        display: none;
-
-        @include breakpoint($breakpoint) {
-          display: flex;
-        }
-      }
-    }
-
-    &__hide-all {
-      display: none;
-    }
+  &__icon {
+    flex-shrink: 0;
   }
 
-  .#{$prefix}--flag {
-    width: fit-content;
-    min-width: rem(16px);
-
-    &--notification {
-      position: relative;
-
-      &--icon {
-        position: absolute;
-        top: 10%;
-        right: 20%;
-      }
-
-      &--texticon {
-        position: absolute;
-        top: 5px;
-        left: 50%;
-
-        &--counter {
-          background: $inverse-support-02;
-          border: 2px solid $icon-01;
-          padding: 0 $spacing-2xs;
-          border-radius: rem(16px);
-
-          @include type-style('caption-01');
-
-          text-align: center;
-          min-width: rem(20px);
-        }
-      }
-    }
-
-    &--counter {
-      background: $support-02;
-      padding: rem(1px) rem(5px) rem(2px) rem(5px);
-      border-radius: rem(16px);
-      line-height: rem(13px) !important;
-
-      @include type-style('caption-01');
-
-      text-align: center;
-    }
+  &__icon-right {
+    justify-content: space-between;
   }
 
-  .#{$prefix}--pulse {
-    display: block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: $inverse-support-02;
-    cursor: pointer;
-    box-shadow: 0 0 0 rgba(27, 247, 168, 0.4);
-    animation: pulse 2s infinite;
+  &__xsicon {
+    margin: 0 rem(6px) 0 0;
 
-    &:hover {
-      animation: none;
+    &-right {
+      margin: 0 0 0 rem(6px);
     }
+
+    height: rem(6px);
+    width: rem(6px);
   }
 
-  .#{$prefix}--insightflag--notification {
+  &__sicon {
+    margin: 0 rem(6px) 0 0;
+
+    &-right {
+      margin: 0 0 0 rem(6px);
+    }
+
+    height: rem(8px);
+    width: rem(8px);
+  }
+
+  &__micon {
+    margin: 0 rem(8px) 0 0;
+
+    &-right {
+      margin: 0 0 0 rem(8px);
+    }
+
+    height: rem(10px);
+    width: rem(10px);
+  }
+
+  &__licon {
+    margin: 0 rem(3px) 0 0;
+
+    &-right {
+      margin: 0 0 0 rem(3px);
+    }
+
+    height: rem(12px);
+    width: rem(12px);
+  }
+
+  &__xstext--content {
+    color: $text-02;
+
+    //    @include type-style('label-01');
+  }
+
+  &__stext--content,
+  &__mtext--content,
+  &__ltext--content {
+    color: $text-02;
+
+    //    @include type-style('body-short-01');
+  }
+
+  //  @each $breakpoint in $breakpoints {
+  //    &__hide-#{$breakpoint} {
+  //      display: none;
+
+  //      @include breakpoint($breakpoint) {
+  //        display: flex;
+  //      }
+  //    }
+  //  }
+
+  &__hide-all {
+    display: none;
+  }
+}
+
+.#{$prefix}--flag {
+  width: fit-content;
+  min-width: rem(16px);
+
+  &--notification {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    min-width: rem(48px);
-    height: fit-content;
-    min-height: rem(48px);
 
     &--icon {
       position: absolute;
-      top: 0.4rem;
-      right: 0.3rem;
+      top: 10%;
+      right: 20%;
+    }
+
+    &--texticon {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+
+      &--counter {
+        background: $inverse-support-02;
+        border: 2px solid $icon-01;
+//        padding: 0 $spacing-2xs;
+        border-radius: rem(16px);
+
+//        @include type-style('caption-01');
+
+        text-align: center;
+        min-width: rem(20px);
+      }
     }
   }
 
-  @-webkit-keyframes pulse {
-    0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0.4);
-    }
+  &--counter {
+    background: $support-02;
+    padding: rem(1px) rem(5px) rem(2px) rem(5px);
+    border-radius: rem(16px);
+    line-height: rem(13px) !important;
 
-    70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(27, 247, 168, 0);
-    }
+//    @include type-style('caption-01');
 
-    100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0);
-    }
+    text-align: center;
+  }
+}
+
+.#{$prefix}--pulse {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $inverse-support-02;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(27, 247, 168, 0.4);
+  animation: pulse 2s infinite;
+
+  &:hover {
+    animation: none;
+  }
+}
+
+.#{$prefix}--insightflag--notification {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-width: rem(48px);
+  height: fit-content;
+  min-height: rem(48px);
+
+  &--icon {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.3rem;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0.4);
   }
 
-  @keyframes pulse {
-    0% {
-      -moz-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0.4);
-      box-shadow: 0 0 0 0 rgba(27, 247, 168, 0.4);
-    }
-
-    70% {
-      -moz-box-shadow: 0 0 0 10px rgba(27, 247, 168, 0);
-      box-shadow: 0 0 0 10px rgba(27, 247, 168, 0);
-    }
-
-    100% {
-      -moz-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0);
-      box-shadow: 0 0 0 0 rgba(27, 247, 168, 0);
-    }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(27, 247, 168, 0);
   }
 
-  .#{$prefix}--generalflag {
-    &--label {
-      margin-left: $spacing-xs;
-
-      @include type-style('code-01');
-    }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0);
   }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0.4);
+    box-shadow: 0 0 0 0 rgba(27, 247, 168, 0.4);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(27, 247, 168, 0);
+    box-shadow: 0 0 0 10px rgba(27, 247, 168, 0);
+  }
+
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(27, 247, 168, 0);
+    box-shadow: 0 0 0 0 rgba(27, 247, 168, 0);
+  }
+}
+
+.#{$prefix}--generalflag {
+  &--label {
+//    margin-left: $spacing-xs;
+
+//    @include type-style('code-01');
+  }
+}
+
 

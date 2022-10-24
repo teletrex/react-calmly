@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Dot as RechartsDot } from 'recharts';
 
-import { buildClass } from '../className';
+import { buildClass } from '../../components/className';
 
 const isAlert = ({ yLineIsAlert }) => {
   return Boolean(yLineIsAlert);

@@ -11,7 +11,7 @@ import React from 'react';
 
 import PropTypes from "prop-types";
 
-import ElevenTooltip from "../eleven-tooltip";
+import ElevenTooltip from "../tooltip";
 
 export const LabeledData = props => {
   const {

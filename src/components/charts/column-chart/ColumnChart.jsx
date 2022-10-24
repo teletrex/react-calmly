@@ -166,7 +166,7 @@ class ColumnChart extends React.Component {
     return (
       <div
         className={classNames({
-          [`${prefix}--column-chart__legend`]: !this.isPortrait && isChartEmpty,
+          [`${prefix}--chart__legend`]: !this.isPortrait && isChartEmpty,
         })}
         style={{ maxWidth: width }}
       >
@@ -248,9 +248,9 @@ class ColumnChart extends React.Component {
     const calculatedHeight = maximizerSettings?.isMaximized ? maxHeight : height;
 
     const className = classNames(`${prefix}--column-chart`, {
-      [`${prefix}--column-chart--maximized`]: maximizerSettings?.isMaximized,
-      [`${prefix}--column-chart--minimized`]: !maximizerSettings?.isMaximized,
-      [`${prefix}--column-chart-portrait`]: this.isPortrait,
+      [`${prefix}--chart--maximized`]: maximizerSettings?.isMaximized,
+      [`${prefix}--chart--minimized`]: !maximizerSettings?.isMaximized,
+      [`${prefix}--chart-portrait`]: this.isPortrait,
     });
 
     const noDataClassName = classNames({ [`${prefix}--no-data`]: isChartEmpty });
@@ -261,10 +261,10 @@ class ColumnChart extends React.Component {
           <Loading alignCenter withOverlay={false} />
         ) : (
           <>
-            <div className={`${prefix}--column-chart__header`}>
-              <h3 className={`${prefix}--column-chart__title`}>{title}</h3>
+            <div className={`${prefix}--chart__header`}>
+              <div className={`${prefix}--chart__title`}>{title}</div>
               {maximizerSettings && (
-                <div className={`${prefix}--column-chart__maximizer`}>
+                <div className={`${prefix}--chart__maximizer`}>
                   {maximizerSettings.button}
                 </div>
               )}

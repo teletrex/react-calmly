@@ -143,7 +143,7 @@ const gridLayoutProps = () => ({
   },
 });
 
-storiesOf('Charts/ColumnChart', module)
+storiesOf('WIP/ColumnChart', module)
   .add('horizontal', () => <ColumnChart {...chartProps()} {...gridLayoutProps()} />)
   .add('horizontal with xAxis labels truncation', () => (
     <ColumnChart

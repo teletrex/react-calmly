@@ -8,7 +8,7 @@
 
 
 import React from 'react';
-import ElevenTooltip from "../../eleven-tooltip";
+import ElevenTooltip from "../../tooltip";
 
 
 const notEqualShouldRender = ( prevState, nextState)  => {

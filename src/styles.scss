@@ -46,6 +46,7 @@ $base-font-size: 16px !default;
 // components //
 
 @import './components/checkbox/_checkbox.scss';   // empty
+@import './components/badge/badge.scss';
 //@import './components/Dropdown/dropdown.scss';  Do not need. Empty.
 //@import './components/configurable-action/configurable-action.scss';
 //@import './components/ExtendedPagination/extended-pagination.scss';
@@ -60,7 +61,7 @@ $base-font-size: 16px !default;
 @import './components/labeled-data/labeled-data';
 //@import './components/eleven/LabeledDataSet/labeled-data-set.scss';
 @import './components/percentile-indicator/percentile-indicator';
-@import './components/eleven-tooltip/eleven-tooltip';
+@import './components/tooltip/tooltip';
 
 @import './components/column-filter/_column-filter';
 @import './components/magic-table/flexible-column-header/flexible-column-header';

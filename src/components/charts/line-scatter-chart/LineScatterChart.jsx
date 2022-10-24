@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -32,7 +32,7 @@ import { buildClass } from '../components/className';
 import includes from 'lodash/includes';
 import {SecondaryButton} from "@carbon/react";
 
-const ElasticityChart = ({
+const LineScatterChart = ({
   title,
   data,
   chartMargin,
@@ -230,7 +230,7 @@ const ElasticityChart = ({
       {title && <div className={buildClass('__header')}>{title}</div>}
       <div style={{display:"grid",gridTemplateColumns:"auto 20%"}}>
         <Legend items={legendItems} onLegendClick={onLegendClick}/>
-        <SecondaryButton disabled={!zoomedIn}  size={"small"} onClick={zoomOut}>Reset Zoom</SecondaryButton>
+        <SecondaryButton disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</SecondaryButton>
       </div>
       <div className={buildClass('__chart')}>
         <ResponsiveContainer>
@@ -342,7 +342,7 @@ const ElasticityChart = ({
   );
 };
 
-ElasticityChart.propTypes  = {
+LineScatterChart.propTypes  = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       discount: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
@@ -355,7 +355,7 @@ ElasticityChart.propTypes  = {
   tacticLegendLabels: PropTypes.arrayOf(PropTypes.shape([PropTypes.string, PropTypes.string])),
 };
 
-ElasticityChart.defaultProps = {
+LineScatterChart.defaultProps = {
   data: undefined,
   height: '100%',
   title: undefined,
@@ -364,4 +364,4 @@ ElasticityChart.defaultProps = {
   tacticLegendLabels: undefined,
 };
 
-export default ElasticityChart;
+export default LineScatterChart;

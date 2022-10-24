@@ -18,7 +18,7 @@ import AnalyticalCard from "./components/analytical-card";
 import { translationResources } from './i18n';
 
 // charts
-import ElasticityChart from "./components/charts/elasticity-chart";
+import LineScatterChart from "./components/charts/line-scatter-chart";
 import MultiLineChart from "./components/charts/multiline-chart";
 import MagicWidgetGrid from "./components/widget/MagicWidgetGrid";
 import DirectedGraphChart from "./components/charts/directed-graph-chart";
@@ -46,7 +46,7 @@ import useUserReportPrefService from "./components/table-configurator/useUserRep
 import useTableFormatters from "./components/magic-table/useTableFormatters";
 
 //tooltips
-import ElevenTooltip from "./components/eleven-tooltip";
+import ElevenTooltip from "./components/tooltip";
 import HoverPopup from "./components/hover-popup";
 
 
@@ -158,7 +158,7 @@ export {
   ProgressStep,
   VerticalProgressIndicator,
   LabeledData,
-  ElasticityChart,
+  LineScatterChart,
   MultiLineChart,
   DirectedGraphChart,
   HaloChart,

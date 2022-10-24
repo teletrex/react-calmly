@@ -280,7 +280,7 @@ const MultipleComboChartWithDates = extraProps => {
   );
 };
 
-storiesOf('Charts/Combo Chart', module)
+storiesOf('WIP/Combo Chart', module)
   .add('default', () => <ComboChart {...baseProps(numberData())} />)
   .add('with title', () => (
     <ComboChart {...baseProps(numberData())} title={text('title', 'Combo Chart lorem ipsum')} />

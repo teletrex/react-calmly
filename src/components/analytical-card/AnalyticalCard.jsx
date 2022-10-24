@@ -11,7 +11,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PagerControl from "../pager-control";
 import LabeledDataSet from "../labeled-data-set";
-import ElevenTooltip from "../eleven-tooltip";
+import ElevenTooltip from "../tooltip";
 import {Link} from "@carbon/react";
 import settings from "../../settings.js";
 

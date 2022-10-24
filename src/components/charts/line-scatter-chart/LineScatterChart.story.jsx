@@ -12,8 +12,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { object, text } from '@storybook/addon-knobs';
 
-import {mydata, myTacticLegendLabels}  from './elasticity';
-import ElasticityChart from './ElasticityChart';
+import {mydata, myTacticLegendLabels}  from './exampledata';
+import LineScatterChart from './LineScatterChart';
 
 
 /* Provide the tacticDataLegendMap with the keys matching the key in the elasticity data and the value as the translated visibile text.
@@ -136,20 +136,20 @@ export const elasticityData = [
 ].sort( (a,b)=> (a.discount - b.discount));;
 
 
-storiesOf('Charts/Elasticity Chart', module)
+storiesOf('Charts/LineScatterChart', module)
   .add('Default', () => (
-    <ElasticityChart
+    <LineScatterChart
       width= "100%"
       height="100%"
       data= {mydata}
-      title="Discount Elasticity"
+      title="Line Scatter Chart"
       height={600}
       xDiscountName={"Discount"}
       tacticLegendLabels={myTacticLegendLabels}
     />
   ))
   .add('With Custom Hover Tooltip', () => (
-    <ElasticityChart
+    <LineScatterChart
       width= "100%"
       height="100%"
       data= {mydata}
@@ -161,12 +161,12 @@ storiesOf('Charts/Elasticity Chart', module)
     />
   ))
 
-  .add('With Promotion Data', () => (
-    <ElasticityChart
+  .add('With Scatter Point Data', () => (
+    <LineScatterChart
       width= "100%"
       height="100%"
       data= {mydata}
-      title="Discount Elasticity"
+      title="Line Scatter Chart"
       height={600}
       xDiscountName={"Discount"}
       tacticLegendLabels={myTacticLegendLabels}

@@ -6,14 +6,15 @@
 *  */
 
 
+// TODO:  Make the borders on charts optional.
+// Build a chart template into which components can be dropped.
+// Template will handle title, legend, etc. and pass to chart
 
 
 import React from 'react';
 import PropTypes from 'prop-types/prop-types';
 import Legend from '../charts/components/Legend';
-
-
-
+import { buildClass } from '../charts/components/className';
 
 
 const RingChart = props => {
@@ -23,12 +24,13 @@ const RingChart = props => {
     data, // list of { label: string, value: number, color: Csscolor}
     maxValue,
     centerText,
+    title
   } = props;
 
 // TODO: Feed the legend items in. data.map blah blah blah.
   return (
     <div>
-
+      {title && <div className={buildClass('__header')}>{title}</div>}
       <Legend items={
         data.map((legend, index) => (
           {
@@ -86,6 +88,7 @@ const RingChart = props => {
 }
 
 RingChart.propTypes = {
+  title: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   data: PropTypes.arrayOf(PropTypes.shape({
@@ -115,7 +118,8 @@ RingChart.defaultProps = {
     }
   ],
   maxValue:1000,
-  centerText:" "
+  centerText:" ",
+  title: null
 };
 
 export default RingChart;

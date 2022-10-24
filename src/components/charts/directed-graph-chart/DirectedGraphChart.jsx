@@ -13,6 +13,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {Network} from 'vis-network/standalone';
 import Legend from "../components/Legend";
+import settings from  "../../../settings";
+
+const {prefix} = settings;
 
 const DirectedGraphChart = ({
   title,
@@ -73,10 +76,10 @@ const DirectedGraphChart = ({
   }, [networkRef, edgesDataSet,nodesDataSet]);
 
   return (
-    <div className={"bx--eleven-chart"} style={{"width":width,"height":height}}>
-      <div className={"bx--eleven-chart__header"}>{title}</div>
+    <div className={`${prefix}--chart`} style={{"width":width,"height":height}}>
+      <div className={`${prefix}--chart__header`}>{title}</div>
       <Legend items={legendItems} />
-      <div className={"bx--eleven-chart__chart"}
+      <div className={`${prefix}--chart__chart`}
         ref={networkRef}
         id="thisNetwork"
         style={{"height":"100%"}}>

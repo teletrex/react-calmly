@@ -3,32 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/badge/_badge.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/_badge.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/badge/stories/Badge.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/stories/Badge.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/ComboChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/ComboChart/ComboChart.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/column-chart/ColumnChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/column-chart/ColumnChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/column-chart/ColumnChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/column-chart/ColumnChart.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/directed-graph-chart/DirectedGraphChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/directed-graph-chart/DirectedGraphChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/elasticity-chart/ElasticityChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/elasticity-chart/ElasticityChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/elasticity-chart/ElasticityChart.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/elasticity-chart/elasticity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/exampledata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/elasticity-chart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/elasticity-chart/smalldata.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/smalldata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/multi-chart/_multi-chart.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/multi-chart/className.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/multi-chart/components/Dot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multi-chart/components/Dot.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/multi-chart/components/Legend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multi-chart/components/Legend.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/eleven-tooltip/ElevenTooltip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip/Tooltip.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/eleven-tooltip/ElevenTooltip.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip/Tooltip.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/eleven-tooltip/_eleven-tooltip.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip/_tooltip.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/eleven-tooltip/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/labeled-data/LabeledData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/labeled-data/LabeledData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/magic-table/cells/TextCell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/cells/TextCell.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget-charts/RingChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget-charts/RingChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget-charts/RingChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget-charts/RingChart.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/TreeNavigation.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/_tree-navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/_tree-navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/tree-navigation/stories/treeData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tree-navigation/stories/treeData.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +143,7 @@
       <workItem from="1665693445538" duration="1067000" />
       <workItem from="1665695149270" duration="1192000" />
       <workItem from="1666324165365" duration="8861000" />
-      <workItem from="1666465341490" duration="6755000" />
+      <workItem from="1666465341490" duration="8300000" />
     </task>
     <servers />
   </component>

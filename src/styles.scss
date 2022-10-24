@@ -54,12 +54,12 @@ $base-font-size: 16px !default;
 
 @import './components/add-tags/add-tags';
 @import './components/checkbox-tree/_checkbox-tree.scss';
+@import './components/tree-navigation/tree-navigation';
 @import './components/search-drop-down/search-drop-down';
 @import './components/heading/heading';
 @import './components/magic-table/magic-table';
 @import './components/bi-level-percentile-indicator/bi-level-percentile-indicator';
 @import './components/labeled-data/labeled-data';
-//@import './components/eleven/LabeledDataSet/labeled-data-set.scss';
 @import './components/percentile-indicator/percentile-indicator';
 @import './components/tooltip/tooltip';
 

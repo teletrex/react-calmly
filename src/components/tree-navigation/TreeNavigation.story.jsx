@@ -25,36 +25,36 @@ const TreeNavigationMenu = ({ onSelect = () => {}, withExpands }) => {
     <TreeNavigation>
       <TreeNavigationItem
         expands={withExpands}
-        label="Campaings"
+        label="Campaigns"
         onHeadingClick={onSelect}
         open
-        selected={boolean('Campaings', false)}
+        selected={boolean('Campaigns', false)}
       >
         <TreeNavigationItem
           label="Email"
           onHeadingClick={onSelect}
-          selected={boolean('Campaings > Email', false)}
+          selected={boolean('Campaigns > Email', false)}
         />
         <TreeNavigationItem
           label="Mobile push"
-          selected={boolean('Campaings > Mobile push', false)}
+          selected={boolean('Campaigns > Mobile push', false)}
         />
         <TreeNavigationItem
           expands={withExpands}
           label="SMS"
           onHeadingClick={onSelect}
           open
-          selected={boolean('Campaings > SMS', false)}
+          selected={boolean('Campaigns > SMS', false)}
         >
           <TreeNavigationItem
             label="Nested item"
             onHeadingClick={onSelect}
-            selected={boolean('Campaings > SMS > Nested item', false)}
+            selected={boolean('Campaigns > SMS > Nested item', false)}
           />
           <TreeNavigationItem
             label="Additional"
             onHeadingClick={onSelect}
-            selected={boolean('Campaings > SMS > Additional', false)}
+            selected={boolean('Campaigns > SMS > Additional', false)}
           />
         </TreeNavigationItem>
       </TreeNavigationItem>
@@ -119,20 +119,20 @@ const TreeNavigationMenuWithOverflowMenu = ({ onSelect = () => {}, withExpands }
       <TreeNavigationItem
         chevronLeft
         expands={withExpands}
-        label="Campaings"
+        label="Campaigns"
         onHeadingClick={onSelect}
         open
-        selected={boolean('Campaings', false)}
+        selected={boolean('Campaigns', false)}
       >
         <TreeNavigationItem
           label="Email"
           onHeadingClick={onSelect}
-          selected={boolean('Campaings > Email', false)}
+          selected={boolean('Campaigns > Email', false)}
         />
         <TreeNavigationItem
           label="Mobile push"
           onHeadingClick={onSelect}
-          selected={boolean('Campaings > Mobile push', false)}
+          selected={boolean('Campaigns > Mobile push', false)}
         />
         <TreeNavigationItem
           chevronLeft
@@ -141,17 +141,17 @@ const TreeNavigationMenuWithOverflowMenu = ({ onSelect = () => {}, withExpands }
           label="SMS"
           onHeadingClick={onSelect}
           open
-          selected={boolean('Campaings > SMS', false)}
+          selected={boolean('Campaigns > SMS', false)}
         >
           <TreeNavigationItem
             label="Nested item"
             onHeadingClick={onSelect}
-            selected={boolean('Campaings > SMS > Nested item', false)}
+            selected={boolean('Campaigns > SMS > Nested item', false)}
           />
           <TreeNavigationItem
             label="Additional"
             onHeadingClick={onSelect}
-            selected={boolean('Campaings > SMS > Additional', false)}
+            selected={boolean('Campaigns > SMS > Additional', false)}
           />
         </TreeNavigationItem>
       </TreeNavigationItem>

@@ -7,19 +7,7 @@
 
 
 
-@import '~@carbon/styles';
-@import '~@carbon/styles/scss/utilities';
-// layout?
-
-
-@import 'src/teletrex-theme/typography/productive';
-@import 'src/teletrex-theme/typography/tokens';
-@import 'src/teletrex-theme/teletrex-theme';
-@import 'src/teletrex-theme/mixins';
-
-@include theme();
-
-.tree-navigation-item {
+.#{$prefix}--tree-navigation-item {
   $root: &;
 
   &__label {
@@ -40,7 +28,7 @@
       margin-right: 0.5rem;
       fill: $icon-02;
       transform: rotate(0);
-      transition: all $duration--fast-02 motion(standard, productive);
+//      transition: all $duration--fast-02 motion(standard, productive);
     }
 
     &--rotate {
@@ -69,7 +57,7 @@
     }
 
     &:focus {
-      @include focus-outline('outline');
+//      @include focus-outline('outline');
 
       > .tree-navigation-item__header-chevron > svg {
         fill: $icon-01;

@@ -10,13 +10,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import settings from '../../settings';
 import { ChevronDown } from '@carbon/icons-react';
 
 import ExpandableHoC from './ExpandableHoC';
 
+const {prefix} = settings;
+
 export const TreeNavigation = ({ isNode, children }) => (
   <ul
-    className={classNames('tree-navigation', { 'tree-navigation--is-root': !isNode })}
+    className={classNames(`${prefix}--tree-navigation`, { "cds--tree-navigation--is-root": !isNode })}
     data-testid="tree-navigation"
   >
     {children}
@@ -78,15 +81,15 @@ export const TreeNavigationItem = ExpandableHoC(
     const isOpen = open || heading;
     return (
       <li
-        className={classNames('tree-navigation-item', {
-          'tree-navigation-item--open': open,
-          'tree-navigation-item--heading': heading,
+        className={classNames(`${prefix}--tree-navigation-item`, {
+          "cds--tree-navigation-item--open": open,
+          "cds--tree-navigation-item--heading": heading,
         })}
       >
         <Wrapper
           aria-expanded={isOpen}
-          className={classNames('tree-navigation-item__button', targetClassName, {
-            'tree-navigation-item__button--selected': selected,
+          className={classNames(`${prefix}--tree-navigation-item__button`, targetClassName, {
+            "cds--tree-navigation-item__button--selected": selected,
           })}
           disabled={disabled}
           onClick={handleHeadingClick}
@@ -98,11 +101,11 @@ export const TreeNavigationItem = ExpandableHoC(
           {...(!elementType && buttonProps)}
           {...props}
         >
-          {!chevronLeft && <div className="tree-navigation-item__label">{label}</div>}
+          {!chevronLeft && <div className={`${prefix}--tree-navigation-item__label`}>{label}</div>}
           {expands && !hideChevron && (
             <div
-              className={classNames('tree-navigation-item__header-chevron', {
-                'tree-navigation-item__header-chevron--rotate': isOpen,
+              className={classNames(`${prefix}--tree-navigation-item__header-chevron`, {
+                "cds--tree-navigation-item__header-chevron--rotate": isOpen,
               })}
             >
               <ChevronDown size={16} />
@@ -110,7 +113,7 @@ export const TreeNavigationItem = ExpandableHoC(
           )}
           {chevronLeft && (
             <>
-              <div className="tree-navigation-item__label">{label}</div>
+              <div className={`${prefix}--tree-navigation-item__label`}>{label}</div>
               {decorator}
             </>
           )}

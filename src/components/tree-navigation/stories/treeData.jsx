@@ -33,7 +33,7 @@ export const withAsyncMockedData = data => (onResolve = null) => async (
 export const treeDataExample = Object.freeze([
   {
     expands: true,
-    label: 'Campaings',
+    label: 'Campaigns',
     open: true,
     items: [
       {

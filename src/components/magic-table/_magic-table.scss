@@ -45,7 +45,7 @@
   display: flex;
   justify-self: end;
   flex-flow: row nowrap;
-  .bx--configurable-action{
+  .cds--configurable-action{
     margin: 0 0 0 4px;
   }
 }
@@ -212,6 +212,9 @@
 .magictable input,
 {
    height: var(--short);
+}
+.magictable input[type='checkbox'] {
+  height: 0px;
 }
 
 .magictable thead, .magictable-column-mover {

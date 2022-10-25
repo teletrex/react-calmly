@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/magic-table/RowSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/RowSelector.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magic-table/_magic-table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/_magic-table.scss" afterDir="false" />
     </list>
-    <list id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/checkbox/_checkbox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/index.js" afterDir="false" />
-    </list>
+    <list id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +143,7 @@
       <workItem from="1665695149270" duration="1192000" />
       <workItem from="1666324165365" duration="8861000" />
       <workItem from="1666465341490" duration="19354000" />
-      <workItem from="1666649394473" duration="10749000" />
+      <workItem from="1666649394473" duration="11188000" />
     </task>
     <servers />
   </component>

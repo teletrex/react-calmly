@@ -119,7 +119,7 @@ const ColumnRangeFilter = ({
     const inputValue = event.target.value.trim();
     if (inputValue.match(CURRENCY_REGEXP)!=null || inputValue.match(NUMERIC_REGEXP)!=null) {
       setValue(inputValue);
-      const currentComparator = options.length>0 ? options[0].comparator: { text:null,id:null};
+      const currentComparator = options && options.length>0 ? options[0].comparator: { text:null,id:null};
       setOptions([{comparator:currentComparator, value:inputValue}]);
     }
   };

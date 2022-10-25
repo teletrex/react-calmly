@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -9,10 +9,10 @@
 
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { Notification16 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import { Notification } from '@carbon/icons-react';
+import  settings  from '../../settings';
 
-import Button from '../button/Button';
+import Button from '@carbon/react';
 
 import Badge from './Badge';
 import InsightsFlag from './InsightsFlag';
@@ -224,7 +224,7 @@ describe('Status', () => {
         <Button
           hasIconOnly
           iconDescription="Button icon"
-          renderIcon={Notification16}
+          renderIcon={() => <Notification size={16} /> }
           tooltipAlignment="center"
           tooltipPosition="bottom"
         />
@@ -239,7 +239,7 @@ describe('Status', () => {
         <Button
           hasIconOnly
           iconDescription="Button icon"
-          renderIcon={Notification16}
+          renderIcon={() => <Notification size={16} /> }
           tooltipAlignment="center"
           tooltipPosition="bottom"
         />
@@ -254,7 +254,7 @@ describe('Status', () => {
         <Button
           hasIconOnly
           iconDescription="Button icon"
-          renderIcon={Notification16}
+          renderIcon={() => <Notification size={16} /> }
           tooltipAlignment="center"
           tooltipPosition="bottom"
         />
@@ -268,7 +268,7 @@ describe('Status', () => {
         <Button
           hasIconOnly
           iconDescription="Button icon"
-          renderIcon={Notification16}
+          renderIcon={() => <Notification size={16} /> }
           tooltipAlignment="center"
           tooltipPosition="bottom"
         />

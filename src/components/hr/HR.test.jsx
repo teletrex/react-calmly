@@ -9,7 +9,7 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { settings } from 'carbon-components';
+import  settings from '../../settings';
 
 import HR from '.';
 

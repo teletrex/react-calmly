@@ -1,0 +1,146 @@
+/* <LICENSE>
+* 
+* Copyright (C) 2020 Acoustic, L.P. All rights reserved.
+* 
+* NOTICE: This file contains material that is confidential and proprietary to
+* Acoustic, L.P. and/or other developers. No license is granted under any intellectual or
+* industrial property rights of Acoustic, L.P. except as may be provided in an agreement with
+* Acoustic, L.P. Any unauthorized copying or distribution of content from this file is
+* prohibited.
+* 
+* </LICENSE>
+*  */
+
+@import '~carbon-components/scss/components/pagination/pagination';
+
+.#{$prefix}--pagination-skeleton {
+  &--right {
+    margin-right: 0;
+  }
+}
+
+.#{$prefix}--data-table-container + .bx--pagination {
+  border-top: carbon--rem(1px) solid $ui-03;
+}
+
+.#{$prefix}--pagination {
+  @include type-style('productive-heading-01');
+
+  font-weight: carbon--font-weight('regular');
+  border-top: carbon--rem(1px) solid $ui-03;
+  width: 100%;
+  height: carbon--rem(49px);
+  background-color: $inverse-01;
+  color: $text-01;
+  min-width: carbon--rem(574px);
+  display: flex;
+  display: -webkit-box;
+
+  .#{$prefix}--select-input {
+    padding-right: carbon--rem(36px);
+    margin-right: 0;
+  }
+
+  .#{$prefix}--select__arrow {
+    right: carbon--rem(16px);
+  }
+
+  button::-moz-focus-inner,
+  select::-moz-focus-inner {
+    border: 0;
+    outline: none;
+  }
+
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+
+  .#{$prefix}--pagination__text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__button {
+    &:hover,
+    &:focus {
+      outline: carbon--rem(2px) solid $interactive-04;
+      outline-offset: carbon--rem(-2px);
+      background-color: $inverse-01;
+    }
+  }
+
+  &__left {
+    padding: 0 0 0 carbon--rem(16px);
+
+    .#{$prefix}--select-input__wrapper {
+      background-color: $inverse-01;
+
+      .#{$prefix}--select-input {
+        background-color: $inverse-01;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $inverse-01;
+        outline: carbon--rem(2px) solid $interactive-04;
+        outline-offset: carbon--rem(-2px);
+      }
+    }
+  }
+
+  &__right {
+    .#{$prefix}--pagination__text {
+      color: $text-01;
+    }
+
+    .#{$prefix}--select-input__wrapper {
+      &:hover,
+      &:focus {
+        .#{$prefix}--select-input {
+          background-color: $inverse-01;
+          outline: carbon--rem(2px) solid $interactive-04;
+        }
+      }
+
+      .#{$prefix}--select-input {
+        &:hover,
+        &:focus {
+          background-color: $inverse-01;
+          outline: carbon--rem(2px) solid $interactive-04;
+        }
+      }
+    }
+  }
+
+  &--simple {
+    justify-content: flex-end;
+
+    .#{$prefix}--pagination__left {
+      display: none;
+    }
+
+    .#{$prefix}--pagination__right {
+      .#{$prefix}--form-item {
+        display: none;
+      }
+    }
+  }
+
+  &--unbound {
+    background-color: $ui-background;
+    border: none;
+
+    .#{$prefix}--pagination__button {
+      background-color: $inverse-01;
+      border: carbon--rem(1px) solid $ui-03;
+      border-bottom: none;
+
+      &--forward {
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+}

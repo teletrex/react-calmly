@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -10,14 +10,14 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { mount } from 'enzyme';
-import { settings } from 'carbon-components';
+import settings from '../../settings';
 import {
   findMenuItemNode,
   findMenuNode,
   generateGenericItem,
   generateItems,
   openMenu,
-} from 'carbon-components-react/es/components/ListBox/test-helpers';
+} from '@carbon/react/es/components/ListBox/test-helpers';
 
 import ExtendedDropdown from './ExtendedDropdown';
 

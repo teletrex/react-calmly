@@ -10,11 +10,11 @@
 
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import { Filter32 } from '@carbon/icons-react';
-import { settings } from 'carbon-components';
+import { Filter } from '@carbon/icons-react';
+import settings from '../../settings';
 
 import { EmptyState401ErrorSvg } from '../svg-components';
-import OverflowMenu from '../overflow-menu';
+import {OverflowMenu} from '@carbon/react';
 
 import { Widget, WidgetContent } from './index';
 
@@ -141,7 +141,7 @@ describe('Widget', () => {
           actions={[
             {
               key: 'filter',
-              renderIcon: Filter32,
+              renderIcon: ()=><Filter size={32} />,
               iconDescription: 'Show Filters',
               onClick: () => {},
             },

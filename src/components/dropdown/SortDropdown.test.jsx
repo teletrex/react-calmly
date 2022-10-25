@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -9,7 +9,7 @@
 
 import { mount } from 'enzyme/build';
 import React from 'react';
-import { settings } from 'carbon-components';
+import  settings  from '../../settings';
 
 import SortDropdown, { sortStates } from './SortDropdown';
 

@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -9,8 +9,8 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { settings } from 'carbon-components';
-import { Edit16 } from '@carbon/icons-react';
+import settings from '../../settings';
+import { Edit } from '@carbon/icons-react';
 import { render } from '@testing-library/react';
 
 import ActionIconDropdown from './ActionIconDropdown';
@@ -21,7 +21,7 @@ const mockProps = {
     {
       id: 'option1',
       text: 'Option 1',
-      icon: <Edit16 />,
+      icon:  () => <Edit size={16} />,
       iconAction: () => {},
     },
     { id: 'option2', text: 'Option 2' },

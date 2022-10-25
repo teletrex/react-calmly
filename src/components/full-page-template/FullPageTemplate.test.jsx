@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -11,7 +11,7 @@ import React, { useContext } from 'react';
 import { render } from '@testing-library/react';
 import { mount } from 'enzyme';
 import { renderToJson } from 'enzyme-to-json';
-import { Header } from 'carbon-components-react';
+import { Header } from '@carbon/react';
 
 import FullPageTemplate, { FullPageTemplateContext } from '.';
 

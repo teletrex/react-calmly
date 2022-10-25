@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -9,10 +9,9 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { Edit16, Filter16 } from '@carbon/icons-react';
-import { OverflowMenu } from 'carbon-components-react';
+import { Edit, Filter } from '@carbon/icons-react';
+import { OverflowMenu,Button } from '@carbon/react';
 
-import Button from '../button/Button';
 import Checkbox from '../checkbox';
 import { dependencyIssueTag, relegateErrors } from '../utils/test-helpers/relegate-errors';
 
@@ -29,13 +28,13 @@ const actionToolbarStructure = props => (
         hasIconOnly
         iconDescription="Button icon"
         onClick={() => {}}
-        renderIcon={Edit16}
+        renderIcon={()=> <Edit size={16} /> }
         tooltipAlignment="center"
         tooltipPosition="top"
       />
     </ActionToolbarItem>
     <ActionToolbarItem>
-      <OverflowMenu renderIcon={Filter16}>
+      <OverflowMenu renderIcon={ () => <Filter size={16} /> } >
         <ActionToolbarTitle title="FILTER BY" />
         <ActionToolbarOption>
           <Checkbox id="opt-1" labelText="option 1" />
@@ -49,7 +48,7 @@ describe('ActionToolbar', () => {
   test('verify if created', () => {
     relegateErrors(
       {
-        reasonTag: dependencyIssueTag('carbon-components-react'),
+        reasonTag: dependencyIssueTag('@carbon/react'),
         reason: 'Toolbar component deprecated. Additional research needed.',
         expectedErrorCount: 1,
       },

@@ -1,0 +1,20 @@
+/* <LICENSE>
+*
+* Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
+*
+* </LICENSE>
+*  */
+
+
+@import '~@carbon/styles';
+
+
+.#{$prefix}--Checkbox {
+  // styles
+  border: 5px solid red;
+  + Label {
+    border: 1px solid green;
+  }
+}
+
+

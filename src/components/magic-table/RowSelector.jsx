@@ -9,7 +9,7 @@
 
 import React, {useCallback,useState, useEffect}  from 'react';
 
-import {Checkbox } from '@carbon/react';
+import {Checkbox}  from '@carbon/react';
 
 const RowSelector = ({
   id,

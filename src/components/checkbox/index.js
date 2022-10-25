@@ -6,4 +6,4 @@
 *  */
 
 
-export {Checkbox} from '@carbon/react';y
+export default from './Checkbox';

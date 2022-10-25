@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.test.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/_checkbox.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/column-filter/ColumnFilter.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/column-filter/ColumnFilter.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/column-filter/_column-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/column-filter/_column-filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dropdown/Dropdown.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/Dropdown.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magic-table/RowSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/RowSelector.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+    </list>
+    <list id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.test.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkbox/_checkbox.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -125,6 +128,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="" />
+      <changelist id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="" />
       <created>1661204652206</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -147,12 +151,23 @@
       <workItem from="1665695149270" duration="1192000" />
       <workItem from="1666324165365" duration="8861000" />
       <workItem from="1666465341490" duration="19354000" />
-      <workItem from="1666649394473" duration="7142000" />
+      <workItem from="1666649394473" duration="10749000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -337,7 +337,7 @@ storiesOf('Components/Dropdown', module)
   )
   .add('search dropdown with label', () => (
     <div style={{ width: 300 }}>
-      <ExtendedDropdown
+      <Dropdown
         {...simpleProps()}
         ariaLabel="Search dropdown with label"
         id="search-dropdown-label"

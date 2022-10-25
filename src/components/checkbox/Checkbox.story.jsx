@@ -9,7 +9,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Checkbox from './Checkbox';
+import {Checkbox} from '@carbon/react';
 
 storiesOf('Components/Checkbox', module)
-  .add('default', () => <Checkbox />);
+  .add('default', () => <Checkbox />)
+  .add('Disabled', ()=><Checkbox disabled />);

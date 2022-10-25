@@ -39,6 +39,7 @@ const defaultProps = () => ({
   showTags: boolean('Show tags', true),
   searchFieldPlaceholder: text('Search field placeholder', 'Find tags'),
   singleSelection: boolean('Single selection', false),
+  visibleOptionsLimit: 5,
   overflowMenuProps: {
     flipped: boolean('Flip menu position', false),
   },

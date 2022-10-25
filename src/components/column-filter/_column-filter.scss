@@ -41,6 +41,8 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    max-height:350px;
+    max-width:400px;
   }
 
   &__title {

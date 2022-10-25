@@ -3,16 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/badge/stories/InsightsFlag.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/stories/InsightsFlag.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/badge/stories/NotificationFlag.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/stories/NotificationFlag.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/badge/stories/NumberNotificationFlag.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/stories/NumberNotificationFlag.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/components/ClickTooltip.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/components/ClickTooltip.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/full-page-template/FullPageTemplate.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/full-page-template/FullPageTemplate.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/full-page-template/_full-page-template.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/full-page-template/_full-page-template.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/magic-table/editors/DateInputEditor.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/editors/DateInputEditor.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tooltip/Tooltip.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tooltip/Tooltip.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.test.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/_checkbox.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/column-filter/ColumnFilter.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/column-filter/ColumnFilter.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/column-filter/_column-filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/column-filter/_column-filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +147,7 @@
       <workItem from="1665695149270" duration="1192000" />
       <workItem from="1666324165365" duration="8861000" />
       <workItem from="1666465341490" duration="19354000" />
-      <workItem from="1666649394473" duration="2906000" />
+      <workItem from="1666649394473" duration="7142000" />
     </task>
     <servers />
   </component>

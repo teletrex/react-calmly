@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -65,7 +65,7 @@ const GaugeChart = ({ data, title, dataFormatter, textColor }) => {
   };
 
   return (
-    <div className={`${prefix}--gauge-chart-dt`}>
+    <div className={`${prefix}--gauge-chart`}>
         {isChartEmpty ? (
           <h2>?</h2>
         ) : (
@@ -77,7 +77,7 @@ const GaugeChart = ({ data, title, dataFormatter, textColor }) => {
                 ))}
               </linearGradient>
             </defs>
-            <Pie data={pieData} dataKey="value" fill={defaultBowColor} {...pieRadius} {...pieProps}>
+            <Pie isAnimationActive={false}  data={pieData} dataKey="value" fill={defaultBowColor} {...pieRadius} {...pieProps}>
               <Cell fill="url(#gradient)" />
               <Label content={renderLabel(data)}  />
             </Pie>

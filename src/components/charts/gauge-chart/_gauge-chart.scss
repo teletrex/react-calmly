@@ -12,10 +12,10 @@
 /// @group gauge-chart
 
 
-.#{$prefix}--gauge-chart-dt {
+.#{$prefix}--gauge-chart {
   border: none;
   width: fit-content;
-  //padding: carbon--rem(20px) carbon--rem(6px) carbon--rem(20px) 0;
+  padding: rem(20px) rem(6px) rem(20px) 0;
    .recharts-sector {
     stroke: $skeleton-01;
     stroke-linejoin: round;

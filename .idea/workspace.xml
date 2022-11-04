@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/action-toolbar/ActionToolbar.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action-toolbar/ActionToolbar.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/badge/Badge.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/badge/Badge.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/ActionIconDropdown.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/ActionIconDropdown.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/ExtendedDropdown.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/ExtendedDropdown.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/MultilevelDropdwon.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/MultilevelDropdown.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dropdown/SortDropdown.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dropdown/SortDropdown.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/full-page-template/FullPageTemplate.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/full-page-template/FullPageTemplate.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hr/HR.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hr/HR.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inline-edit/InlineEdit.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inline-edit/InlineEdit.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/search-drop-down/SearchDropDown.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/search-drop-down/SearchDropDown.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/side-bar-template/SideBarTemplate.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/side-bar-template/SideBarTemplate.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table-pagination/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table-pagination/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/value-indicator/ValueIndicator.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/value-indicator/ValueIndicator.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget/Widget.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget/Widget.test.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/gauge-chart/GaugeChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/gauge-chart/GaugeChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/gauge-chart/_gauge-chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/gauge-chart/_gauge-chart.scss" afterDir="false" />
     </list>
     <list id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,9 +122,9 @@
     <list>
       <item itemvalue="Jest.BreadcrumbsTemplate" />
       <item itemvalue="Jest.TitleH1" />
-      <item itemvalue="npm.start " />
       <item itemvalue="Jest.Dropdown.should let the user select an option by clicking on the option node" />
       <item itemvalue="Jest.InlineEdit" />
+      <item itemvalue="npm.start " />
     </list>
     <recent_temporary>
       <list>
@@ -175,7 +163,8 @@
       <workItem from="1665695149270" duration="1192000" />
       <workItem from="1666324165365" duration="8861000" />
       <workItem from="1666465341490" duration="19354000" />
-      <workItem from="1666649394473" duration="12947000" />
+      <workItem from="1666649394473" duration="13532000" />
+      <workItem from="1667415743774" duration="2697000" />
     </task>
     <servers />
   </component>
@@ -192,6 +181,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -269,13 +259,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/hr/HR.test.jsx</url>
           <line>9</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/search-drop-down/SearchDropDown.test.jsx</url>
           <line>9</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>

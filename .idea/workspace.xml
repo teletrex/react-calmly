@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/gauge-chart/GaugeChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/gauge-chart/GaugeChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/gauge-chart/_gauge-chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/gauge-chart/_gauge-chart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/components/_chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/components/_chart.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/gauge-chart/GaugeChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/gauge-chart/GaugeChart.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/exampledata.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/exampledata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/multi-chart/MultiChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multi-chart/MultiChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/multiline-chart/MultiLineChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multiline-chart/MultiLineChart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/charts/multiline-chart/MultiLineChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multiline-chart/MultiLineChart.story.jsx" afterDir="false" />
     </list>
     <list id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +170,7 @@
       <workItem from="1666324165365" duration="8861000" />
       <workItem from="1666465341490" duration="19354000" />
       <workItem from="1666649394473" duration="13532000" />
-      <workItem from="1667415743774" duration="2697000" />
+      <workItem from="1667415743774" duration="5062000" />
     </task>
     <servers />
   </component>

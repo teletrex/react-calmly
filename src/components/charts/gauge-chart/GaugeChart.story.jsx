@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -21,5 +21,5 @@ const chartProps = {
 storiesOf('Charts/Gauge Chart', module)
   .add('default', () => <GaugeChart {...chartProps} />)
   .add('with formatted data', () => (
-    <GaugeChart {...chartProps} dataFormatter={value => `${value}$`} />
+    <GaugeChart {...chartProps} dataFormatter={value => `$${value}`} />
   ));

@@ -30,7 +30,7 @@ import {
 import Legend from '../components/Legend';
 import { buildClass } from '../components/className';
 import includes from 'lodash/includes';
-import {SecondaryButton} from "@carbon/react";
+import {Button} from "@carbon/react";
 
 const LineScatterChart = ({
   title,
@@ -228,9 +228,9 @@ const LineScatterChart = ({
   return (
     <div className={buildClass()} style={{ width, height }}>
       {title && <div className={buildClass('__header')}>{title}</div>}
-      <div style={{display:"grid",gridTemplateColumns:"auto 20%"}}>
+      <div style={{display:"grid",gridTemplateColumns:"auto 20%",alignItems:"baseline"}}>
         <Legend items={legendItems} onLegendClick={onLegendClick}/>
-        <SecondaryButton disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</SecondaryButton>
+        <Button kind={"tertiary"} disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</Button>
       </div>
       <div className={buildClass('__chart')}>
         <ResponsiveContainer>

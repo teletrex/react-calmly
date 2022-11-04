@@ -389,7 +389,7 @@ const ClickDotTooltip = (
   return null;
 }
 
-const ProductHistoryTooltip = ({active, payload, label}) => {
+const CommodityPricingHistoryTooltip = ({active, payload, label}) => {
   if (active && payload && payload.length) {
     return (
       <div className="recharts-default-tooltip">
@@ -431,7 +431,7 @@ const ProductHistoryTooltip = ({active, payload, label}) => {
         height="100%"
         timeSeries={true}
         data={timeSeriesData}
-        title="Product History"
+        title="Commodity Prices"
         height={300}
         seriesLegendLabels={seriesLegendLabels}
       />
@@ -441,9 +441,9 @@ const ProductHistoryTooltip = ({active, payload, label}) => {
         timeSeries={true}
         width="100%"
         data={timeSeriesData}
-        title="Product History With Custom Tooltip"
+        title="Commodity Prices With Custom Tooltip"
         height={300}
-        tooltip={(props) => <ProductHistoryTooltip active={true} {...props}/>}
+        tooltip={(props) => <CommodityPricingHistoryTooltip active={true} {...props}/>}
         seriesLegendLabels={seriesLegendLabels}
       />
     ))
@@ -465,16 +465,16 @@ const ProductHistoryTooltip = ({active, payload, label}) => {
             height="100%"
             timeSeries={true}
             data={timeSeriesData}
-            title="Product History With Custom Tooltip"
+            title="Commodity Prices With Custom Tooltip"
             height={500}
-            tooltip={(props) => <ProductHistoryTooltip {...props}/>}
+            tooltip={(props) => <CommodityPricingHistoryTooltip {...props}/>}
             clickDotTooltip={
               <AnalyticalCard
                 totalPages={10}
                 currentPage={1}
                 valueIndicator={<ValueIndicator mainValue={0.5} title={"Lift %"}/>}
                 linkLabel={"Promotion at " + xPoint}
-                linkUrl={"https://networkdebuglfr.z20.web.core.windows.net"}
+                linkUrl={"https://github.com/teletrex/react-calmly"}
                 primaryData={promotionData}
                 secondaryData={secondaryData}
               />}
@@ -501,16 +501,16 @@ const ProductHistoryTooltip = ({active, payload, label}) => {
             height="100%"
             data={timeSeriesData}
             timeSeries={true}
-            title="Product History With Custom Tooltip"
+            title="Commodity Prices With Custom Tooltip"
             height={500}
-            tooltip={(props) => <ProductHistoryTooltip {...props}/>}
+            tooltip={(props) => <CommodityPricingHistoryTooltip {...props}/>}
             clickDotTooltip={
               <AnalyticalCard
                 totalPages={10}
                 currentPage={1}
                 valueIndicator={<ValueIndicator mainValue={0.5} title={"Lift %"}/>}
                 linkLabel={"Promotion at " + xPoint}
-                linkUrl={"https://networkdebuglfr.z20.web.core.windows.net"}
+                linkUrl={"https://github.com/teletrex/react-calmly"}
                 primaryData={promotionData}
                 secondaryData={secondaryData}
               />}
@@ -542,16 +542,16 @@ const ProductHistoryTooltip = ({active, payload, label}) => {
             height="100%"
             timeSeries={true}
             data={timeSeriesData}
-            title="Product History With Custom Tooltip"
+            title="Commodity Prices With Custom Tooltip"
             height={500}
-            tooltip={(props) => <ProductHistoryTooltip {...props}/>}
+            tooltip={(props) => <CommodityPricingHistoryTooltip {...props}/>}
             clickDotTooltip={
               <AnalyticalCard
                 totalPages={10}
                 currentPage={1}
                 valueIndicator={<ValueIndicator mainValue={0.5} title={"Lift %"}/>}
                 linkLabel={"Promotion at " + xPoint}
-                linkUrl={"https://networkdebuglfr.z20.web.core.windows.net"}
+                linkUrl={"https://github.com/teletrex/react-calmly"}
                 primaryData={promotionData}
                 secondaryData={secondaryData}
               />}

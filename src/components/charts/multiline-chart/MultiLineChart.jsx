@@ -23,7 +23,7 @@ import {
 } from 'recharts';
 
 
-import {SecondaryButton} from "@carbon/react";
+import {Button} from "@carbon/react";
 import Legend from '../components/Legend';
 import { buildClass } from '../components/className';
 import ClickTooltip from "../components/ClickTooltip";
@@ -227,9 +227,9 @@ const MultiLineChart = ({
   return (
     <div className={buildClass()} style={{ width, height, userSelect:"none"}}  ref={chartRef}>
       {title && <div className={buildClass('__header')}>{title}</div>}
-      <div style={{display:"grid",gridTemplateColumns:"auto 20%"}}>
+      <div style={{display:"grid",gridTemplateColumns:"auto 20%", alignItems:"baseline"}}>
         <Legend items={legendItems} />
-        <SecondaryButton disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</SecondaryButton>
+        <Button kind={"tertiary"} disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</Button>
       </div>
       <div className={buildClass('__chart')}>
         <ResponsiveContainer>

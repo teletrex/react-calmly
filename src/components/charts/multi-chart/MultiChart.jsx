@@ -30,6 +30,7 @@ import { multichartAbsolutePosTooltipProps } from '../components/defaultTooltipP
 
 import { ActiveDashedDotWithAlert, ActiveLineDotWithAlert, InactiveDot } from '../components/Dot';
 import Legend from '../components/Legend';
+import ChartTitle from "../components/ChartTitle";
 import { buildClass } from '../components/className';
 
 export const defaultTooltipFormatter = (value, name) => {
@@ -130,7 +131,7 @@ const MultiChart = ({
 
   return (
     <div className={buildClass()} style={{ width, height }}>
-      {title && <div className={buildClass('__header')}>{title}</div>}
+      {title && <ChartTitle>{title}</ChartTitle>}
       <Legend items={legendItems} />
       <div className={buildClass('__chart')}>
         {isChartEmpty ? (

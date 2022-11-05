@@ -25,6 +25,7 @@ import {
 
 import {Button} from "@carbon/react";
 import Legend from '../components/Legend';
+import ChartTitle from '../components/ChartTitle';
 import { buildClass } from '../components/className';
 import ClickTooltip from "../components/ClickTooltip";
 import ReferenceLineDot from "../components/ReferenceLineDot";
@@ -226,7 +227,7 @@ const MultiLineChart = ({
 
   return (
     <div className={buildClass()} style={{ width, height, userSelect:"none"}}  ref={chartRef}>
-      {title && <div className={buildClass('__header')}>{title}</div>}
+      {title && <ChartTitle>{title}</ChartTitle>}
       <div style={{display:"grid",gridTemplateColumns:"auto 20%", alignItems:"baseline"}}>
         <Legend items={legendItems} />
         <Button kind={"tertiary"} disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</Button>

@@ -13,6 +13,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {Network} from 'vis-network/standalone';
 import Legend from "../components/Legend";
+import ChartTitle from "../components/ChartTitle";
 import settings from  "../../../settings";
 
 const {prefix} = settings;
@@ -77,7 +78,7 @@ const DirectedGraphChart = ({
 
   return (
     <div className={`${prefix}--chart`} style={{"width":width,"height":height}}>
-      <div className={`${prefix}--chart__header`}>{title}</div>
+      <ChartTitle>{title}</ChartTitle>
       <Legend items={legendItems} />
       <div className={`${prefix}--chart__chart`}
         ref={networkRef}

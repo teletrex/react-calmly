@@ -28,6 +28,7 @@ import {
 
 
 import Legend from '../components/Legend';
+import ChartTitle from "../components/ChartTitle";
 import { buildClass } from '../components/className';
 import includes from 'lodash/includes';
 import {Button} from "@carbon/react";
@@ -227,7 +228,7 @@ const LineScatterChart = ({
 
   return (
     <div className={buildClass()} style={{ width, height }}>
-      {title && <div className={buildClass('__header')}>{title}</div>}
+      {title && <ChartTitle>{title}</ChartTitle>}
       <div style={{display:"grid",gridTemplateColumns:"auto 20%",alignItems:"baseline"}}>
         <Legend items={legendItems} onLegendClick={onLegendClick}/>
         <Button kind={"tertiary"} disabled={!zoomedIn}  size={"sm"} onClick={zoomOut}>Reset Zoom</Button>

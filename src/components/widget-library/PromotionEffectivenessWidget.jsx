@@ -9,7 +9,7 @@
 
 import React from 'react';
 import ChartWidget from "../widget/ChartWidget";
-import ComboChart  from '../charts/ComboChart';
+import ComboChart  from '../charts/combo-chart';
 import {useFormat ,DATE_FORMAT } from '../format';
 
 const PromotionEffectivenessWidget = props => {

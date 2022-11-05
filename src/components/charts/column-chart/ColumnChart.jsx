@@ -29,6 +29,7 @@ import ChartMetrics, {
   chartMetricsPropTypes,
 } from '../chart-metrics/ChartMetrics';
 import CustomLegend from '../components/CustomLegend';
+import ChartTitle from '../components/ChartTitle';
 //import { ReactComponentPropType } from '../../../components/eleven/utils/prop-types';
 import {Loading} from '@carbon/react';
 import { defaultTooltipProps } from '../components/defaultTooltipProps';
@@ -262,7 +263,7 @@ class ColumnChart extends React.Component {
         ) : (
           <>
             <div className={`${prefix}--chart__header`}>
-              <div className={`${prefix}--chart__title`}>{title}</div>
+              <ChartTitle >{title}</ChartTitle>
               {maximizerSettings && (
                 <div className={`${prefix}--chart__maximizer`}>
                   {maximizerSettings.button}

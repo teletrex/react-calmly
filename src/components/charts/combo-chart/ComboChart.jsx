@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -27,6 +27,7 @@ import { ZoomIn, ZoomOut, OverflowMenuVertical } from '@carbon/icons-react';
 // TODO:   Why are combocharts so complex?  simplify!
 
 import CustomLegend from '../components/CustomLegend';
+import ChartTitle from '../components/ChartTitle';
 import CustomEmptyState from '../components/CustomEmptyState';
 import {Loading} from '@carbon/react';
 import ChartMetrics, {
@@ -219,7 +220,7 @@ const ComboChart = ({
         <Loading alignCenter withOverlay={false} />
       ) : (
         <>
-          {!!title && <div className={buildClass('__header')}>{title}</div>}
+          {!!title && <ChartTitle>{title}</ChartTitle>}
 
           {!!legendItems.length && !withLegend && (
             <div className={buildClass('__legend')}>

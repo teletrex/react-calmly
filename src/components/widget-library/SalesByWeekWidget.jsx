@@ -10,7 +10,7 @@
 import React from 'react';
 import Widget from "../widget/Widget";
 import ChartWidget from "../widget/ChartWidget";
-import ComboChart from '../charts/ComboChart';
+import ComboChart from '../charts/combo-chart';
 import {useFormat, DATE_FORMAT} from '../format';
 
 const SalesByWeekWidget = props => {

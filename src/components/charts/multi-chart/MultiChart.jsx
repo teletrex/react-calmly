@@ -28,9 +28,9 @@ import {
 import CustomEmptyState from '../components/CustomEmptyState';
 import { multichartAbsolutePosTooltipProps } from '../components/defaultTooltipProps';
 
-import { ActiveDashedDotWithAlert, ActiveLineDotWithAlert, InactiveDot } from './components/Dot';
+import { ActiveDashedDotWithAlert, ActiveLineDotWithAlert, InactiveDot } from '../components/Dot';
 import Legend from '../components/Legend';
-import { buildClass } from './components/className';
+import { buildClass } from '../components/className';
 
 export const defaultTooltipFormatter = (value, name) => {
   let finalName = `${name.charAt(0).toUpperCase()}${name.substr(1)}`;

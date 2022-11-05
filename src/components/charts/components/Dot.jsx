@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Dot as RechartsDot } from 'recharts';
 
-import { buildClass } from '../../components/className';
+import { buildClass } from './className';
 
 const isAlert = ({ yLineIsAlert }) => {
   return Boolean(yLineIsAlert);

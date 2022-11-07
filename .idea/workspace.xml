@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa7b0901-175c-4367-b2f2-3013ad70772f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/charts/components/ChartTitle.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/ComboChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/combo-chart/ComboChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/ComboChart.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/combo-chart/ComboChart.story.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/ComboChart.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/combo-chart/ComboChart.test.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/LegendIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/combo-chart/LegendIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/_combo-chart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/combo-chart/_combo-chart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/ComboChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/combo-chart/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/column-chart/ColumnChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/column-chart/ColumnChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/directed-graph-chart/DirectedGraphChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/directed-graph-chart/DirectedGraphChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/garbage/Legend.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/garbage/Legend.test.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/line-scatter-chart/LineScatterChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/multi-chart/MultiChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multi-chart/MultiChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/charts/multiline-chart/MultiLineChart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/charts/multiline-chart/MultiLineChart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget-library/PromotionEffectivenessWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget-library/PromotionEffectivenessWidget.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/widget-library/SalesByWeekWidget.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/widget-library/SalesByWeekWidget.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytical-card/AnalyticalCard.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.story.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/_checkbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/_checkbox.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magic-table/HeaderRowSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/HeaderRowSelector.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magic-table/MagicTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/MagicTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magic-table/RowSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magic-table/RowSelector.jsx" afterDir="false" />
     </list>
     <list id="b7192b9e-a0fb-4da0-8f35-a8b7dd30790c" name="restore checkbox" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +174,8 @@
       <workItem from="1666324165365" duration="8861000" />
       <workItem from="1666465341490" duration="19354000" />
       <workItem from="1666649394473" duration="13532000" />
-      <workItem from="1667415743774" duration="10309000" />
+      <workItem from="1667415743774" duration="14058000" />
+      <workItem from="1667848534367" duration="1415000" />
     </task>
     <servers />
   </component>

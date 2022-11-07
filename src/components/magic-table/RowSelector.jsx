@@ -10,6 +10,7 @@
 import React, {useCallback,useState, useEffect}  from 'react';
 
 import {Checkbox}  from '@carbon/react';
+import InlineCheckbox from '../checkbox-tree/InlineCheckbox';
 
 const RowSelector = ({
   id,
@@ -23,7 +24,6 @@ const RowSelector = ({
   ...otherProps
 }) => {
 
-  //const [internalValue, setInternalValue] = useState(value);
 
   const onChangeHandler =
     event => {
@@ -32,7 +32,7 @@ const RowSelector = ({
 
   const _style = {"display":"grid","alignItems":"center"};
   return (
-    <Checkbox
+    <InlineCheckbox
       style={_style}
       key={id}
       id={id}
@@ -47,7 +47,5 @@ const RowSelector = ({
 }
 
 export default React.memo(RowSelector);
-//  .bx--form-item.bx--checkbox-wrapper:first-of-type
-//  div.bx--form-item.bx--checkbox-wrapper:first-of-type
-// margin-bottom:1rem
+
 

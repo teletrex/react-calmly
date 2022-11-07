@@ -69,5 +69,5 @@ export const Default = () =>
     currentPage={2}
     valueIndicator={<ValueIndicator mainValue={0.5} title={"Lift %"}/>}
     linkLabel={"This is a layout. View in ClickTooltip component. "}
-    linkUrl={"https://networkdebuglfr.z20.web.core.windows.net"}
+    linkUrl={"https://github.com/teletrex/react-calmly"}
  />

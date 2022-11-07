@@ -10,6 +10,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import settings  from '../../settings';
 
+import {Checkbox} from '@carbon/react';
+/*
 const { prefix } = settings;
 
 const Checkbox = (
@@ -29,5 +31,5 @@ const Checkbox = (
 Checkbox.propTypes = {};
 
 Checkbox.defaultProps = {};
-
+*/
 export default Checkbox;

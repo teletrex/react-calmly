@@ -1,7 +1,7 @@
 /* <LICENSE>
-* 
+*
 * Copyright (C) 2022 Louis F. Roehrs, All rights reserved.
-* 
+*
 * </LICENSE>
 *  */
 
@@ -10,6 +10,7 @@
 import React, {useCallback}  from 'react';
 
 import {Checkbox } from '@carbon/react';
+import InlineCheckbox from '../checkbox-tree/InlineCheckbox';
 
 const HeaderRowSelector = ({
   id,
@@ -28,12 +29,13 @@ const HeaderRowSelector = ({
   );
   const userAgentString = navigator.userAgent;
 
-  const isFirefox =  userAgentString.indexOf("Firefox") > -1;;
-
+  const isFirefox =  userAgentString.indexOf("Firefox") > -1;
+  const _style = {"display":"grid","alignItems":"center"};
   return (
-    <Checkbox key={id}
+    <InlineCheckbox key={id}
               id={id}
-              className = {!isFirefox && "notfirefox"}
+              style = {_style}
+//              className = {"asdf " + !isFirefox && "notfirefox"}
               labelText={value}
               onClick={onChangeHandler}
               checked={value}

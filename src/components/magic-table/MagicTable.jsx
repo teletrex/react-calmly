@@ -843,7 +843,6 @@ const MagicTable = (
                   className={"headerrowselector"+`${(hasSelectionType && onSelectionTypeChange) ? '-options' : ''}`}>
               {dataRows && dataRows.length > 0 &&
                   <>
-                    <div style={{ display: "flex", alignItems: "flex-start" }}>
                       <HeaderRowSelector
                         id={headerCheckboxId || "header_row_selector"}
                         value={selectedRows.length === totalSelectableRows && dataRows.length > 0} //dataRows.length
@@ -863,7 +862,6 @@ const MagicTable = (
                         type="inline"
                         items={gridSelectionOptions} />
                       }
-                    </div>
                   </>
                 }
               </th>

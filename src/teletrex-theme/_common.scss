@@ -97,7 +97,6 @@ body {
     }
 }
 
-
 .pop-up-modal__icon-wrapper{
   display: flex;
   align-items: center;
@@ -113,6 +112,11 @@ body {
   &.active{
     background-color: #424564;
   }
+}
+
+
+.negative {
+  padding-right:0.75rem;
 }
 
 .rc-grey {

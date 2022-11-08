@@ -13,9 +13,12 @@
 }
 
 .cds--table-configurator {
+  height: calc(100%);
+
   .cds--form-item.cds--checkbox-wrapper {
     margin-top: 0.08rem
   }
+
 
   .orderinput {
     height: auto;
@@ -40,31 +43,6 @@
   padding-right:1rem;
 }
 
-.review-tag-green{
-  color : green;
-  font-weight: normal;
-  font-family: Lucida Grande, monospace;
-  font-size: 90%;
-}
-
-.review-tag-yellow{
-  color : orangered;
-  font-weight: normal;
-  font-family: Lucida Grande, monospace;
-  font-size: 90%;
-}
-
-.review-tag-gray{
-  color : black;
-  font-weight: normal;
-  font-family: Lucida Grande, monospace;
-  font-size: 90%;
-}
-
-.negative {
-  padding-right:0.75rem;
-}
-
 .cds--dropdown__wrapper .cds--list-box__field {
   -webkit-appearance: none;
 }
@@ -73,11 +51,7 @@
   max-width: 400px;
   overflow-x: hidden;
 }
-.cds--value-indicator {
-  .cds--value-indicator--extra {
-    padding-right: 0.1rem;
-  }
-}
+
 .cds--data-table--compact {
   .cds--text-input {
     height: 1.2rem;
@@ -102,13 +76,11 @@
 .cds--content-switcher-btn:focus {
   box-shadow:inset 0 0 0 2px $rc-brand-outline-active;
 }
-/*
-.cds--configurable-table-toolbar--batch-actions.cds--batch-actions.cds--batch-actions--active {
-}
-*/
 
 .cds--configurable-table-toolbar--batch-actions {
   height:32px;
+  top:0px;
+  buttom:unset;
 }
 
 .oppHoverPopUp {
@@ -368,9 +340,6 @@
 .cds--btn--ghost:hover {
   color: $rc-brand-greyblue;
 }
-.cds--configurable-table-toolbar--batch-actions.cds--batch-actions.cds--batch-actions--active {
-  background-color: $rc-brand-darkblue !important;
-}
 
 .cds--side-bar-template__bar__close:focus {
   outline: none;
@@ -479,6 +448,10 @@ td.data-table__cell--row-actions {
   border-left: 1px solid #eeeeee;
 }
 
+
+.cds--checkbox {
+  position: relative;
+}
 
 .cds--checkbox-wrapper:focus,
 .cds--checkbox-wrapper:active,

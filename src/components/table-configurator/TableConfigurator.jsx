@@ -323,7 +323,7 @@ TableConfigurator.propTypes = {
 };
 
 TableConfigurator.defaultProps = {
-  className: 'dt-grid-configurator',
+  className: 'cds--table-configurator',
   header: '',
 };
 
